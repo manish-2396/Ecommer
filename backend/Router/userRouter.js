@@ -55,6 +55,7 @@ userRoutes.post("/login", async (req, res) => {
         res.status(500).send({ Massage: "Something went wrong. Please try again later." });
       }
     }
+    
     else {
       res.send({ Massage: "please signup first then login" })
     }
