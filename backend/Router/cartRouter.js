@@ -22,7 +22,7 @@ cartRouter.get("/getCart" ,  async(req , res) => {
     try{
         const data = await cartModel.find();
         console.log(data)
-        res.status(200).send({ user_id:req.body.user_id , data:data})
+        res.status(200).send(data)
     }
     catch(error){
         res.status(501).send({Massage:"some went wrong"});
