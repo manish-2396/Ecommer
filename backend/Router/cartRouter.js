@@ -20,7 +20,7 @@ cartRouter.post("/addCart" , async(req , res) => {
 cartRouter.get("/getCart" ,  async(req , res) => {
     console.log(req.body.user_id)
     try{
-        const data = await cartModel.find({user_id:req.body.user_id});
+        const data = await cartModel.find();
         res.status(200).send({ user_id:req.body.user_id , data:data})
     }
     catch(error){
