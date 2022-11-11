@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 // console.log(process.env.Code)
 
 const authtication = (req , res , next) => {
-    console.log("manish" , req.headers.authorization)
+    // console.log("manish" , req.headers.authorization)
     if(!req.headers.authorization){
         res.status(500).send({massage:"User not authorized 1"})
     }else{
