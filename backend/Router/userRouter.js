@@ -14,6 +14,7 @@ userRoutes.get("/", (req, res) => {
 })
 
 userRoutes.post("/signup", async (req, res) => {
+  console.log(req.body)
 
   try {
     const user = await userModule.findOne({ email: req.body.email });
@@ -24,7 +25,7 @@ userRoutes.post("/signup", async (req, res) => {
 
       await userData.save();
 
-      res.status(200).send("resistance successfully completed");
+      res.status(200).send({"Massage":"resistance successfully completed"});
     }
   }
   catch (error) {
@@ -36,13 +37,14 @@ userRoutes.post("/signup", async (req, res) => {
 
 
 userRoutes.post("/login", async (req, res) => {
+  console.log(req.body)
 
   try{
     const { email, password } = req.body;
     const user = await userModule.findOne({ email });
     if (user) {
       if (user.password == password) {
-        console.log(password)
+        console.log("login",password)
         const token = jwt.sign(
           {
             userId:user._id,
