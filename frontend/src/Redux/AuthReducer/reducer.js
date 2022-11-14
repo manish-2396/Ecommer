@@ -1,14 +1,71 @@
 import * as types from "./actionType"
 
 const initialState = {
+    islogin: false,
     isAuth: false,
     loading: false,
-    Response: null
+    isError: false,
+    ResponseMail: {},
+    ResponseOtp: {},
+    ResponseSignup: {},
+    ResponseSignin: {}
+
+
+
+
 }
 
 export const authreducer = (state = initialState, { type, payload }) => {
+    // console.log(payload);
     switch (type) {
 
+        // Email Check
+
+        case types.EMAILCHECK_REQUEST:
+            return {
+                ...state,
+                loading: true,
+            }
+        case types.EMAILCHECK_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                ResponseMail: payload
+
+            }
+        case types.EMAILCHECK_FAILED:
+            return {
+                ...state,
+                loading: false,
+                isError: true,
+                ResponseMail: payload
+            }
+
+        //otp
+
+        case types.OTP_REQUEST:
+            return {
+                ...state,
+                loading: true,
+            }
+        case types.OTP_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                ResponseOtp: payload
+
+            }
+        case types.OTP_FAILED:
+            return {
+                ...state,
+                loading: false,
+                isError: true,
+                ResponseOtp: payload
+            }
+
+
+
+        // signup
         case types.SIGNING_REQUEST:
             return {
                 ...state,
@@ -16,42 +73,43 @@ export const authreducer = (state = initialState, { type, payload }) => {
                 Response: null
 
             }
-            case types.SIGNING_SUCCESS:
+        case types.SIGNING_SUCCESS:
+            return {
+                ...state,
+                isAuth:true,
+                loading: false,
+                ResponseSignup: payload
+
+            }
+        case types.SIGNING_FAILED:
             return {
                 ...state,
                 loading: false,
-                Response: payload
+                ResponseSignup: payload
 
             }
-            case types.SIGNING_FAILED:
-            return {
-                ...state,
-                loading: false,
-                Response: payload
 
-            }
-            case types.LOGIN_REQUEST:
+        // login
+        case types.LOGIN_REQUEST:
             return {
                 ...state,
-                isAuth: false,
                 loading: true,
-                Response: null
 
             }
-            case types.LOGIN_SUCCESS:
+        case types.LOGIN_SUCCESS:
             return {
                 ...state,
-                isAuth: true,
+                islogin: true,
                 loading: false,
-                Response: payload
+                ResponseSignin: payload
 
             }
-            case types.LOGIN_FAILED:
+        case types.LOGIN_FAILED:
             return {
                 ...state,
                 isAuth: false,
                 loading: false,
-                Response: payload
+                ResponseSignin: payload
 
             }
 

@@ -1,20 +1,31 @@
-import { Box, Button, Container, FormControl, Input, InputLabel, MenuItem, Select } from '@mui/material'
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { signup } from '../../Redux/AuthReducer/action'
+import { Avatar, Box, Button, Container, CssBaseline, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import ExitToAppSharpIcon from '@mui/icons-material/ExitToAppSharp';
+import { signup } from '../../Redux/AuthReducer/action';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
 
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+
+
 
   const [form, setForm] = useState({
-    name:"",
-    email:"",
-    password:"",
-    gender:"",
-    age:""
+    name: "",
+    email: "",
+    password: "",
+    gender: "",
+    age: ""
   })
+
+  let email = sessionStorage.getItem("email");
+
+
+
 
 
   const handleChange = (event) => {
@@ -27,24 +38,49 @@ const Signup = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-
-    console.log(form)
-
+    form.email= email 
     dispatch(signup(form))
+    console.log(form)
   }
+
+  const data = useSelector((state) => state.authreducer.ResponseSignin.Massage);
+
+
+  console.log(data)
+
+  useEffect(() => {
+
+    if(data === "resistance successfully completed"){
+      navigate("/signin")
+    }
+
+  },[data , navigate])
 
   return (
     <Container maxWidth="sm">
-      <form action="" onSubmit={handleSubmit}>
-        <Box m={1.5}>
-          <FormControl>
-            <InputLabel htmlFor="my-input">Name</InputLabel>
-            <Input id="name" name="name" value={form.name} onChange={handleChange} />
-          </FormControl>
+      <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <ExitToAppSharpIcon/>
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign up
+          </Typography>
+
+          </Box>
+      <form action="" onSubmit={handleSubmit} >
+        <Box m="1rem" >
+          <TextField fullWidth required id="name" autoFocus label="Name" name="name" value={form.name} onChange={handleChange} />
         </Box>
-        
-        <Box>
-          <FormControl variant="standard" sx={{ pr: 1, minWidth: 200 }} >
+        <Box m="1rem" >
+          <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Gender</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -53,32 +89,22 @@ const Signup = () => {
               value={form.gender}
               label="Gender"
               onChange={handleChange}
+              fullWidth
+              required
             >
               <MenuItem value="Male">Male</MenuItem>
               <MenuItem value="Female">Female</MenuItem>
             </Select>
           </FormControl>
         </Box>
-        <Box m={1.5}>
-          <FormControl>
-            <InputLabel htmlFor="my-input">Age</InputLabel>
-            <Input id="age" name="age" value={form.age} onChange={handleChange} />
-          </FormControl>
+        <Box m="1rem" >
+          <TextField fullWidth type="number" required id="age" label="Age" name="age" value={form.age} onChange={handleChange} />
         </Box>
-        <Box m={1.5}>
-          <FormControl>
-            <InputLabel htmlFor="my-input">Email address</InputLabel>
-            <Input id="email" name="email" value={form.email} onChange={handleChange} />
-          </FormControl>
+        <Box m="1rem" >
+          <TextField fullWidth required id="password" label="Password" name="password" value={form.password} onChange={handleChange} />
         </Box>
-        <Box m={1.5} >
-          <FormControl>
-            <InputLabel htmlFor="my-input">Password</InputLabel>
-            <Input id="password" name="password" value={form.password} onChange={handleChange} />
-          </FormControl>
-        </Box>
-        <Box>
-          <Button type='submit'>Submit</Button>
+        <Box m="1rem" >
+          <Button type='submit' fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >Submit</Button>
         </Box>
       </form>
     </Container>
