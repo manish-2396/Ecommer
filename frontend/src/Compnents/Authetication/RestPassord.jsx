@@ -78,7 +78,7 @@ const RestPassord = () => {
     useEffect(() => {
         if (data.ResponseForgetOtp.Massage === "Password updated sucessfully!") {
             navigate("/signin");
-        } else if (data.ResponseForgetOtp.Massage === "Please enter Correct OTP") {
+        } else if (data.ResponseForgetOtp.Massage === "OTP is Expired!") {
             setOpen(false);
             setIsShow(false);
         }

@@ -101,7 +101,7 @@ const Signup = () => {
           <TextField fullWidth type="number" required id="age" label="Age" name="age" value={form.age} onChange={handleChange} />
         </Box>
         <Box m="1rem" >
-          <TextField fullWidth required id="password" label="Password" name="password" value={form.password} onChange={handleChange} />
+          <TextField type="password" fullWidth required id="password" label="Password" name="password" value={form.password} onChange={handleChange} />
         </Box>
         <Box m="1rem" >
           <Button type='submit' fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >Submit</Button>

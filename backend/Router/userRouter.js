@@ -23,7 +23,7 @@ userRoutes.post("/newaccount", async (req, res) => {
   if (user) {
     res.status(200).send({ isAuth: false, Massage: "User already registered" })
   } else {
-    let otpcode = Math.floor(Math.random() * 10000 + 1000);
+    let otpcode = Math.floor(Math.random() * 1000 + 4500);
     let expireIn = new Date().getTime() + 300 * 1000;
     let otpData = new otpModule({
       email: req.body.email,
@@ -126,7 +126,7 @@ userRoutes.post("/passwordrest", async (req, res) => {
   const user = await userModule.findOne(req.body);
 
   if (user) {
-    let otpcode = Math.floor(Math.random() * 10000 + 1000);
+    let otpcode = Math.floor(Math.random() * 1000 + 4500);
     let expireIn = new Date().getTime() + 300 * 1000;
 
     const payload = {
@@ -189,7 +189,7 @@ const mailer = (email, otp) => {
     from: process.env.MAIL_I,
     to: email,
     subject: 'rest your password one time password',
-    text: `one time password is ${otp}`
+    text: `this a one time password is ${otp} and valid for only next 5 minutes `
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

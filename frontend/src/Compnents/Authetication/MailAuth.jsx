@@ -21,6 +21,7 @@ const style = {
 };
 
 const MailAuth = () => {
+    
 
     const [open, setOpen] = useState(false)
     const [isShow, setIsShow] = useState(false)
@@ -78,7 +79,7 @@ const MailAuth = () => {
     useEffect(() => {
         if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "move to signup") {
             navigate("/signup")
-        } else if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "Please Enter Correct OTP!") {
+        } else if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "OTP is Expired!") {
             alert("Please Enter Correct OTP!")
             handleClose()
         }

@@ -79,10 +79,10 @@ const Signin = () => {
       </Box>
       <form action="" onSubmit={handleSubmit}>
         <Box m={1.5}>
-          <TextField fullWidth id="email" label="Email Address" required autoFocus name="email" value={form.email} onChange={handleChange} />
+          <TextField type="text" fullWidth id="email" label="Email Address" required autoFocus name="email" value={form.email} onChange={handleChange} />
         </Box>
         <Box m={1.5} >
-          <TextField fullWidth id="password" label="Password" required autoComplete="current-password" name="password" value={form.password} onChange={handleChange} />
+          <TextField type="password" fullWidth id="password" label="Password" required autoComplete="current-password" name="password" value={form.password} onChange={handleChange} />
         </Box>
 
         <Box>
