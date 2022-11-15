@@ -12,7 +12,7 @@ const AllRounts = () => {
         <div>
             <Navbar/>
             <Routes>
-                <Route path="/home" element={ <Home/> } ></Route>
+                <Route path="/" element={ <Home/> } ></Route>
                 <Route  path="/mailAuth" element={  <MailAuth/> } />
                 <Route path="/signup" element={ <Signup/> } />
                 <Route  path="/signin" element={ <Signin/> } />

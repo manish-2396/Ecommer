@@ -12,10 +12,15 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signout } from '../Redux/AuthReducer/action';
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -62,23 +67,42 @@ const PrimarySearchAppBar = () => {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
     const navigate = useNavigate();
+    // const data = useSelector((state) => state.authreducer)
+    // console.log(data)
+
+    const dispatch = useDispatch();
+
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+
+
+    const { isAuth } = JSON.parse(localStorage.getItem('user'))
+    // console.log(isAuth)
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
 
     const handleSignIn = () => {
-        navigate("/Signin");
+        console.log("manish")
+
+        if (isAuth) {
+            dispatch(signout())
+            localStorage.setItem("user", JSON.stringify({ isAuth: false }))
+            navigate("/")
+        } else {
+            navigate("/signin")
+        }
+
     }
 
-    const handleSignup = () => {
-        navigate("/mailAuth");
-    }
+    let signin = isAuth ? "none" : ""
+    let signup = isAuth ? "" : "none"
 
-    
+
+
 
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
@@ -94,6 +118,7 @@ const PrimarySearchAppBar = () => {
     };
 
     const menuId = 'primary-search-account-menu';
+
     const renderMenu = (
         <Menu
             anchorEl={anchorEl}
@@ -112,8 +137,6 @@ const PrimarySearchAppBar = () => {
         >
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-            <MenuItem onClick={handleSignIn}>Sign In</MenuItem>
-            <MenuItem onClick={handleSignup}>Sign Up</MenuItem>
         </Menu>
     );
 
@@ -136,14 +159,6 @@ const PrimarySearchAppBar = () => {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
-                        <MailIcon />
-                    </Badge>
-                </IconButton>
-                <p>Messages</p>
-            </MenuItem>
-            <MenuItem>
                 <IconButton
                     size="large"
                     aria-label="show 17 new notifications"
@@ -165,7 +180,23 @@ const PrimarySearchAppBar = () => {
                 >
                     <AccountCircle />
                 </IconButton>
-                <p>Profile</p>
+                <p>
+                    Profilet
+                </p>
+            </MenuItem>
+            <MenuItem onClick={handleProfileMenuOpen}>
+                <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="primary-search-account-menu"
+                    aria-haspopup="true"
+                    color="inherit"
+                >
+                    <AccountCircle />
+                </IconButton>
+               
+                    <Box onClick={handleSignIn} >{isAuth ? "Signout" : "SignIn"}</Box>
+                
             </MenuItem>
         </Menu>
     );
@@ -189,13 +220,13 @@ const PrimarySearchAppBar = () => {
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                            <img
-                                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmVqc3ZmAoop83D7t9qAhxaXKwSVPe0GU8ydTl3nyRj8V9Mp9UABytmzCFfDWyK-GCQU&usqp=CAU'
-                                alt='log0'
-                                loading="lazy"
-                                style={{maxWidth:"4rem"}}
-                            />
-                        
+                        <img
+                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmVqc3ZmAoop83D7t9qAhxaXKwSVPe0GU8ydTl3nyRj8V9Mp9UABytmzCFfDWyK-GCQU&usqp=CAU'
+                            alt='log0'
+                            loading="lazy"
+                            style={{ maxWidth: "4rem" }}
+                        />
+
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
@@ -208,15 +239,18 @@ const PrimarySearchAppBar = () => {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <MailIcon />
-                            </Badge>
-                        </IconButton>
                         <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
                             <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
+                                <ShoppingCartSharpIcon />
                             </Badge>
+                        </IconButton>
+                        <IconButton onClick={handleSignIn} size="large" aria-label="show 17 new notifications" color="inherit">
+                            <Box  display={signup}>
+                                <Badge color="error"><LogoutIcon /></Badge>
+                            </Box>
+                            <Box  display={signin}>
+                                <Badge color="error"><LoginIcon /></Badge>
+                            </Box>
                         </IconButton>
                         <IconButton
                             size="large"

@@ -1,8 +1,11 @@
 import { Container, TextField } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
+import { useDispatch, useSelector } from 'react-redux';
+import { forgetemail, forgetotp } from '../../Redux/AuthReducer/action';
+import { useNavigate } from 'react-router-dom';
 
 
 const style = {
@@ -24,27 +27,31 @@ const RestPassord = () => {
 
     const [open, setOpen] = useState(false)
     const [isShow, setIsShow] = useState(false)
+    const dispatch = useDispatch();
+    const data = useSelector((state) => state.authreducer)
+    const navigate = useNavigate();
 
     const [form, setForm] = useState({
         password: "",
-        conformpassword : "",
-        code:""
-      })
-    
-    
-      const handleChange = (event) => {
+        conformpassword: "",
+        code: ""
+    })
+
+
+    const handleChange = (event) => {
         setForm(form => ({
-          ...form,
-          [event.target.name]: event.target.value
+            ...form,
+            [event.target.name]: event.target.value
         }))
-      };
+    };
+
 
 
 
     const handleClose = () => {
         form.email = email;
-        setOpen(false);
-        setIsShow(false);
+        dispatch(forgetotp(form))
+
         console.log(form)
     }
 
@@ -54,10 +61,28 @@ const RestPassord = () => {
 
     const handleClik = () => {
         console.log(email, "email")
-        setOpen(true);
-        setIsShow(true);
-
+        dispatch(forgetemail({ email: email }))
     }
+
+    console.log("data", data);
+    // ResponseForgetMail
+    useEffect(() => {
+        if (data.ResponseForgetMail.Massage === "Please Check your Email") {
+            setOpen(true);
+            setIsShow(true);
+        } else if (data.ResponseForgetMail.Massage === "Email not found") {
+            navigate("/mailAuth")
+        }
+    }, [data.ResponseForgetMail.Massage, navigate])
+
+    useEffect(() => {
+        if (data.ResponseForgetOtp.Massage === "Password updated sucessfully!") {
+            navigate("/signin");
+        } else if (data.ResponseForgetOtp.Massage === "Please enter Correct OTP") {
+            setOpen(false);
+            setIsShow(false);
+        }
+    }, [data.ResponseForgetOtp.Massage, navigate])
 
     return (
         <Container maxWidth="xs" >
@@ -83,10 +108,10 @@ const RestPassord = () => {
                                     <TextField type="password" id="password" label="Password" required autoFocus name="password" value={form.password} onChange={handleChange} />
                                 </Box>
                                 <Box m="1rem" >
-                                    <TextField type="password" id="conformpassword" label="Conform-Password" required  name="conformpassword" value={form.conformpassword}  onChange={handleChange}/>
+                                    <TextField type="password" id="conformpassword" label="Conform-Password" required name="conformpassword" value={form.conformpassword} onChange={handleChange} />
                                 </Box>
                                 <Box m="1rem" >
-                                    <TextField type="number" id="otp" label="One Time Password" required  name="code" value={form.code} onChange={handleChange} />
+                                    <TextField type="number" id="otp" label="One Time Password" required name="code" value={form.code} onChange={handleChange} />
                                 </Box>
                                 <Button variant="contained" onClick={handleClose} sx={{ ml: 3, mt: 1 }} >Submit</Button>
                             </Box>

@@ -1,7 +1,7 @@
 import { Avatar, Button, CssBaseline, Grid, TextField, Typography } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { signin } from '../../Redux/AuthReducer/action'
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -11,13 +11,16 @@ const Signin = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.authreducer)
   const navigate = useNavigate();
+  // console.log(data);
 
   const [form, setForm] = useState({
     email: "",
     password: ""
   })
 
- 
+
+  
+
 
 
 
@@ -35,9 +38,24 @@ const Signin = () => {
     dispatch(signin(form))
   }
 
-  if(data.islogin){
-    navigate("/home")
+ 
+  if(data.ResponseSignin.isAuth){
+    console.log()
+    localStorage.setItem("user", JSON.stringify(data.ResponseSignin))
   }
+
+  
+  
+  let user = JSON.parse(localStorage.getItem("user"))
+
+  console.log(user)
+
+  useEffect(() => {
+    if (user.isAuth) {
+      navigate("/home")
+    }
+  }, [user.isAuth , navigate])
+
 
 
 
@@ -66,21 +84,21 @@ const Signin = () => {
         <Box m={1.5} >
           <TextField fullWidth id="password" label="Password" required autoComplete="current-password" name="password" value={form.password} onChange={handleChange} />
         </Box>
-        
+
         <Box>
           <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >Submit</Button>
           <Grid container>
-              <Grid item xs>
-                <NavLink to="/restmassage"  style={{textDecoration:"none" , fontSize:"15px"}}>
-                  Forgot password?
-                </NavLink>
-              </Grid>
-              <Grid item>
-                <NavLink to="/mailAuth"  style={{textDecoration:"none" , fontSize:"15px"}}>
-                  {"Don't have an account? Sign Up"}
-                </NavLink>
-              </Grid>
+            <Grid item xs>
+              <NavLink to="/restmassage" style={{ textDecoration: "none", fontSize: "15px" }}>
+                Forgot password?
+              </NavLink>
             </Grid>
+            <Grid item>
+              <NavLink to="/mailAuth" style={{ textDecoration: "none", fontSize: "15px" }}>
+                {"Don't have an account? Sign Up"}
+              </NavLink>
+            </Grid>
+          </Grid>
         </Box>
       </form>
     </Container>

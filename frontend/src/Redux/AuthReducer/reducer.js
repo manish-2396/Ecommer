@@ -8,7 +8,9 @@ const initialState = {
     ResponseMail: {},
     ResponseOtp: {},
     ResponseSignup: {},
-    ResponseSignin: {}
+    ResponseSignin: {},
+    ResponseForgetMail: {},
+    ResponseForgetOtp: {},
 
 
 
@@ -18,9 +20,7 @@ const initialState = {
 export const authreducer = (state = initialState, { type, payload }) => {
     // console.log(payload);
     switch (type) {
-
         // Email Check
-
         case types.EMAILCHECK_REQUEST:
             return {
                 ...state,
@@ -40,9 +40,7 @@ export const authreducer = (state = initialState, { type, payload }) => {
                 isError: true,
                 ResponseMail: payload
             }
-
         //otp
-
         case types.OTP_REQUEST:
             return {
                 ...state,
@@ -62,9 +60,6 @@ export const authreducer = (state = initialState, { type, payload }) => {
                 isError: true,
                 ResponseOtp: payload
             }
-
-
-
         // signup
         case types.SIGNING_REQUEST:
             return {
@@ -76,7 +71,7 @@ export const authreducer = (state = initialState, { type, payload }) => {
         case types.SIGNING_SUCCESS:
             return {
                 ...state,
-                isAuth:true,
+                isAuth: true,
                 loading: false,
                 ResponseSignup: payload
 
@@ -113,7 +108,57 @@ export const authreducer = (state = initialState, { type, payload }) => {
 
             }
 
+        //forgetemail
+
+        case types.FORGETEMAIL_REQUEST:
+            return {
+                ...state,
+                loading: true,
+
+            }
+        case types.FORGETEMAIL_SUCCESS:
+            return {
+                ...state,
+                islogin: true,
+                loading: false,
+                ResponseForgetMail: payload
+
+            }
+        case types.FORGETEMAIL_FAILED:
+            return {
+                ...state,
+                isAuth: false,
+                loading: false,
+                ResponseForgetMail: payload
+
+            }
+
+        //forgetotp
+
+        case types.FORGETOTP_REQUEST:
+            return {
+                ...state,
+                loading: true,
+
+            }
+        case types.FORGETOTP_SUCCESS:
+            return {
+                ...state,
+                islogin: true,
+                loading: false,
+                ResponseForgetOtp: payload
+
+            }
+        case types.FORGETOTP_FAILED:
+            return {
+                ...state,
+                isAuth: false,
+                loading: false,
+                ResponseForgetOtp: payload
+            }
         default:
             return state
     }
 }
+
+

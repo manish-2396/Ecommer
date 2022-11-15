@@ -94,7 +94,7 @@ userRoutes.post("/login", async (req, res) => {
             process.env.Code,
             { expiresIn: "6h" }
           );
-          res.status(200).send({ Massage: "login succesfull", token: token, name: user.name, gender: user.gender, age: user.age });
+          res.status(200).send({ isAuth:true, Massage: "login succesfull", token: token, name: user.name, gender: user.gender, age: user.age });
         }
       });
     }
@@ -148,11 +148,13 @@ userRoutes.post("/changePassword", async (req, res) => {
   const { email, code, password } = req.body
   const data = await otpModule.findOne({ email, code });
 
+  console.log(email , code , password)
+
 
   if (data) {
     const expireIn = data.expireIn
     const currentTime = new Date().getTime();
-    // console.log(expireIn - currentTime)
+    console.log(expireIn - currentTime)
 
     if (expireIn >= currentTime) {
       bcrypt.hash(password, 4, async function (err, hash) {
