@@ -24,7 +24,7 @@ userRoutes.post("/newaccount", async (req, res) => {
     res.status(200).send({ isAuth: false, Massage: "User already registered" })
   } else {
     let otpcode = Math.floor(Math.random() * 1000 + 4500);
-    let expireIn = new Date().getTime() + 300 * 1000;
+    let expireIn = new Date().getTime() + 180 * 1000;
     let otpData = new otpModule({
       email: req.body.email,
       code: otpcode,
@@ -48,7 +48,7 @@ userRoutes.post("/checkotp", async (req, res) => {
       await otpModule.deleteOne(req.body);
     res.status(200).send({ isAuth: true , Massage: "move to signup"})
     }else{
-      res.status(404).send({ isAuth: false ,  Massage: "OTP is Expired!" })
+      res.status(408).send({ isAuth: false ,  Massage: "OTP is Expired!" })
     }    
   } else {
     res.status(200).send({ isAuth: false, Massage: "Please Enter Correct OTP!" })
@@ -69,7 +69,7 @@ userRoutes.post("/signup", async (req, res) => {
   }
   catch (error) {
     console.log(error);
-    res.status(501).send({ "Massage": "Something went wrong" })
+    res.status(401).send({ "Massage": "Something went wrong" })
   }
 
 });
@@ -104,7 +104,7 @@ userRoutes.post("/login", async (req, res) => {
   }
   catch (error) {
     console.log(error)
-    res.status(501).send({ Massage: "Something went wrong" })
+    res.status(401).send({ Massage: "Something went wrong" })
   }
 
 });
@@ -127,7 +127,7 @@ userRoutes.post("/passwordrest", async (req, res) => {
 
   if (user) {
     let otpcode = Math.floor(Math.random() * 1000 + 4500);
-    let expireIn = new Date().getTime() + 300 * 1000;
+    let expireIn = new Date().getTime() + 180 * 1000;
 
     const payload = {
       email: req.body.email,
@@ -140,7 +140,7 @@ userRoutes.post("/passwordrest", async (req, res) => {
 
     res.status(200).send({ Massage: "Please Check your Email" })
   } else {
-    res.status(200).send({ Massage: "Email not found" })
+    res.status(403).send({ Massage: "Email not found" })
   }
 })
 
@@ -165,7 +165,7 @@ userRoutes.post("/changePassword", async (req, res) => {
       });
       await otpModule.deleteOne({ email, code });
     } else {
-      res.status(404).send({ isAuth: false , Massage: "OTP is Expired!" })
+      res.status(408).send({ isAuth: false , Massage: "OTP is Expired!" })
     }
   }
   else {
@@ -189,7 +189,7 @@ const mailer = (email, otp) => {
     from: process.env.MAIL_I,
     to: email,
     subject: 'rest your password one time password',
-    text: `this a one time password is ${otp} and valid for only next 5 minutes `
+    text: `this a one time password is ${otp} and valid for only next 3 minutes `
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

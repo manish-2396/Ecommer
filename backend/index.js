@@ -5,6 +5,7 @@ const { connection } = require('./Config/db');
 const { userRoutes } = require('./Router/userRouter');
 const { cartRouter } = require('./Router/cartRouter');
 const { authtication } = require('./middleware/authtication');
+const { productRouter } = require('./Router/productRouter');
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use("/" , userRoutes)
+app.use("/" , productRouter)
 
 app.use(authtication)
 
