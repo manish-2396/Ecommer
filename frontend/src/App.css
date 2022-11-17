@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+#link :hover {
+  color:rgba(68, 0, 255, 0.884);
+  text-decoration:underline;
+}
+
+#link{
+  text-decoration: none;
+  color:antiquewhite;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1rem;
+}

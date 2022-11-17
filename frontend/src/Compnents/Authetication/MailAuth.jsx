@@ -6,6 +6,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { mailcheck, otpcheck } from '../../Redux/AuthReducer/action';
+import Timmer from '../Pages/Timmer';
 
 
 const style = {
@@ -21,7 +22,7 @@ const style = {
 };
 
 const MailAuth = () => {
-    
+
 
     const [open, setOpen] = useState(false)
     const [isShow, setIsShow] = useState(false)
@@ -44,7 +45,7 @@ const MailAuth = () => {
         setIsShow(true);
 
         return
-    },[])
+    }, [])
     // const handleClose = () => {
     //     setOpen(false);
     //     setIsShow(false);
@@ -54,11 +55,11 @@ const MailAuth = () => {
     const handleClose = useCallback(() => {
         setOpen(false);
         setIsShow(false);
-    } , [])
+    }, [])
 
     const data = useSelector((state) => state.authreducer);
 
-    
+
 
     const handleMail = () => {
         dispatch(mailcheck({ email: email }))
@@ -84,9 +85,9 @@ const MailAuth = () => {
             handleClose()
         }
 
-    }, [data.ResponseOtp.Massage , handleClose , navigate])
+    }, [data.ResponseOtp.Massage, handleClose, navigate])
 
-    
+
 
 
     useEffect(() => {
@@ -95,7 +96,7 @@ const MailAuth = () => {
         } else if (data.ResponseMail.Massage && data.ResponseMail.Massage === "checkotp") {
             handleOpen();
         }
-    }, [data.ResponseMail.Massage , handleOpen])
+    }, [data.ResponseMail.Massage, handleOpen])
 
 
 
@@ -135,6 +136,7 @@ const MailAuth = () => {
                     <Box sx={style}>
                         <Container maxWidth="sm">
                             <Box p="2px">
+                                <Timmer />
                                 <TextField id="otp" label="One Time Password" required autoFocus name="otp" onChange={(e) => setOTP(e.target.value)} />
                                 <Button variant="contained" onClick={handleOtp} sx={{ ml: 3, mt: 1 }} >
                                     Submit

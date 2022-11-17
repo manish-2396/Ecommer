@@ -16,8 +16,10 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import LockIcon from '@mui/icons-material/Lock';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signout } from '../Redux/AuthReducer/action';
 
@@ -63,30 +65,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const PrimarySearchAppBar = () => {
-    const [anchorEl, setAnchorEl] = useState(null);
+
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
     const navigate = useNavigate();
-    // const data = useSelector((state) => state.authreducer)
-    // console.log(data)
+
 
     const dispatch = useDispatch();
 
 
-    const isMenuOpen = Boolean(anchorEl);
+
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
 
 
     const { isAuth } = JSON.parse(localStorage.getItem('user'))
-    // console.log(isAuth)
-
-    const handleProfileMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
 
     const handleSignIn = () => {
-        console.log("manish")
+
 
         if (isAuth) {
             dispatch(signout())
@@ -99,7 +95,7 @@ const PrimarySearchAppBar = () => {
     }
 
     let signin = isAuth ? "none" : ""
-    let signup = isAuth ? "" : "none"
+    let signout1 = isAuth ? "" : "none"
 
 
 
@@ -108,10 +104,6 @@ const PrimarySearchAppBar = () => {
         setMobileMoreAnchorEl(null);
     };
 
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-        handleMobileMenuClose();
-    };
 
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);
@@ -119,26 +111,6 @@ const PrimarySearchAppBar = () => {
 
     const menuId = 'primary-search-account-menu';
 
-    const renderMenu = (
-        <Menu
-            anchorEl={anchorEl}
-            anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
-            id={menuId}
-            keepMounted
-            transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
-            open={isMenuOpen}
-            onClose={handleMenuClose}
-        >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-        </Menu>
-    );
 
     const mobileMenuId = 'primary-search-account-menu-mobile';
 
@@ -170,7 +142,7 @@ const PrimarySearchAppBar = () => {
                 </IconButton>
                 <p>Notifications</p>
             </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
+            <MenuItem >
                 <IconButton
                     size="large"
                     aria-label="account of current user"
@@ -184,7 +156,7 @@ const PrimarySearchAppBar = () => {
                     Profilet
                 </p>
             </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
+            <MenuItem >
                 <IconButton
                     size="large"
                     aria-label="account of current user"
@@ -192,11 +164,17 @@ const PrimarySearchAppBar = () => {
                     aria-haspopup="true"
                     color="inherit"
                 >
-                    <AccountCircle />
+                    <Box display={signin}>
+                        <LockOpenIcon />
+                    </Box>
+                    <Box display={signout1}>
+                        <LockIcon />
+                    </Box>
+
                 </IconButton>
-               
-                    <Box onClick={handleSignIn} >{isAuth ? "Signout" : "SignIn"}</Box>
-                
+
+                <Box onClick={handleSignIn} >{isAuth ? "Signout" : "Signin"}</Box>
+
             </MenuItem>
         </Menu>
     );
@@ -216,16 +194,17 @@ const PrimarySearchAppBar = () => {
                     </IconButton>
                     <Typography
                         variant="h6"
-                        noWrap
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                        <img
-                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmVqc3ZmAoop83D7t9qAhxaXKwSVPe0GU8ydTl3nyRj8V9Mp9UABytmzCFfDWyK-GCQU&usqp=CAU'
-                            alt='log0'
-                            loading="lazy"
-                            style={{ maxWidth: "4rem" }}
-                        />
+                        <Link to="/">
+                            <img
+                                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmVqc3ZmAoop83D7t9qAhxaXKwSVPe0GU8ydTl3nyRj8V9Mp9UABytmzCFfDWyK-GCQU&usqp=CAU'
+                                alt='log0'
+                                loading="lazy"
+                                style={{ maxWidth: "4rem" }}
+                            />
+                        </Link>
 
                     </Typography>
                     <Search>
@@ -237,6 +216,29 @@ const PrimarySearchAppBar = () => {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <Box ml="2rem" >
+                            <NavLink id='link'  to="/mens">
+                                <h2> Men</h2>
+                            </NavLink>
+                        </Box>
+                        <Box ml="2rem" >
+                            <NavLink id='link'  to="/womens">
+                                <h2> Women</h2>
+                            </NavLink>
+                        </Box>
+                        <Box ml="2rem" >
+                            <NavLink  id='link' to="/kids">
+                                <h2> Kids</h2>
+                            </NavLink>
+                        </Box>
+                        <Box ml="2rem" >
+                            <NavLink id='link' to="/home&kitchen">
+                                <h2> Home & kitchen</h2>
+                            </NavLink>
+                        </Box>
+                    </Box>
+
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
@@ -245,10 +247,10 @@ const PrimarySearchAppBar = () => {
                             </Badge>
                         </IconButton>
                         <IconButton onClick={handleSignIn} size="large" aria-label="show 17 new notifications" color="inherit">
-                            <Box  display={signup}>
+                            <Box display={signout1}>
                                 <Badge color="error"><LogoutIcon /></Badge>
                             </Box>
-                            <Box  display={signin}>
+                            <Box display={signin}>
                                 <Badge color="error"><LoginIcon /></Badge>
                             </Box>
                         </IconButton>
@@ -258,7 +260,6 @@ const PrimarySearchAppBar = () => {
                             aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
                             <AccountCircle />
@@ -279,7 +280,6 @@ const PrimarySearchAppBar = () => {
                 </Toolbar>
             </AppBar>
             {renderMobileMenu}
-            {renderMenu}
         </Box>
     );
 }

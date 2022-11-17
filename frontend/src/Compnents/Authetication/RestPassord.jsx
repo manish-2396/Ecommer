@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { forgetemail, forgetotp } from '../../Redux/AuthReducer/action';
 import { useNavigate } from 'react-router-dom';
+import Timmer from '../Pages/Timmer';
 
 
 const style = {
@@ -103,6 +104,7 @@ const RestPassord = () => {
                 >
                     <Box sx={style} >
                         <Container maxWidth="sm">
+                            <Timmer />
                             <Box p="2px">
                                 <Box m="1rem" >
                                     <TextField type="password" id="password" label="Password" required autoFocus name="password" value={form.password} onChange={handleChange} />
