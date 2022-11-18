@@ -14,11 +14,9 @@ export const signup = (payload) => (dispatch) => {
     })
         .then((res) => res.json())
         .then((res) => {
-            // console.log(res)
             dispatch({ type: types.LOGIN_SUCCESS , payload: res})
         })
         .catch((err) => {
-            // console.log(err);
             dispatch({ type: types.LOGIN_FAILED })
         })
 }
@@ -37,11 +35,9 @@ export const signin = (payload) => (dispatch) => {
     })
         .then((res) => res.json())
         .then((res) => {
-            // console.log(res)
             dispatch({ type: types.LOGIN_SUCCESS , payload: res})
         })
         .catch((err) => {
-            // console.log(err);
             dispatch({ type: types.LOGIN_FAILED })
         })
 

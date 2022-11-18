@@ -7,6 +7,7 @@ const authtication = (req , res , next) => {
     if(!req.headers.authorization){
         res.status(500).send({massage:"User not authorized 1"})
     }else{
+        console.log("manish")
         const token = req.headers.authorization.split(" ")[1];
         jwt.verify(token , process.env.Code , (err , decoded) => {
             if(err){

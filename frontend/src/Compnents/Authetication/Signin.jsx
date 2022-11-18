@@ -19,7 +19,7 @@ const Signin = () => {
   })
 
 
-  
+
 
 
 
@@ -38,23 +38,27 @@ const Signin = () => {
     dispatch(signin(form))
   }
 
- 
-  if(data.ResponseSignin.isAuth){
+
+  if (data.ResponseSignin.isAuth) {
     console.log()
     localStorage.setItem("user", JSON.stringify(data.ResponseSignin))
   }
 
-  
-  
-  let user = JSON.parse(localStorage.getItem("user"))
 
-  console.log(user)
+  let a = {
+    isAuth: false
+  }
+
+
+  let user = JSON.parse(localStorage.getItem("user")) || a
+
+  // console.log(user)
 
   useEffect(() => {
     if (user.isAuth) {
-      navigate("/home")
+      navigate("/")
     }
-  }, [user.isAuth , navigate])
+  }, [user.isAuth, navigate])
 
 
 

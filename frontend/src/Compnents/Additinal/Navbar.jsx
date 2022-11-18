@@ -21,7 +21,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signout } from '../Redux/AuthReducer/action';
+import { signout } from '../../Redux/AuthReducer/action';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -69,17 +69,17 @@ const PrimarySearchAppBar = () => {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
     const navigate = useNavigate();
-
-
     const dispatch = useDispatch();
-
-
-
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+    const user = JSON.parse(localStorage.getItem('user'))
 
 
-    const { isAuth } = JSON.parse(localStorage.getItem('user'))
+    if(user){
+          var { isAuth } = JSON.parse(localStorage.getItem('user'))
+    }
+
+  
 
     const handleSignIn = () => {
 
@@ -180,7 +180,7 @@ const PrimarySearchAppBar = () => {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} mb="3rem">
             <AppBar position="static">
                 <Toolbar>
                     <IconButton

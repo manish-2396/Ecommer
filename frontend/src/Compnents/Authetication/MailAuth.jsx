@@ -6,7 +6,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { mailcheck, otpcheck } from '../../Redux/AuthReducer/action';
-import Timmer from '../Pages/Timmer';
+import Timmer from '../Additinal/Timmer';
 
 
 const style = {

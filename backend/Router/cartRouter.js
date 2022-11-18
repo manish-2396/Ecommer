@@ -5,10 +5,9 @@ const { cartModel } = require('../model/cartModel');
 
 const cartRouter = Router();
 cartRouter.post("/addCart" , async(req , res) => {
-    console.log("yfh")
+    console.log(req.body)
     try{
-        const {image_url , price ,offer , user_id} = req.body;
-        const data = new cartModel({image_url , price ,offer , user_id})
+        const data = new cartModel(req.body)
         await data.save()
         res.status(200).send({Massage: "Add to the Cart"})
     }

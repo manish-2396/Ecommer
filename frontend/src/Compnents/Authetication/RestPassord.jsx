@@ -6,7 +6,7 @@ import Modal from '@mui/material/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { forgetemail, forgetotp } from '../../Redux/AuthReducer/action';
 import { useNavigate } from 'react-router-dom';
-import Timmer from '../Pages/Timmer';
+import Timmer from '../Additinal/Timmer';
 
 
 const style = {
