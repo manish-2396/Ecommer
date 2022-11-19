@@ -40,13 +40,13 @@ const Signup = () => {
     event.preventDefault()
     form.email= email 
     dispatch(signup(form))
-    console.log(form)
+    // console.log(form)
   }
 
   const data = useSelector((state) => state.authreducer.ResponseSignin.Massage);
 
 
-  console.log(data)
+  // console.log(data)
 
   useEffect(() => {
 

@@ -3,7 +3,8 @@ import { Box, Container } from '@mui/system'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addCart, getkidsData } from '../../Redux/AppReducer/action'
+import { addCart, getData, getkidsData } from '../../Redux/AppReducer/action'
+import swal from 'sweetalert';  
 
 const Kids = () => {
   const dispatch = useDispatch()
@@ -27,17 +28,20 @@ const Kids = () => {
     if (!isAuth) {
       navigate("/signin")
     } else {
-      console.log(e)
       const payload = {
         img: e.image_url,
         name: e.name,
         offer: e.offer,
         price: e.price,
-        normalprice: e.strikedprice
+        normalprice: e.strikedprice,
+        orderdate:new Date().toDateString(),
+        ordertime:new Date().toTimeString(),
       }
-      console.log("payload", payload)
+      // console.log("payload", payload)
       dispatch(addCart(payload, token))
-      alert("Add to cart")
+      swal("Add to the Cart")
+      dispatch(getData(token))
+      navigate("/kids")
     }
 
 

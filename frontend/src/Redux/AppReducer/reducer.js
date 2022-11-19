@@ -5,13 +5,15 @@ const initialState = {
     Men: [],
     Women: [],
     kids: [],
-    kitchen: []
+    kitchen: [],
+    cart: []
 }
 
 export const appreducer = (state = initialState, { type, payload }) => {
     switch (type) {
 
 
+        // men
         case types.get_Man_Data_Request:
             return {
                 ...state,
@@ -34,6 +36,7 @@ export const appreducer = (state = initialState, { type, payload }) => {
 
 
 
+        // woman
 
         case types.get_women_Data_Request:
             return {
@@ -54,6 +57,7 @@ export const appreducer = (state = initialState, { type, payload }) => {
 
 
 
+        //kids
 
         case types.get_kids_Data_Request:
             return {
@@ -74,6 +78,10 @@ export const appreducer = (state = initialState, { type, payload }) => {
 
 
 
+
+
+        //kitchen
+
         case types.get_kitchen_Data_Request:
             return {
                 ...state,
@@ -90,6 +98,28 @@ export const appreducer = (state = initialState, { type, payload }) => {
                 ...state,
                 loading: false
             }
+
+
+
+        //cart
+        case types.get_Cart_Data_Request:
+            return {
+                ...state,
+                loading: true
+            }
+        case types.get_Cart_Data_Success:
+            return {
+                ...state,
+                loading: false,
+                cart: payload
+            }
+        case types.get_Cart_Data_Failure:
+            return {
+                ...state,
+                loading: false
+            }
+
+
 
         default:
             return state

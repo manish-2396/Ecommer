@@ -5,7 +5,7 @@ const { cartModel } = require('../model/cartModel');
 
 const cartRouter = Router();
 cartRouter.post("/addCart" , async(req , res) => {
-    console.log(req.body)
+    // console.log(req.body)
     try{
         const data = new cartModel(req.body)
         await data.save()
@@ -17,11 +17,10 @@ cartRouter.post("/addCart" , async(req , res) => {
 })
 
 cartRouter.get("/getCart" ,  async(req , res) => {
-    // console.log(req.body.user_id)
+    // console.log("getData",req.body.user_id)
     try{
-        const data = await cartModel.find();
-        console.log(data)
-        res.status(200).send({"data":data})
+        const data = await cartModel.find({user_id:req.body.user_id});
+        res.status(200).send({"data":data});
     }
     catch(error){
         res.status(501).send({Massage:"some went wrong"});

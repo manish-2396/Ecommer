@@ -53,7 +53,7 @@ const RestPassord = () => {
         form.email = email;
         dispatch(forgetotp(form))
 
-        console.log(form)
+        // console.log(form)
     }
 
     let show = isShow ? "none" : ""
@@ -61,11 +61,11 @@ const RestPassord = () => {
     const [email, setEmail] = useState("")
 
     const handleClik = () => {
-        console.log(email, "email")
+        // console.log(email, "email")
         dispatch(forgetemail({ email: email }))
     }
 
-    console.log("data", data);
+    // console.log("data", data);
     // ResponseForgetMail
     useEffect(() => {
         if (data.ResponseForgetMail.Massage === "Please Check your Email") {

@@ -2,7 +2,8 @@ import { Box, Button, Container, Grid } from '@mui/material'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addCart, getWomanData } from '../../Redux/AppReducer/action'
+import { addCart, getData, getWomanData } from '../../Redux/AppReducer/action'
+import swal from 'sweetalert';  
 
 const Women = () => {
 
@@ -30,17 +31,20 @@ const Women = () => {
     if (!isAuth) {
       navigate("/signin")
     } else {
-      console.log(e)
+      // console.log(e)
       const payload = {
         img: e.image_url,
         name: e.name,
-        offer: e.offer,
+        offer: e.offprice,
         price: e.price,
-        normalprice: e.strikedprice
+        normalprice: e.strikedoffprice,
+        orderdate:new Date().toDateString(),
+        ordertime:new Date().toTimeString()
       }
-      console.log("payload", payload)
+      // console.log("payload", payload)
       dispatch(addCart(payload, token))
-      alert("Add to cart")
+      dispatch(getData(token))
+      swal("Add to the Cart")
     }
 
   }

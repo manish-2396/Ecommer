@@ -129,7 +129,7 @@ export const getkitchenSingleData = (payload) => async (dispatch) => {
 }
 
 export const addCart = (payload , token) => (dispatch) => {
-    console.log("action" , payload , token)
+    // console.log("action" , payload , token)
     fetch("http://localhost:8080/addCart" , {
         method: "POST",
         headers: {
@@ -142,4 +142,20 @@ export const addCart = (payload , token) => (dispatch) => {
     .catch((err)=> console.log(err))
 }
 
-//headers.authorization
+export const getData = (token) => (dispatch) =>{
+    dispatch(({type: types.get_Cart_Data_Request}))
+
+    fetch("http://localhost:8080/getCart" , {
+        method: "GET",
+        headers: {
+            "Content-Type" : "application/json",
+            "authorization" :`bear ${token}`
+        }
+    })
+    .then((res) => res.json())
+    .then((res)=> {
+        // console.log(res)
+        dispatch({type: types.get_Cart_Data_Success , payload:res})
+    })
+    .catch((err) => dispatch({type:types.get_Cart_Data_Failure}))
+}

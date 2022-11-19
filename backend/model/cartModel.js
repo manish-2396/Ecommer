@@ -6,7 +6,10 @@ const cartSchema = mongoose.Schema({
     offer: {type: "String" , require:true},
     price: {type: "String" , require:true},
     normalprice: {type: "String" , require:true},
-    user_id:{type:"String"}
+    orderdate:{type: "String" , require:true},
+    ordertime:{type: "String" , require:true},
+    user_id:{type:"String"},
+    quntity: {type: "Number" , default: 1}
 })
 
 

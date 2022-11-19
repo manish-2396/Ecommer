@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -12,7 +12,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -20,8 +19,9 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import LockIcon from '@mui/icons-material/Lock';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { signout } from '../../Redux/AuthReducer/action';
+import { getData } from '../../Redux/AppReducer/action';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -74,18 +74,58 @@ const PrimarySearchAppBar = () => {
 
     const user = JSON.parse(localStorage.getItem('user'))
 
+    let man = "https://www.maxpixel.net/static/photo/1x/User-Man-Head-The-Dummy-Avatar-Jacket-Tie-Foot-659652.png"
 
-    if(user){
-          var { isAuth } = JSON.parse(localStorage.getItem('user'))
+    let woman = "https://cdn2.iconfinder.com/data/icons/business-and-finance-related-hand-gestures/256/face_female_blank_user_avatar_mannequin-512.png"
+
+    let logo;
+
+
+    if (user) {
+        var { isAuth, token, gender, name } = JSON.parse(localStorage.getItem('user'))
     }
 
-  
+    let Name = name || "Profile"
+
+    if (gender === "Male") {
+        logo = man
+    } else {
+        logo = woman
+    }
+
+    const cart = useSelector((state) => state.appreducer.cart);
+    // console.log(cart);
+
+
+
+
+    let len;
+    if (isAuth && cart.data) {
+        len = cart.data.length
+
+        if (len === 0) {
+            len = undefined;
+        }
+    } else {
+        len = undefined;
+    }
+
+    useEffect(() => {
+        if (isAuth) {
+            dispatch(getData(token))
+        }
+    }, [isAuth, dispatch, token])
+
+
+
 
     const handleSignIn = () => {
 
 
         if (isAuth) {
             dispatch(signout())
+            len = undefined;
+
             localStorage.setItem("user", JSON.stringify({ isAuth: false }))
             navigate("/")
         } else {
@@ -94,8 +134,14 @@ const PrimarySearchAppBar = () => {
 
     }
 
+    // console.log(len)
+
     let signin = isAuth ? "none" : ""
     let signout1 = isAuth ? "" : "none"
+
+
+
+
 
 
 
@@ -136,26 +182,37 @@ const PrimarySearchAppBar = () => {
                     aria-label="show 17 new notifications"
                     color="inherit"
                 >
-                    <Badge badgeContent={17} color="error">
-                        <NotificationsIcon />
+                    <Badge badgeContent={len} color="error">
+                        <Link style={{ color: "#000" }} to="/cart" >
+                            <ShoppingCartSharpIcon />
+                        </Link>
                     </Badge>
                 </IconButton>
-                <p>Notifications</p>
+                <p>Cart</p>
             </MenuItem>
-            <MenuItem >
-                <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
-                    <AccountCircle />
-                </IconButton>
-                <p>
-                    Profilet
-                </p>
-            </MenuItem>
+
+            <Link to="/profile" style={{ color: "#000" , textDecoration:"none" }} >
+                <MenuItem >
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="primary-search-account-menu"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <Box display={signin} >
+                            <AccountCircle />
+                        </Box>
+                        <Box display={signout1} >
+                            <img style={{ width: "2rem", height: "2rem" }} src={logo} alt='male' />
+                        </Box>
+                    </IconButton>
+                    <p>
+                        {/* profile */}
+                        {Name}
+                    </p>
+                </MenuItem>
+            </Link>
             <MenuItem >
                 <IconButton
                     size="large"
@@ -217,18 +274,18 @@ const PrimarySearchAppBar = () => {
                         />
                     </Search>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                    <Box ml="2rem" >
-                            <NavLink id='link'  to="/mens">
+                        <Box ml="2rem" >
+                            <NavLink id='link' to="/mens">
                                 <h2> Men</h2>
                             </NavLink>
                         </Box>
                         <Box ml="2rem" >
-                            <NavLink id='link'  to="/womens">
+                            <NavLink id='link' to="/womens">
                                 <h2> Women</h2>
                             </NavLink>
                         </Box>
                         <Box ml="2rem" >
-                            <NavLink  id='link' to="/kids">
+                            <NavLink id='link' to="/kids">
                                 <h2> Kids</h2>
                             </NavLink>
                         </Box>
@@ -242,8 +299,10 @@ const PrimarySearchAppBar = () => {
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="error">
-                                <ShoppingCartSharpIcon />
+                            <Badge badgeContent={len} color="error">
+                                <Link style={{ color: "#fff" }} to="/cart" >
+                                    <ShoppingCartSharpIcon />
+                                </Link>
                             </Badge>
                         </IconButton>
                         <IconButton onClick={handleSignIn} size="large" aria-label="show 17 new notifications" color="inherit">
@@ -262,7 +321,17 @@ const PrimarySearchAppBar = () => {
                             aria-haspopup="true"
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <Link to="/profile" style={{ color: "#fff" }} >
+                                <Box display={signin} >
+                                    {/* /profile */}
+                                    <AccountCircle />
+                                </Box>
+                                <Box display={signout1} >
+
+                                    <img style={{ width: "2rem", height: "2rem" }} src={logo} alt='male' />
+
+                                </Box>
+                            </Link>
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
