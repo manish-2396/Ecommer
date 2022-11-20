@@ -5,7 +5,7 @@ import * as types from "./actionType"
 export const signup = (payload) => (dispatch) => {
     // console.log("payload", payload)
     dispatch({ type: types.SIGNING_REQUEST })
-    fetch("http://localhost:8080/signup", {
+    fetch("https://ecmmerce-server.onrender.com/signup", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export const signin = (payload) => (dispatch) => {
     dispatch({ type: types.LOGIN_REQUEST })
     // console.log("login",payload)
 
-    fetch("http://localhost:8080/login", {
+    fetch("https://ecmmerce-server.onrender.com/login", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ export const signout = () => (dispatch)=> {
 export const mailcheck = (payload) => (dispatch) => {
     dispatch({type: types.EMAILCHECK_REQUEST})
 
-    fetch("http://localhost:8080/newaccount" , {
+    fetch("https://ecmmerce-server.onrender.com/newaccount" , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ export const mailcheck = (payload) => (dispatch) => {
 export const otpcheck = (payload) => (dispatch) => {
     dispatch({type: types.OTP_REQUEST})
 
-    fetch("http://localhost:8080/checkotp" , {
+    fetch("https://ecmmerce-server.onrender.com/checkotp" , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ export const forgetemail = (payload) => (dispatch)=>{
     dispatch({type: types.FORGETEMAIL_REQUEST})
     
 
-    fetch("http://localhost:8080/passwordrest" , {
+    fetch("https://ecmmerce-server.onrender.com/passwordrest" , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
@@ -117,7 +117,7 @@ export const forgetotp = (payload) => (dispatch) => {
     dispatch({type: types.FORGETOTP_REQUEST})
     // console.log(payload)
 
-    fetch("http://localhost:8080/changePassword" , {
+    fetch("https://ecmmerce-server.onrender.com/changePassword" , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'

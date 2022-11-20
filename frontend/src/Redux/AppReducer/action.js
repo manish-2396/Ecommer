@@ -4,7 +4,7 @@ export const getManData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_Man_Data_Request })
 
     try {
-        let res = await fetch("http://localhost:8080/man")
+        let res = await fetch("https://ecmmerce-server.onrender.com/man")
         res = await res.json();
 
         // console.log(res)
@@ -21,7 +21,7 @@ export const getManData = (payload) => async (dispatch) => {
 export const getManSingleData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_Man_Single_Data_Request })
     try {
-        let res = await fetch(`http://localhost:8080/man/${payload}`)
+        let res = await fetch(`https://ecmmerce-server.onrender.com/man/${payload}`)
         res = await res.json();
         console.log(res)
         dispatch({ type: types.get_Man_Single_Data_Success , payload:res})
@@ -37,7 +37,7 @@ export const getManSingleData = (payload) => async (dispatch) => {
 export const getWomanData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_women_Data_Request })
     try {
-        let res = await fetch("http://localhost:8080/woman")
+        let res = await fetch("https://ecmmerce-server.onrender.com/woman")
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_women_Data_Success, payload: res })
@@ -53,7 +53,7 @@ export const getWomanData = (payload) => async (dispatch) => {
 export const getWomanSingleData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_women_Single_Data_Request })
     try {
-        let res = await fetch(`http://localhost:8080/woman/${payload}`)
+        let res = await fetch(`https://ecmmerce-server.onrender.com/woman/${payload}`)
         res = await res.json();
         console.log(res)
         dispatch({ type: types.get_women_Single_Data_Success, payload: res })
@@ -69,7 +69,7 @@ export const getWomanSingleData = (payload) => async (dispatch) => {
 export const getkidsData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kids_Data_Request })
     try {
-        let res = await fetch("http://localhost:8080/kids")
+        let res = await fetch("https://ecmmerce-server.onrender.com/kids")
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_kids_Data_Success, payload: res })
@@ -85,7 +85,7 @@ export const getkidsData = (payload) => async (dispatch) => {
 export const getkidsSingleData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kids_Single_Data_Request })
     try {
-        let res = await fetch(`http://localhost:8080/kids/${payload}`)
+        let res = await fetch(`https://ecmmerce-server.onrender.com/kids/${payload}`)
         res = await res.json();
         console.log(res)
         dispatch({ type: types.get_kids_Single_Data_Success, payload: res })
@@ -102,7 +102,7 @@ export const getkidsSingleData = (payload) => async (dispatch) => {
 export const getkitchenData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kitchen_Data_Request })
     try {
-        let res = await fetch("http://localhost:8080/kitchen")
+        let res = await fetch("https://ecmmerce-server.onrender.com/kitchen")
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_kitchen_Data_Success, payload: res })
@@ -117,7 +117,7 @@ export const getkitchenData = (payload) => async (dispatch) => {
 export const getkitchenSingleData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kids_Single_Data_Request })
     try {
-        let res = await fetch(`http://localhost:8080/kitchen/${payload}`)
+        let res = await fetch(`https://ecmmerce-server.onrender.com/kitchen/${payload}`)
         res = await res.json();
         console.log(res)
         dispatch({ type: types.get_kitchen_Single_Data_Success, payload: res })
@@ -130,8 +130,8 @@ export const getkitchenSingleData = (payload) => async (dispatch) => {
 }
 
 export const addCart = (payload , token) => (dispatch) => {
-    // console.log("action" , payload , token)
-    fetch("http://localhost:8080/cart" , {
+    
+    fetch("https://ecmmerce-server.onrender.com/cart" , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -147,10 +147,10 @@ export const addCart = (payload , token) => (dispatch) => {
 }
 
 export const getData = (token) => (dispatch) =>{
-    // console.log(token)
+
     dispatch(({type: types.get_Cart_Data_Request}))
 
-    fetch("http://localhost:8080/cart" , {
+    fetch("https://ecmmerce-server.onrender.com/cart" , {
         method: "GET",
         headers: {
             "Content-Type" : "application/json",
@@ -166,9 +166,8 @@ export const getData = (token) => (dispatch) =>{
 }
 
 export const removeData = (id , token) => (dispatch) => {
-    // console.log(id)
 
-    fetch(`http://localhost:8080/cart/${id}` , {
+    fetch(`https://ecmmerce-server.onrender.com/cart/${id}` , {
         method: "DELETE",
         headers: {
             "Content-Type" : "application/json",
@@ -179,13 +178,11 @@ export const removeData = (id , token) => (dispatch) => {
     .then((res) => dispatch(getData(token)))
 }
 
-// const { token } = JSON.parse(localStorage.getItem("user"))
+
 
 export const updateQuntity = (id , token , mock) => (dispatch) => {
 
-    // console.log(id )
-
-    fetch(`http://localhost:8080/cartquntity/${mock}` , {
+    fetch(`https://ecmmerce-server.onrender.com/cartquntity/${mock}` , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",

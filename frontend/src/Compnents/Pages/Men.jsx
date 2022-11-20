@@ -12,6 +12,30 @@ const Men = () => {
   const navigate = useNavigate();
   // console.log(Men , loading)
 
+  let time = new Date().toTimeString().split(" ")[0].split(":")
+
+  let Time = []
+
+  if (time[0] > 12) {
+    let hr = time[0] - 12
+    let min = time[1] + "PM"
+    Time.push(hr)
+    Time.push(min)
+  } else {
+    let hr = time[0]
+    let min = time[1] + "PM"
+    Time.push(hr)
+    Time.push(min)
+  }
+
+  let date = new Date().toDateString().split(" ")
+
+  let today = "" + date[2] +" " + date[1]+ " " + date[3];
+
+
+  console.log(Time.join(":"))
+  console.log(today);
+
   useEffect(() => {
     dispatch(getManData())
   }, [dispatch])
@@ -35,8 +59,8 @@ const Men = () => {
         offer: e.offer,
         price: e.price,
         normalprice: e.strikedoffprice,
-        orderdate:new Date().toDateString(),
-        ordertime:new Date().toTimeString()
+        orderdate:today,
+        ordertime:Time.join(":")
 
       }
       // console.log("payload", payload)
@@ -62,7 +86,7 @@ const Men = () => {
               </Box>
               <img style={{ maxWidth: "100%", height: "10rem" }} src={element.image_url} alt={element.name} />
               <Box height="3rem" >
-                <p style={{ color: "#a4a4a4", fontSize: "12px" }}>{element.name}</p>
+                <p style={{ color: "#a4a4a4", fontSize: "14px" }}>{element.name}</p>
               </Box>
               <Box display="flex" justifyContent="space-around" >
                 <Box><h5 style={{ textDecoration: "line-through" , color: "#a4a4a4" }} >{element.strikedoffprice}</h5></Box>

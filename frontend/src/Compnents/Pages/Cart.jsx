@@ -14,7 +14,7 @@ const Cart = () => {
 
   if (data) {
     for (let i = 0; i < data.length; i++) {
-      sum += Number(data[i].price)*data[i].quntity
+      sum += Number(data[i].price) * data[i].quntity
     }
   }
 
@@ -34,7 +34,7 @@ const Cart = () => {
 
     dispatch(updateQuntity(id, token, "increase"))
 
- 
+
   }
 
 
@@ -70,7 +70,10 @@ const Cart = () => {
                   <Box width="30%">
                     <h4>{item.name}</h4>
                     <p>Rs. {item.price}</p>
+                  </Box>
+                  <Box mt="2rem">
                     <p>{item.orderdate}</p>
+                    <p>{item.ordertime}</p>
                   </Box>
                   <Box mt="4rem" fontSize="1.4rem">
                     <button style={{ fontSize: "1.5rem", backgroundColor: "teal", marginRight: "1rem" }} onClick={() => handleDcrease(item._id)} disabled={item.quntity === 1} >-</button>
@@ -78,7 +81,7 @@ const Cart = () => {
                     <button style={{ fontSize: "1.5rem", backgroundColor: "teal", marginLeft: "1rem" }} onClick={() => handleIncrease(item._id)} disabled={item.quntity >= 10} >+</button>
                   </Box>
                   <Box mt="3rem" >
-                    <h3 >Rs.{item.price}</h3>
+                    <h3 >Rs.{item.price*item.quntity}</h3>
                   </Box>
                   <Box mt="4rem" >
                     <Button variant='contained' onClick={() => handledelete(item._id)} > Remove  </Button>

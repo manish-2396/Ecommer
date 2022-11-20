@@ -3,13 +3,38 @@ import { Box, Container } from '@mui/system'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addCart,  getkidsData } from '../../Redux/AppReducer/action'
-import swal from 'sweetalert';  
+import { addCart, getkidsData } from '../../Redux/AppReducer/action'
+import swal from 'sweetalert';
 
 const Kids = () => {
   const dispatch = useDispatch()
   const { kids, loading } = useSelector((state) => state.appreducer)
   const navigate = useNavigate();
+
+  let time = new Date().toTimeString().split(" ")[0].split(":")
+
+  let Time = []
+
+  if (time[0] > 12) {
+    let hr = time[0] - 12
+    let min = time[1] + "PM"
+    Time.push(hr)
+    Time.push(min)
+  } else {
+    let hr = time[0]
+    let min = time[1] + "PM"
+    Time.push(hr)
+    Time.push(min)
+  }
+
+  let date = new Date().toDateString().split(" ")
+
+  let today = "" + date[2] +" " + date[1]+ " " + date[3];
+
+
+  console.log(Time.join(":"))
+  console.log(today);
+
 
 
 
@@ -34,8 +59,8 @@ const Kids = () => {
         offer: e.offer,
         price: e.price,
         normalprice: e.strikedprice,
-        orderdate:new Date().toDateString(),
-        ordertime:new Date().toTimeString(),
+        orderdate: today,
+        ordertime: Time.join(":"),
       }
       // console.log("payload", payload)
       dispatch(addCart(payload, token))
@@ -66,7 +91,7 @@ const Kids = () => {
                 <p style={{ color: "#a4a4a4", fontSize: "14px" }}>{element.name}</p>
               </Box>
               <Box display="flex" justifyContent="space-around" >
-                <Box><h5 style={{ textDecoration: "line-through" , color: "#a4a4a4" }} >{element.strikedprice}</h5></Box>
+                <Box><h5 style={{ textDecoration: "line-through", color: "#a4a4a4" }} >{element.strikedprice}</h5></Box>
                 <Box><h5>Rs.{element.price}</h5></Box>
               </Box>
 

@@ -11,6 +11,30 @@ const Kitchen = () => {
   const navigate = useNavigate();
   // console.log(kitchen , loading)
 
+  let time = new Date().toTimeString().split(" ")[0].split(":")
+
+  let Time = []
+
+  if (time[0] > 12) {
+    let hr = time[0] - 12
+    let min = time[1] + "PM"
+    Time.push(hr)
+    Time.push(min)
+  } else {
+    let hr = time[0]
+    let min = time[1] + "PM"
+    Time.push(hr)
+    Time.push(min)
+  }
+
+  let date = new Date().toDateString().split(" ")
+
+  let today = "" + date[2] +" " + date[1]+ " " + date[3];
+
+
+  console.log(Time.join(":"))
+  console.log(today);
+
   useEffect(() => {
     dispatch(getkitchenData())
   }, [dispatch])
@@ -33,8 +57,8 @@ const Kitchen = () => {
         offer: e.discount,
         price: e.price,
         normalprice: e.strikedOffPrice,
-        orderdate:new Date().toDateString(),
-        ordertime:new Date().toTimeString()
+        orderdate:today,
+        ordertime:Time.join(":")
       }
       // console.log("payload", payload)
       dispatch(addCart(payload, token))
@@ -59,7 +83,7 @@ const Kitchen = () => {
               </Box>
               <img style={{ maxWidth: "100%", height: "10rem" }} src={element.image_url} alt={element.name} />
               <Box height="3rem" >
-                <p style={{ color: "#a4a4a4", fontSize: "12px" }}>{element.name}</p>
+                <p style={{ color: "#a4a4a4", fontSize: "14px" }}>{element.name}</p>
               </Box>
               <Box display="flex" justifyContent="space-around" >
                 <Box><h5 style={{ textDecoration: "line-through" , color: "#a4a4a4" }} >Rs.{element.strikedOffPrice}</h5></Box>
