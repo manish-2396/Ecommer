@@ -4,7 +4,7 @@ const { cartModel } = require('../model/cartModel');
 
 
 const cartRouter = Router();
-cartRouter.post("/addCart" , async(req , res) => {
+cartRouter.post("/cart" , async(req , res) => {
     // console.log(req.body)
     try{
         const data = new cartModel(req.body)
@@ -16,7 +16,7 @@ cartRouter.post("/addCart" , async(req , res) => {
     }
 })
 
-cartRouter.get("/getCart" ,  async(req , res) => {
+cartRouter.get("/cart" ,  async(req , res) => {
     // console.log("getData",req.body.user_id)
     try{
         const data = await cartModel.find({user_id:req.body.user_id});
@@ -26,6 +26,45 @@ cartRouter.get("/getCart" ,  async(req , res) => {
         res.status(501).send({Massage:"some went wrong"});
     }
 })
+
+cartRouter.post("/cartquntity/:mock" , async(req , res) => {
+
+    const data = req.body
+    const {mock} = req.params
+    // console.log(mock)
+
+    try{
+        let data = await cartModel.findOne(req.body)
+        if(mock === "increase"){
+            data.quntity +=1;
+        }else{
+            data.quntity -=1;
+        }
+        await data.save();
+        // console.log(data)
+        res.status(200).send({Massage:"data updated"})
+    }
+    catch(err){
+        res.send(err)
+    }
+
+    
+
+    // console.log(o)
+
+    
+})
+
+cartRouter.delete("/cart/:id" , async(req , res) => {
+    const {id} = req.params
+    
+
+    await cartModel.deleteOne({_id:id})
+    res.status(200).send({Massage:"Removed item successfully"})
+
+})
+
+
 module.exports = {
     cartRouter
 }

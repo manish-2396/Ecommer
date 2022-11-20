@@ -3,7 +3,7 @@ import { Box, Container } from '@mui/system'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addCart, getData, getManData } from '../../Redux/AppReducer/action'
+import { addCart,  getManData } from '../../Redux/AppReducer/action'
 import swal from 'sweetalert';  
 
 const Men = () => {
@@ -41,7 +41,6 @@ const Men = () => {
       }
       // console.log("payload", payload)
       dispatch(addCart(payload, token))
-      dispatch(getData(token))
       swal("Add to the Cart")
     }
 
@@ -66,7 +65,7 @@ const Men = () => {
                 <p style={{ color: "#a4a4a4", fontSize: "12px" }}>{element.name}</p>
               </Box>
               <Box display="flex" justifyContent="space-around" >
-                <Box><h5 style={{ textDecoration: "line-through" }} >{element.strikedoffprice}</h5></Box>
+                <Box><h5 style={{ textDecoration: "line-through" , color: "#a4a4a4" }} >{element.strikedoffprice}</h5></Box>
                 <Box><h5>Rs.{element.price}</h5></Box>
               </Box>
 

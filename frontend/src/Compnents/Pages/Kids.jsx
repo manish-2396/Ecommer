@@ -3,7 +3,7 @@ import { Box, Container } from '@mui/system'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addCart, getData, getkidsData } from '../../Redux/AppReducer/action'
+import { addCart,  getkidsData } from '../../Redux/AppReducer/action'
 import swal from 'sweetalert';  
 
 const Kids = () => {
@@ -40,8 +40,6 @@ const Kids = () => {
       // console.log("payload", payload)
       dispatch(addCart(payload, token))
       swal("Add to the Cart")
-      dispatch(getData(token))
-      navigate("/kids")
     }
 
 
@@ -65,10 +63,10 @@ const Kids = () => {
               </Box>
               <img style={{ maxWidth: "100%", height: "10rem" }} src={element.image_url} alt={element.name} />
               <Box height="3rem" >
-                <p style={{ color: "#a4a4a4", fontSize: "12px" }}>{element.name}</p>
+                <p style={{ color: "#a4a4a4", fontSize: "14px" }}>{element.name}</p>
               </Box>
               <Box display="flex" justifyContent="space-around" >
-                <Box><h5 style={{ textDecoration: "line-through" }} >{element.strikedprice}</h5></Box>
+                <Box><h5 style={{ textDecoration: "line-through" , color: "#a4a4a4" }} >{element.strikedprice}</h5></Box>
                 <Box><h5>Rs.{element.price}</h5></Box>
               </Box>
 

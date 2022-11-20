@@ -9,6 +9,7 @@ export const getManData = (payload) => async (dispatch) => {
 
         // console.log(res)
         dispatch({ type: types.get_Man_Data_Success, payload: res })
+        
     }
 
     catch (err) {
@@ -130,7 +131,7 @@ export const getkitchenSingleData = (payload) => async (dispatch) => {
 
 export const addCart = (payload , token) => (dispatch) => {
     // console.log("action" , payload , token)
-    fetch("http://localhost:8080/addCart" , {
+    fetch("http://localhost:8080/cart" , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -138,14 +139,18 @@ export const addCart = (payload , token) => (dispatch) => {
         },
         body: JSON.stringify(payload)
     }).then((res)=> res.json())
-    .then((res) => console.log(res))
+    .then((res) => {
+        dispatch(getData(token))
+        console.log(res)
+    })
     .catch((err)=> console.log(err))
 }
 
 export const getData = (token) => (dispatch) =>{
+    // console.log(token)
     dispatch(({type: types.get_Cart_Data_Request}))
 
-    fetch("http://localhost:8080/getCart" , {
+    fetch("http://localhost:8080/cart" , {
         method: "GET",
         headers: {
             "Content-Type" : "application/json",
@@ -158,4 +163,40 @@ export const getData = (token) => (dispatch) =>{
         dispatch({type: types.get_Cart_Data_Success , payload:res})
     })
     .catch((err) => dispatch({type:types.get_Cart_Data_Failure}))
+}
+
+export const removeData = (id , token) => (dispatch) => {
+    // console.log(id)
+
+    fetch(`http://localhost:8080/cart/${id}` , {
+        method: "DELETE",
+        headers: {
+            "Content-Type" : "application/json",
+            "authorization" :`bear ${token}`
+        }
+    })
+    .then((res) => res.json())
+    .then((res) => dispatch(getData(token)))
+}
+
+// const { token } = JSON.parse(localStorage.getItem("user"))
+
+export const updateQuntity = (id , token , mock) => (dispatch) => {
+
+    // console.log(id )
+
+    fetch(`http://localhost:8080/cartquntity/${mock}` , {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json",
+            "authorization" :`bear ${token}`
+        },
+        body: JSON.stringify({_id:id})
+    })
+    .then((res) => res.json())
+    .then((res) => {
+        dispatch(getData(token))
+        console.log(res)
+    })
+
 }

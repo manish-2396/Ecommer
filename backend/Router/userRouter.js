@@ -94,7 +94,7 @@ userRoutes.post("/login", async (req, res) => {
             process.env.Code,
             { expiresIn: "6h" }
           );
-          res.status(200).send({ isAuth:true, Massage: "login succesfull", token: token, name: user.name, gender: user.gender, age: user.age });
+          res.status(200).send({ isAuth:true, Massage: "login succesfull", token: token, name: user.name, gender: user.gender, age: user.age , email:email });
         }
       });
     }
