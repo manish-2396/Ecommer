@@ -23,7 +23,7 @@ const Men = () => {
     Time.push(min)
   } else {
     let hr = time[0]
-    let min = time[1] + "PM"
+    let min = time[1] + "AM"
     Time.push(hr)
     Time.push(min)
   }
@@ -33,8 +33,8 @@ const Men = () => {
   let today = "" + date[2] +" " + date[1]+ " " + date[3];
 
 
-  console.log(Time.join(":"))
-  console.log(today);
+  // console.log(Time.join(":"))
+  // console.log(today);
 
   useEffect(() => {
     dispatch(getManData())

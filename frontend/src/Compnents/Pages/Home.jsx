@@ -18,7 +18,7 @@ const Home = () => {
         </Box>
       </Box>
 
-      <Box maxHeight="auto" display="flex" justifyContent="end" mt="3rem" p="1.5rem"  id="backgrond-img2" >
+      <Box maxHeight="auto" display="flex" justifyContent="end" mt="3rem" p="1.5rem" id="backgrond-img2" >
         <Box display="flex" justifyContent="space-between" p="1.5rem" gap="2rem" flexWrap="wrap" >
           <Box m="auto">
             <img src="https://images.meesho.com/images/marketing/1649760808952.webp" alt="" />

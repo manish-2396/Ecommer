@@ -63,7 +63,7 @@ const Cart = () => {
           {
             data && data.map((item) => {
               return (
-                <Box key={item._id} display="flex" className="shadow" p="5px" m="1rem" justifyContent="space-around">
+                <Box key={item._id} display="flex" className="shadow" p="5px" m="1rem" justifyContent="space-around" flexWrap="wrap">
                   <Box>
                     <img style={{ width: "9rem" }} src={item.img} alt={item.name} />
                   </Box>
