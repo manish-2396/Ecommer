@@ -5,8 +5,10 @@ function Footer() {
 
   return (
     <Container height="40px" bgcolor="#2c272e"  >
-      <Box display="flex" justifyContent="space-around" pt="3rem" bg="" >
-        <Box mt="2%"  ml="8%" >
+      <hr />
+      <Box display="flex" justifyContent="space-around" pt="3rem" bgcolor="#021236" color="#fff" flexWrap="wrap" >
+
+        <Box mt="2%" ml="8%" >
           <h5>Featured Brands</h5>
           <h6>Heimat</h6>
           <h6>it Vanishes</h6>

@@ -1,16 +1,32 @@
 import { Avatar, Button, CssBaseline, Grid, TextField, Typography } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { signin } from '../../Redux/AuthReducer/action'
 import { NavLink, useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const Signin = () => {
 
   const dispatch = useDispatch()
   const data = useSelector((state) => state.authreducer)
   const navigate = useNavigate();
+
+
+
+  if (data.ResponseSignin.isAuth) {
+    console.log()
+    localStorage.setItem("user", JSON.stringify(data.ResponseSignin))
+  }
+
+
+  let a = {
+    isAuth: false
+  }
+
+
+  let user = JSON.parse(localStorage.getItem("user")) || a
   // console.log(data);
 
   const [form, setForm] = useState({
@@ -36,29 +52,32 @@ const Signin = () => {
     event.preventDefault()
 
     dispatch(signin(form))
+     
+
+    if (user.isAuth) {
+      navigate("/")
+    } else {
+      swal("Something went wrong. Please try again later")
+      form.password = "";
+     
+    }
   }
 
 
-  if (data.ResponseSignin.isAuth) {
-    console.log()
-    localStorage.setItem("user", JSON.stringify(data.ResponseSignin))
-  }
-
-
-  let a = {
-    isAuth: false
-  }
-
-
-  let user = JSON.parse(localStorage.getItem("user")) || a
 
   // console.log(user)
 
-  useEffect(() => {
-    if (user.isAuth) {
-      navigate("/")
-    }
-  }, [user.isAuth, navigate])
+  // useEffect(() => {
+
+
+  //   if (user.isAuth) {
+  //     navigate("/")
+  //   } else {
+  //     swal("Something went wrong. Please try again later")
+  //   }
+
+
+  // }, [user.isAuth, navigate])
 
 
 

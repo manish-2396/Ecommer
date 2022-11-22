@@ -1,5 +1,7 @@
 import * as types from "./actionType"
 
+console.log(process.env.REACT_URL)
+
 export const getManData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_Man_Data_Request })
 
@@ -138,10 +140,11 @@ export const addCart = (payload , token) => (dispatch) => {
             "authorization" :`bear ${token}`
         },
         body: JSON.stringify(payload)
-    }).then((res)=> res.json())
+    })
+    .then((res)=> res.json())
     .then((res) => {
         dispatch(getData(token))
-        console.log(res)
+        // console.log(res)
     })
     .catch((err)=> console.log(err))
 }

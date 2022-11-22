@@ -1,4 +1,4 @@
-import { Container, Grid, TextField, } from '@mui/material'
+import { Avatar, Container, Grid, TextField, Typography, } from '@mui/material'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { mailcheck, otpcheck } from '../../Redux/AuthReducer/action';
 import Timmer from '../Additinal/Timmer';
+import ExitToAppSharpIcon from '@mui/icons-material/ExitToAppSharp';
+import swal from 'sweetalert';  
 
 
 const style = {
@@ -46,11 +48,6 @@ const MailAuth = () => {
 
         return
     }, [])
-    // const handleClose = () => {
-    //     setOpen(false);
-    //     setIsShow(false);
-
-    // }
 
     const handleClose = useCallback(() => {
         setOpen(false);
@@ -75,13 +72,14 @@ const MailAuth = () => {
         // console.log("payload",payload)
     }
 
+    
     // console.log("data" ,data.ResponseOtp.Massage)
 
     useEffect(() => {
         if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "move to signup") {
             navigate("/signup")
         } else if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "OTP is Expired!") {
-            alert("Please Enter Correct OTP!")
+            swal("Please Enter Correct OTP!")
             handleClose()
         }
 
@@ -92,7 +90,7 @@ const MailAuth = () => {
 
     useEffect(() => {
         if (data.ResponseMail.Massage && data.ResponseMail.Massage === "User already registered") {
-            alert("User already registered")
+            swal("User already registered")
         } else if (data.ResponseMail.Massage && data.ResponseMail.Massage === "checkotp") {
             handleOpen();
         }
@@ -110,6 +108,22 @@ const MailAuth = () => {
 
     return (
         <Container maxWidth="xs">
+            <Box
+                sx={{
+                    marginTop: 8,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+            >
+                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                    <ExitToAppSharpIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                    Sign up
+                </Typography>
+
+            </Box>
             <Box display={show} >
                 <Box m={1.5}>
                     <TextField fullWidth id="email" label="Email Address" required autoFocus name="email" onChange={(e) => setEmail(e.target.value)} />

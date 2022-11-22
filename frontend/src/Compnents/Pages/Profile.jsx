@@ -17,7 +17,7 @@ const Profile = () => {
   return (
     <Container>
       <Box mb="3rem">
-        <img style={{ width: "15rem", borderRadius: "50%" }} src={img} alt="" />
+        <img style={{ width: "15rem", borderRadius: "50%" }} src={img} alt="profile" />
       </Box>
       <Box>
         <h3>Name : {user.name}</h3>
