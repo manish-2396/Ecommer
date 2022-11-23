@@ -1,12 +1,34 @@
 import { Button, Grid } from '@mui/material'
-import { Box, Container } from '@mui/system'
-import React, { useEffect } from 'react'
+import { Container } from '@mui/system'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { addCart, getkidsData } from '../../Redux/AppReducer/action'
 import swal from 'sweetalert';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 const Kids = () => {
+
+  const [open, setOpen] = useState(false);
+  const [data , setData] = useState({})
+  const handleOpen = (element) => {
+    setData(element)
+    setOpen(true);
+  }
+  const handleClose = () => setOpen(false);
   const dispatch = useDispatch()
   const { kids, loading } = useSelector((state) => state.appreducer)
   const navigate = useNavigate();
@@ -29,7 +51,7 @@ const Kids = () => {
 
   let date = new Date().toDateString().split(" ")
 
-  let today = "" + date[2] +" " + date[1]+ " " + date[3];
+  let today = "" + date[2] + " " + date[1] + " " + date[3];
 
 
   // console.log(Time.join(":"))
@@ -79,6 +101,29 @@ const Kids = () => {
   return (
     <Container>
       <Box color="#1976d2">{loading && "loading..."}</Box>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Box display="flex" justifyContent="space-around" >
+            <Box>
+              <img src={data.image_url} alt=""/>
+            </Box>
+            <Box>
+              <h1>{data.name}</h1>
+              <Box display="flex" justifyContent="space-between" >
+                <Box>{data.strikedprice}</Box>
+                <Box>{data.price}</Box>
+              </Box>
+            </Box>
+          </Box>
+
+          <Button onClick={handleClose} >close</Button>
+        </Box>
+      </Modal>
       <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 12, md: 20 }}>
         {kids && kids.map((element, index) => (
           <Grid item xs={2} sm={4} md={4} key={index}>
@@ -97,7 +142,7 @@ const Kids = () => {
 
               <Box display="flex" justifyContent="space-around" >
                 <Box>
-                  <Button variant="contained" >Buy</Button>
+                  <Button variant="contained" onClick={() => handleOpen(element)} >Buy</Button>
                 </Box>
                 <Box>
                   <Button onClick={() => handleAdd(element)} variant="contained" >Add</Button>
