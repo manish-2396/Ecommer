@@ -93,7 +93,7 @@ const Cart = () => {
         </Box>
       </Box>
       <Box display={B} >
-        <img src="https://img.freepik.com/free-vector/shopping-cart_1284-672.jpg?w=740&t=st=1668934253~exp=1668934853~hmac=bf94ef08514e1707565f8f27a60901c023df3a01a7c474697abf0ada3791f6f1" alt="cart" />
+        <img style={{maxWidth:"80%"}}  src="https://img.freepik.com/free-vector/shopping-cart_1284-672.jpg?w=740&t=st=1668934253~exp=1668934853~hmac=bf94ef08514e1707565f8f27a60901c023df3a01a7c474697abf0ada3791f6f1" alt="cart" />
       </Box>
 
     </Container>

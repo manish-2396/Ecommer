@@ -124,24 +124,27 @@ const PrimarySearchAppBar = () => {
                 horizontal: 'right',
             }}
             open={isMobileMenuOpen}
-            onClose={handleMobileMenuClose}        >
-            <MenuItem>
-                <IconButton
-                    size="large"
-                    aria-label="show 17 new notifications"
-                    color="inherit"
-                    onClick={handleMobileMenuClose}
-                >
-                    <Badge badgeContent={len} color="error">
-                        <Link style={{ color: "#000" }} to="/cart" >
-                            <ShoppingCartSharpIcon />
-                        </Link>
-                    </Badge>
-                </IconButton>
-                <p>Cart</p>
-            </MenuItem>
+            onClose={handleMobileMenuClose}
+        >
+            <Link to="/cart" style={{ color: "#000", textDecoration: "none" }} >
+                <MenuItem>
+                    <IconButton
+                        size="large"
+                        aria-label="show 17 new notifications"
+                        color="inherit"
+                        onClick={handleMobileMenuClose}
+                    >
+                        <Badge badgeContent={len} color="error">
+                            <Link style={{ color: "#000" }} to="/cart" >
+                                <ShoppingCartSharpIcon />
+                            </Link>
+                        </Badge>
+                    </IconButton>
+                    <p>Cart</p>
+                </MenuItem>
+            </Link>
 
-            <Link to="/profile" style={{ color: "#000" , textDecoration:"none" }} >
+            <Link to="/profile" style={{ color: "#000", textDecoration: "none" }} >
                 <MenuItem >
                     <IconButton
                         size="large"
@@ -163,7 +166,7 @@ const PrimarySearchAppBar = () => {
                     </p>
                 </MenuItem>
             </Link>
-            <Link to="/mens" style={{ color: "#000" , textDecoration:"none" }} >
+            <Link to="/mens" style={{ color: "#000", textDecoration: "none" }} >
                 <MenuItem >
                     <IconButton
                         size="large"
@@ -182,7 +185,7 @@ const PrimarySearchAppBar = () => {
                     </p>
                 </MenuItem>
             </Link>
-            <Link to="/womens" style={{ color: "#000" , textDecoration:"none" }} >
+            <Link to="/womens" style={{ color: "#000", textDecoration: "none" }} >
                 <MenuItem >
                     <IconButton
                         size="large"
@@ -193,7 +196,7 @@ const PrimarySearchAppBar = () => {
                         onClick={handleMobileMenuClose}
                     >
                         <Box  >
-                            <LocalLaundryServiceIcon/>
+                            <LocalLaundryServiceIcon />
                         </Box>
                     </IconButton>
                     <p>
@@ -201,7 +204,7 @@ const PrimarySearchAppBar = () => {
                     </p>
                 </MenuItem>
             </Link>
-            <Link to="/kids" style={{ color: "#000" , textDecoration:"none" }} >
+            <Link to="/kids" style={{ color: "#000", textDecoration: "none" }} >
                 <MenuItem >
                     <IconButton
                         size="large"
@@ -216,13 +219,13 @@ const PrimarySearchAppBar = () => {
                         </Box>
                     </IconButton>
                     <p>
-                        
+
                         Kids
-                        
+
                     </p>
                 </MenuItem>
             </Link>
-            <Link to="/home&kitchen" style={{ color: "#000" , textDecoration:"none" }} >
+            <Link to="/home&kitchen" style={{ color: "#000", textDecoration: "none" }} >
                 <MenuItem >
                     <IconButton
                         size="large"
@@ -237,8 +240,8 @@ const PrimarySearchAppBar = () => {
                         </Box>
                     </IconButton>
                     <p>
-                        
-                    Home & kitchen
+
+                        Home & kitchen
                     </p>
                 </MenuItem>
             </Link>
@@ -289,7 +292,7 @@ const PrimarySearchAppBar = () => {
                                 src={sitelogo}
                                 alt='log0'
                                 loading="lazy"
-                                style={{ maxWidth: "3rem" ,backgroundColor:"#fff" , borderRadius:"15px" }}
+                                style={{ maxWidth: "3rem", backgroundColor: "#fff", borderRadius: "15px" }}
                             />
                         </Link>
 
