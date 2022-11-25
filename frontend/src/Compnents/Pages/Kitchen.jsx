@@ -1,76 +1,77 @@
-import {  Button, Container, Grid } from '@mui/material'
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { addCart, getkitchenData } from '../../Redux/AppReducer/action'
-import swal from 'sweetalert';  
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import { Button, Container, Grid } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addCart, getkitchenData } from "../../Redux/AppReducer/action";
+import swal from "sweetalert";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
 
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
 };
 
-
 const Kitchen = () => {
   const [open, setOpen] = useState(false);
-  const [data , setData] = useState({})
+  const [data, setData] = useState({});
   const handleOpen = (element) => {
-    setData(element)
+    setData(element);
     setOpen(true);
-  }
-  const handleClose = () => setOpen(false);
-  const dispatch = useDispatch()
-  const { kitchen, loading } = useSelector((state) => state.appreducer)
+    sessionStorage.setItem("payment" , element.price)
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handlePayment = () => {
+    return navigate("/payment");
+  };
+  const dispatch = useDispatch();
+  const { kitchen, loading } = useSelector((state) => state.appreducer);
   const navigate = useNavigate();
   // console.log(kitchen , loading)
 
-  let time = new Date().toTimeString().split(" ")[0].split(":")
+  let time = new Date().toTimeString().split(" ")[0].split(":");
 
-  let Time = []
+  let Time = [];
 
   if (time[0] > 12) {
-    let hr = time[0] - 12
-    let min = time[1] + "PM"
-    Time.push(hr)
-    Time.push(min)
+    let hr = time[0] - 12;
+    let min = time[1] + "PM";
+    Time.push(hr);
+    Time.push(min);
   } else {
-    let hr = time[0]
-    let min = time[1] + "AM"
-    Time.push(hr)
-    Time.push(min)
+    let hr = time[0];
+    let min = time[1] + "AM";
+    Time.push(hr);
+    Time.push(min);
   }
 
-  let date = new Date().toDateString().split(" ")
+  let date = new Date().toDateString().split(" ");
 
-  let today = "" + date[2] +" " + date[1]+ " " + date[3];
-
-
-  // console.log(Time.join(":"))
-  // console.log(today);
+  let today = "" + date[2] + " " + date[1] + " " + date[3];
 
   useEffect(() => {
-    dispatch(getkitchenData())
-  }, [dispatch])
+    dispatch(getkitchenData());
+  }, [dispatch]);
 
   let a = {
     isAuth: false,
-    token: null
-  }
+    token: null,
+  };
 
-  let { isAuth, token } = JSON.parse(localStorage.getItem("user")) || a
+  let { isAuth, token } = JSON.parse( sessionStorage.getItem("user")) || a;
 
   const handleAdd = (e) => {
     if (!isAuth) {
-      navigate("/signin")
+      navigate("/signin");
     } else {
       // console.log(e)
       const payload = {
@@ -79,22 +80,18 @@ const Kitchen = () => {
         offer: e.discount,
         price: e.price,
         normalprice: e.strikedOffPrice,
-        orderdate:today,
-        ordertime:Time.join(":")
-      }
+        orderdate: today,
+        ordertime: Time.join(":"),
+      };
       // console.log("payload", payload)
-      dispatch(addCart(payload, token))
-      swal("Add to the Cart")
+      dispatch(addCart(payload, token));
+      swal("Add to the Cart");
     }
-
-
-  }
-
-
+  };
 
   return (
     <Container>
-      <Box color="#1976d2" >{loading && "loading..."}</Box>
+      <Box color="#1976d2">{loading && "loading..."}</Box>
       <Modal
         open={open}
         onClose={handleClose}
@@ -102,50 +99,113 @@ const Kitchen = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box display="flex" justifyContent="space-around" >
-            <Box>
-              <img src={data.image_url} alt=""/>
+          <Box display="flex" justifyContent="space-around" fontSize="12px">
+            <Box p="2rem">
+              <img style={{ maxWidth: "8rem" }} src={data.image_url} alt="" />
             </Box>
             <Box>
-              <h1>{data.name}</h1>
-              <Box display="flex" justifyContent="space-between" >
-                <Box>{data.strikedOffPrice}</Box>
-                <Box>{data.price}</Box>
+              <h1 style={{ color: "#a4a4a4", fontSize: "20px" }} >{data.name}</h1>
+              <Box display="flex" justifyContent="space-between" mt="3rem">
+                <Box>
+                  <h5
+                    style={{
+                      textDecoration: "line-through",
+                      color: "#a4a4a4",
+                    }}
+                  >
+                    Rs.{data.strikedOffPrice}
+                  </h5>
+                </Box>
+                <Box>
+                  <h5>Rs.{data.price}</h5>
+                </Box>
               </Box>
             </Box>
           </Box>
-
-          <Button onClick={handleClose} >close</Button>
+          <Box display="flex" justifyContent="space-around" mt="2rem">
+            <Box>
+              <Button variant="contained" onClick={handleClose}>
+                back
+              </Button>
+            </Box>
+            <Box>
+              <Button variant="contained" onClick={handlePayment}>
+                Checkout
+              </Button>
+            </Box>
+          </Box>
         </Box>
       </Modal>
-      <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 12, md: 20 }}>
-        {kitchen && kitchen.map((element, index) => (
-          <Grid item xs={2} sm={4} md={4} key={index}>
+      <Grid
+        container
+        spacing={{ xs: 2, md: 4 }}
+        columns={{ xs: 4, sm: 12, md: 20 }}
+      >
+        {kitchen &&
+          kitchen.map((element, index) => (
+            <Grid item xs={2} sm={4} md={4} key={index}>
+              <Box className="shadow" height="auto" p="1rem">
+                <Box
+                  fontSize="10px"
+                  position="absolute"
+                  borderRadius="50%"
+                  bgcolor="red"
+                  color="#fff"
+                  border="1px solid red"
+                  p="5px"
+                >
+                  {element.discount}
+                </Box>
+                <img
+                  style={{ maxWidth: "100%", height: "10rem" }}
+                  src={element.image_url}
+                  alt={element.name}
+                />
+                <Box height="5rem">
+                  <p style={{ color: "#a4a4a4", fontSize: "14px" }}>
+                    {element.name}
+                  </p>
+                </Box>
+                <Box display="flex" justifyContent="space-around">
+                  <Box>
+                    <h5
+                      style={{
+                        textDecoration: "line-through",
+                        color: "#a4a4a4",
+                      }}
+                    >
+                      Rs.{element.strikedOffPrice}
+                    </h5>
+                  </Box>
+                  <Box>
+                    <h5>Rs.{element.price}</h5>
+                  </Box>
+                </Box>
 
-            <Box className="shadow" height="auto" p="1rem">
-              <Box fontSize="10px" position="absolute" borderRadius="50%" bgcolor="red" color="#fff" border="1px solid red" p="5px" >
-                {element.discount}
+                <Box display="flex" justifyContent="space-around">
+                  <Box>
+                    <Button
+                      variant="contained"
+                      onClick={() => handleOpen(element)}
+                    >
+                      Buy
+                    </Button>{" "}
+                  </Box>
+                  <Box>
+                    <Button
+                      onClick={() => handleAdd(element)}
+                      variant="contained"
+                    >
+                      Add
+                    </Button>{" "}
+                  </Box>
+                </Box>
               </Box>
-              <img style={{ maxWidth: "100%", height: "10rem" }} src={element.image_url} alt={element.name} />
-              <Box height="3rem" >
-                <p style={{ color: "#a4a4a4", fontSize: "14px" }}>{element.name}</p>
-              </Box>
-              <Box display="flex" justifyContent="space-around" >
-                <Box><h5 style={{ textDecoration: "line-through" , color: "#a4a4a4" }} >Rs.{element.strikedOffPrice}</h5></Box>
-                <Box><h5>Rs.{element.price}</h5></Box>
-              </Box>
-
-              <Box display="flex" justifyContent="space-around" >
-                <Box  ><Button variant="contained"  onClick={() => handleOpen(element)}  >Buy</Button> </Box>
-                <Box><Button onClick={() => handleAdd(element)} variant="contained" >Add</Button> </Box>
-              </Box>
-            </Box>
-
-          </Grid>
-        ))}
+            </Grid>
+          ))}
       </Grid>
     </Container>
-  )
-}
+  );
+};
 
-export default Kitchen
+export default Kitchen;

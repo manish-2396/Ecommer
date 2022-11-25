@@ -1,20 +1,21 @@
-import Signin from "./Signin";
 
+import { Navigate, useLocation } from "react-router-dom";
 
-function PrivateRoute({children}) {
-    // QpwL5tke4Pnpja7X4
+// const jwt = require('jsonwebtoken')
 
-    
-    let {isAuth} = JSON.parse(localStorage.getItem("user")) || {isAuth : false};
+function PrivateRoute({ children }) {
+  const { pathname } = useLocation();
+  // QpwL5tke4Pnpja7X4
 
-    if(isAuth){
-        return children;
-    }
+  let { isAuth } = JSON.parse(sessionStorage.getItem("user")) || {
+    isAuth: false,
+  };
 
-    return <Signin />
+  if (isAuth) {
+    return children;
+  }
 
-
-
+  return <Navigate to="/signin" state={{ from: pathname }} replace />;
 }
 
 export default PrivateRoute;

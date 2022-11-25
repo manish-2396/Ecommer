@@ -1,12 +1,13 @@
 import * as types from "./actionType"
 
-console.log(process.env.REACT_URL)
+// console.log(process.env.REACT_APP_process.env.REACT_APP_URL)
+// var process.env.REACT_APP_URL = process.env.REACT_APP_process.env.REACT_APP_URL
 
 export const getManData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_Man_Data_Request })
 
     try {
-        let res = await fetch("https://ecmmerce-server.onrender.com/man")
+        let res = await fetch(`${process.env.REACT_APP_URL}/man`)
         res = await res.json();
 
         // console.log(res)
@@ -20,26 +21,13 @@ export const getManData = (payload) => async (dispatch) => {
     }
 }
 
-export const getManSingleData = (payload) => async (dispatch) => {
-    dispatch({ type: types.get_Man_Single_Data_Request })
-    try {
-        let res = await fetch(`https://ecmmerce-server.onrender.com/man/${payload}`)
-        res = await res.json();
-        console.log(res)
-        dispatch({ type: types.get_Man_Single_Data_Success , payload:res})
-    }
 
-    catch (err) {
-        console.log(err)
-        dispatch({ type: types.get_Man_Single_Data_Failure })
-    }
-}
 
 
 export const getWomanData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_women_Data_Request })
     try {
-        let res = await fetch("https://ecmmerce-server.onrender.com/woman")
+        let res = await fetch(`${process.env.REACT_APP_URL}/woman`)
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_women_Data_Success, payload: res })
@@ -52,26 +40,12 @@ export const getWomanData = (payload) => async (dispatch) => {
     }
 }
 
-export const getWomanSingleData = (payload) => async (dispatch) => {
-    dispatch({ type: types.get_women_Single_Data_Request })
-    try {
-        let res = await fetch(`https://ecmmerce-server.onrender.com/woman/${payload}`)
-        res = await res.json();
-        console.log(res)
-        dispatch({ type: types.get_women_Single_Data_Success, payload: res })
 
-    }
-
-    catch (err) {
-        console.log(err)
-        dispatch({ type: types.get_women_Single_Data_Failure })
-    }
-}
 
 export const getkidsData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kids_Data_Request })
     try {
-        let res = await fetch("https://ecmmerce-server.onrender.com/kids")
+        let res = await fetch(`${process.env.REACT_APP_URL}/kids`)
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_kids_Data_Success, payload: res })
@@ -84,27 +58,13 @@ export const getkidsData = (payload) => async (dispatch) => {
     }
 }
 
-export const getkidsSingleData = (payload) => async (dispatch) => {
-    dispatch({ type: types.get_kids_Single_Data_Request })
-    try {
-        let res = await fetch(`https://ecmmerce-server.onrender.com/kids/${payload}`)
-        res = await res.json();
-        console.log(res)
-        dispatch({ type: types.get_kids_Single_Data_Success, payload: res })
 
-    }
-
-    catch (err) {
-        console.log(err)
-        dispatch({ type: types.get_kids_Single_Data_Failure })
-    }
-}
 
 
 export const getkitchenData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kitchen_Data_Request })
     try {
-        let res = await fetch("https://ecmmerce-server.onrender.com/kitchen")
+        let res = await fetch(`${process.env.REACT_APP_URL}/kitchen`)
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_kitchen_Data_Success, payload: res })
@@ -116,24 +76,11 @@ export const getkitchenData = (payload) => async (dispatch) => {
     }
 }
 
-export const getkitchenSingleData = (payload) => async (dispatch) => {
-    dispatch({ type: types.get_kids_Single_Data_Request })
-    try {
-        let res = await fetch(`https://ecmmerce-server.onrender.com/kitchen/${payload}`)
-        res = await res.json();
-        console.log(res)
-        dispatch({ type: types.get_kitchen_Single_Data_Success, payload: res })
-    }
 
-    catch (err) {
-        console.log(err)
-        dispatch({ type: types.get_kitchen_Single_Data_Failure })
-    }
-}
 
 export const addCart = (payload , token) => (dispatch) => {
     
-    fetch("https://ecmmerce-server.onrender.com/cart" , {
+    fetch(`${process.env.REACT_APP_URL}/cart` , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -153,7 +100,7 @@ export const getData = (token) => (dispatch) =>{
 
     dispatch(({type: types.get_Cart_Data_Request}))
 
-    fetch("https://ecmmerce-server.onrender.com/cart" , {
+    fetch(`${process.env.REACT_APP_URL}/cart` , {
         method: "GET",
         headers: {
             "Content-Type" : "application/json",
@@ -170,7 +117,7 @@ export const getData = (token) => (dispatch) =>{
 
 export const removeData = (id , token) => (dispatch) => {
 
-    fetch(`https://ecmmerce-server.onrender.com/cart/${id}` , {
+    fetch(`${process.env.REACT_APP_URL}/cart/${id}` , {
         method: "DELETE",
         headers: {
             "Content-Type" : "application/json",
@@ -185,7 +132,7 @@ export const removeData = (id , token) => (dispatch) => {
 
 export const updateQuntity = (id , token , mock) => (dispatch) => {
 
-    fetch(`https://ecmmerce-server.onrender.com/cartquntity/${mock}` , {
+    fetch(`${process.env.REACT_APP_URL}/cartquntity/${mock}` , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -199,4 +146,19 @@ export const updateQuntity = (id , token , mock) => (dispatch) => {
         console.log(res)
     })
 
+}
+
+export const payment = (token) => (dispatch) => {
+    fetch(`${process.env.REACT_APP_URL}/paymentdone` , {
+        method: "DELETE",
+        headers: {
+            "Content-Type" : "application/json",
+            "authorization" :`bear ${token}`
+        }
+    })
+    .then((res) => res.json())
+    .then((res) => {
+        dispatch(getData(token))
+        console.log(res)
+    })
 }

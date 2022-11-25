@@ -17,8 +17,10 @@ const Signin = () => {
 
   if (data.ResponseSignin.isAuth) {
     console.log()
-    localStorage.setItem("user", JSON.stringify(data.ResponseSignin))
+     sessionStorage.setItem("user", JSON.stringify(data.ResponseSignin))
   }
+
+ 
 
 
   let a = {
@@ -26,7 +28,7 @@ const Signin = () => {
   }
 
 
-  let user = JSON.parse(localStorage.getItem("user")) || a
+  let user = JSON.parse( sessionStorage.getItem("user")) || a
   // console.log(data);
 
   const [form, setForm] = useState({

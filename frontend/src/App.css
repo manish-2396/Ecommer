@@ -37,12 +37,12 @@
   }
 }
 
-#link :hover {
+#NavLink :hover {
   color:rgba(68, 0, 255, 0.884);
   text-decoration:underline;
 }
 
-#link{
+#NavLink{
   text-decoration: none;
   color:antiquewhite;
   font-family:'Times New Roman', Times, serif;

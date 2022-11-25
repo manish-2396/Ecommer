@@ -4,7 +4,7 @@ import React from 'react'
 
 const Profile = () => {
 
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = JSON.parse( sessionStorage.getItem("user"))
 
   let img
   if (user.gender === "Male") {
