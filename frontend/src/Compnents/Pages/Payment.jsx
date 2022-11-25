@@ -31,13 +31,14 @@ const Payment = () => {
       <Box display="flex" justifyContent="end">
         <h3>Rs.{price}</h3>
       </Box>
-      <Box maxWidth="70%" display="flex" justifyContent="space-around">
+      <Box maxWidth="70%" display="flex" justifyContent="space-around" flexWrap="wrap"  m="auto">
         <Box
           border="1px solid black"
           p="2rem"
           borderRadius="15px"
           width="15rem"
           bgcolor="teal"
+         
         >
           <Box>
             <h4>Debit Cart</h4>

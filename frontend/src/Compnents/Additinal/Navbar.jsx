@@ -16,6 +16,7 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import LockIcon from "@mui/icons-material/Lock";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import LocalLaundryServiceIcon from "@mui/icons-material/LocalLaundryService";
+import HomeIcon from '@mui/icons-material/Home';
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../../Redux/AuthReducer/action";
@@ -114,21 +115,37 @@ const PrimarySearchAppBar = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-          onClick={handleMobileMenuClose}
-        >
-          <Badge badgeContent={len} color="error">
-            <NavLink style={{ color: "#000" }} to="/cart">
+      <NavLink style={{ color: "#000" , textDecoration: "none" }} to="/">
+        <MenuItem>
+          <IconButton
+            size="large"
+            aria-label="show 17 new notifications"
+            color="inherit"
+            onClick={handleMobileMenuClose}
+          >
+            <Badge  color="error">
+              <HomeIcon />
+            </Badge>
+          </IconButton>
+          <p>Home</p>
+        </MenuItem>
+      </NavLink>
+
+      <NavLink style={{ color: "#000" , textDecoration: "none" }} to="/cart">
+        <MenuItem>
+          <IconButton
+            size="large"
+            aria-label="show 17 new notifications"
+            color="inherit"
+            onClick={handleMobileMenuClose}
+          >
+            <Badge badgeContent={len} color="error">
               <ShoppingCartSharpIcon />
-            </NavLink>
-          </Badge>
-        </IconButton>
-        <p>Cart</p>
-      </MenuItem>
+            </Badge>
+          </IconButton>
+          <p>Cart</p>
+        </MenuItem>
+      </NavLink>
 
       <NavLink to="/profile" style={{ color: "#000", textDecoration: "none" }}>
         <MenuItem>

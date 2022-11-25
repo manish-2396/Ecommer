@@ -100,8 +100,8 @@ const Men = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Box display="flex" justifyContent="space-around" fontSize="12px">
+        <Box sx={style} >
+          <Box display="flex" justifyContent="space-around" fontSize="12px" flexWrap="wrap">
             <Box p="2rem">
               <img style={{ maxWidth: "10rem" }} src={data.image_url} alt="" />
             </Box>
