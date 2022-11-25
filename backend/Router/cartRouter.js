@@ -64,6 +64,14 @@ cartRouter.delete("/cart/:id" , async(req , res) => {
 
 })
 
+cartRouter.delete("/paymentdone" , async(req , res) => {
+
+    const data = req.body;
+    console.log(data)
+    await cartModel.deleteMany(req.body)
+    res.status(200).send({Massage:"done"})
+})
+
 
 module.exports = {
     cartRouter
