@@ -184,6 +184,7 @@ const mailer = (email, otp) => {
       pass: process.env.MAILER_POASSWORD
     }
   });
+  
 
   var mailOptions = {
     from: process.env.MAIL_I,
