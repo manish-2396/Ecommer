@@ -1,13 +1,12 @@
 import * as types from "./actionType"
 
-// console.log(process.env.REACT_APP_process.env.REACT_APP_URL)
-// var process.env.REACT_APP_URL = process.env.REACT_APP_process.env.REACT_APP_URL
+let baseURL ="https://eccommerceapi.onrender.com"
 
 export const getManData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_Man_Data_Request })
 
     try {
-        let res = await fetch(`${process.env.REACT_APP_URL}/man`)
+        let res = await fetch(`${baseURL}/man`)
         res = await res.json();
 
         // console.log(res)
@@ -27,7 +26,7 @@ export const getManData = (payload) => async (dispatch) => {
 export const getWomanData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_women_Data_Request })
     try {
-        let res = await fetch(`${process.env.REACT_APP_URL}/woman`)
+        let res = await fetch(`${baseURL}/woman`)
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_women_Data_Success, payload: res })
@@ -45,7 +44,7 @@ export const getWomanData = (payload) => async (dispatch) => {
 export const getkidsData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kids_Data_Request })
     try {
-        let res = await fetch(`${process.env.REACT_APP_URL}/kids`)
+        let res = await fetch(`${baseURL}/kids`)
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_kids_Data_Success, payload: res })
@@ -64,7 +63,7 @@ export const getkidsData = (payload) => async (dispatch) => {
 export const getkitchenData = (payload) => async (dispatch) => {
     dispatch({ type: types.get_kitchen_Data_Request })
     try {
-        let res = await fetch(`${process.env.REACT_APP_URL}/kitchen`)
+        let res = await fetch(`${baseURL}/kitchen`)
         res = await res.json();
         // console.log(res)
         dispatch({ type: types.get_kitchen_Data_Success, payload: res })
@@ -80,7 +79,7 @@ export const getkitchenData = (payload) => async (dispatch) => {
 
 export const addCart = (payload , token) => (dispatch) => {
     
-    fetch(`${process.env.REACT_APP_URL}/cart` , {
+    fetch(`${baseURL}/cart` , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -100,7 +99,7 @@ export const getData = (token) => (dispatch) =>{
 
     dispatch(({type: types.get_Cart_Data_Request}))
 
-    fetch(`${process.env.REACT_APP_URL}/cart` , {
+    fetch(`${baseURL}/cart` , {
         method: "GET",
         headers: {
             "Content-Type" : "application/json",
@@ -117,7 +116,7 @@ export const getData = (token) => (dispatch) =>{
 
 export const removeData = (id , token) => (dispatch) => {
 
-    fetch(`${process.env.REACT_APP_URL}/cart/${id}` , {
+    fetch(`${baseURL}/cart/${id}` , {
         method: "DELETE",
         headers: {
             "Content-Type" : "application/json",
@@ -132,7 +131,7 @@ export const removeData = (id , token) => (dispatch) => {
 
 export const updateQuntity = (id , token , mock) => (dispatch) => {
 
-    fetch(`${process.env.REACT_APP_URL}/cartquntity/${mock}` , {
+    fetch(`${baseURL}/cartquntity/${mock}` , {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
@@ -149,7 +148,7 @@ export const updateQuntity = (id , token , mock) => (dispatch) => {
 }
 
 export const payment = (token) => (dispatch) => {
-    fetch(`${process.env.REACT_APP_URL}/paymentdone` , {
+    fetch(`${baseURL}/paymentdone` , {
         method: "DELETE",
         headers: {
             "Content-Type" : "application/json",

@@ -3,10 +3,12 @@ import * as types from "./actionType"
 // https://ecommer-production.up.railway.app
 // const process.env.REACT_APP_URL = process.env.REACT_APP_process.env.REACT_APP_URL
 
+let baseURL = "https://eccommerceapi.onrender.com"
+
 export const signup = (payload) => (dispatch) => {
     // console.log("payload", payload)
     dispatch({ type: types.SIGNING_REQUEST })
-    fetch(`${process.env.REACT_APP_URL}/signup`, {
+    fetch(`${baseURL}/signup`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -27,7 +29,7 @@ export const signin = (payload) => (dispatch) => {
     dispatch({ type: types.LOGIN_REQUEST })
     // console.log("login",payload)
 
-    fetch(`${process.env.REACT_APP_URL}/login`, {
+    fetch(`${baseURL}/login`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -55,7 +57,7 @@ export const signout = () => (dispatch)=> {
 export const mailcheck = (payload) => (dispatch) => {
     dispatch({type: types.EMAILCHECK_REQUEST})
 
-    fetch(`${process.env.REACT_APP_URL}/newaccount` , {
+    fetch(`${baseURL}/newaccount` , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
@@ -76,7 +78,7 @@ export const mailcheck = (payload) => (dispatch) => {
 export const otpcheck = (payload) => (dispatch) => {
     dispatch({type: types.OTP_REQUEST})
 
-    fetch(`${process.env.REACT_APP_URL}/checkotp` , {
+    fetch(`${baseURL}/checkotp` , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
@@ -97,7 +99,7 @@ export const forgetemail = (payload) => (dispatch)=>{
     dispatch({type: types.FORGETEMAIL_REQUEST})
     
 
-    fetch(`${process.env.REACT_APP_URL}/passwordrest` , {
+    fetch(`${baseURL}/passwordrest` , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
@@ -118,7 +120,7 @@ export const forgetotp = (payload) => (dispatch) => {
     dispatch({type: types.FORGETOTP_REQUEST})
     // console.log(payload)
 
-    fetch(`${process.env.REACT_APP_URL}/changePassword` , {
+    fetch(`${baseURL}/changePassword` , {
         method: "POST" ,
         headers: {
             'Content-Type': 'application/json'
