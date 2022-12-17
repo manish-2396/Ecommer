@@ -7,6 +7,7 @@ import { addCart, getManData } from "../../Redux/AppReducer/action";
 import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { Paginataion } from "../Additinal/Pagination";
 
 const style = {
   position: "absolute",
@@ -91,6 +92,24 @@ const Men = () => {
     }
   };
 
+
+  const [page, setPage] = useState(1);
+  const perPage = 10;
+
+  let totalPages;
+
+  if (Men) {
+    // totalPages = Men.length;
+    totalPages = Math.ceil(Men.length / perPage);
+  }
+
+  console.log(totalPages);
+
+  let end = page * perPage;
+  let start = end - perPage;
+  let paginatedProducts = Men.slice(start, end);
+
+
   return (
     <Container>
       <Box color="#1976d2">{loading && "loading..."}</Box>
@@ -143,8 +162,8 @@ const Men = () => {
         spacing={{ xs: 2, md: 4 }}
         columns={{ xs: 4, sm: 12, md: 20 }}
       >
-        {Men &&
-          Men.map((element, index) => (
+        {paginatedProducts &&
+          paginatedProducts.map((element, index) => (
             <Grid item xs={2} sm={4} md={4} key={index}>
               <Box className="shadow" height="auto" p="1rem">
                 <Box
@@ -206,6 +225,9 @@ const Men = () => {
             </Grid>
           ))}
       </Grid>
+      <Box mt="2rem">
+        <Paginataion page={page} setPage={setPage} totalPages={totalPages} />
+      </Box>
     </Container>
   );
 };

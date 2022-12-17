@@ -7,6 +7,7 @@ import { addCart, getkidsData } from "../../Redux/AppReducer/action";
 import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { Paginataion } from "../Additinal/Pagination";
 
 const style = {
   position: "absolute",
@@ -26,7 +27,7 @@ const Kids = () => {
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
-    sessionStorage.setItem("payment" , element.price)
+    sessionStorage.setItem("payment", element.price);
   };
   const handleClose = () => {
     setOpen(false);
@@ -70,7 +71,7 @@ const Kids = () => {
     token: null,
   };
 
-  let { isAuth, token } = JSON.parse( sessionStorage.getItem("user")) || a;
+  let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
 
   const handleAdd = (e) => {
     if (!isAuth) {
@@ -91,9 +92,22 @@ const Kids = () => {
     }
   };
 
-  // useEffect(() => {
+  const [page, setPage] = useState(1);
+  const perPage = 10;
 
-  // }, [cart, isAuth , token , dispatch])
+  let totalPages;
+
+  if (kids) {
+    // totalPages = kids.length;
+    totalPages = Math.ceil(kids.length / perPage);
+  }
+
+  console.log(totalPages);
+
+  let end = page * perPage;
+  let start = end - perPage;
+  let paginatedProducts = kids.slice(start, end);
+
 
   return (
     <Container>
@@ -105,26 +119,28 @@ const Kids = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box display="flex" justifyContent="space-around" fontSize="12px" >
+          <Box display="flex" justifyContent="space-around" fontSize="12px">
             <Box>
               <img style={{ maxWidth: "8rem" }} src={data.image_url} alt="" />
             </Box>
             <Box>
-              <h1 style={{ color: "#a4a4a4", fontSize: "25px" }} >{data.name}</h1>
+              <h1 style={{ color: "#a4a4a4", fontSize: "25px" }}>
+                {data.name}
+              </h1>
               <Box display="flex" justifyContent="space-between" mt="3rem">
-              <Box>
-                    <h5
-                      style={{
-                        textDecoration: "line-through",
-                        color: "#a4a4a4",
-                      }}
-                    >
-                      {data.strikedprice}
-                    </h5>
-                  </Box>
-                  <Box>
-                    <h5>Rs.{data.price}</h5>
-                  </Box>
+                <Box>
+                  <h5
+                    style={{
+                      textDecoration: "line-through",
+                      color: "#a4a4a4",
+                    }}
+                  >
+                    {data.strikedprice}
+                  </h5>
+                </Box>
+                <Box>
+                  <h5>Rs.{data.price}</h5>
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -148,8 +164,8 @@ const Kids = () => {
         spacing={{ xs: 2, md: 4 }}
         columns={{ xs: 4, sm: 12, md: 20 }}
       >
-        {kids &&
-          kids.map((element, index) => (
+        {paginatedProducts &&
+          paginatedProducts.map((element, index) => (
             <Grid item xs={2} sm={4} md={4} key={index}>
               <Box className="shadow" height="auto" p="1rem">
                 <Box
@@ -211,6 +227,9 @@ const Kids = () => {
             </Grid>
           ))}
       </Grid>
+      <Box mt="2rem">
+        <Paginataion page={page} setPage={setPage} totalPages={totalPages} />
+      </Box>
     </Container>
   );
 };
