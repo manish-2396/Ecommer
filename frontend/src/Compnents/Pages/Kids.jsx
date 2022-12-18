@@ -1,4 +1,4 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Pagination, Stack } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +7,6 @@ import { addCart, getkidsData } from "../../Redux/AppReducer/action";
 import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { Paginataion } from "../Additinal/Pagination";
 
 const style = {
   position: "absolute",
@@ -108,6 +107,10 @@ const Kids = () => {
   let start = end - perPage;
   let paginatedProducts = kids.slice(start, end);
 
+  // const [newpage, setnewPage] = React.useState(1);
+  const handleChange = (ChangeEvent, value) => {
+    setPage(value);
+  };
 
   return (
     <Container>
@@ -227,8 +230,16 @@ const Kids = () => {
             </Grid>
           ))}
       </Grid>
-      <Box mt="2rem">
-        <Paginataion page={page} setPage={setPage} totalPages={totalPages} />
+      <Box m="2rem" textAlign="center">
+        <Stack spacing={8}>
+          <Pagination
+            count={totalPages}
+            page={page}
+            defaultPage={6}
+            onChange={handleChange}
+            siblingCount={0}
+          />
+        </Stack>
       </Box>
     </Container>
   );
