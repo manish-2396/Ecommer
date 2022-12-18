@@ -89,6 +89,7 @@ const Men = () => {
       dispatch(addCart(payload, token));
       swal("Add to the Cart");
     }
+    
   };
 
   const [page, setPage] = useState(1);
