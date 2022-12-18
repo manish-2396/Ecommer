@@ -26,7 +26,7 @@ const Men = () => {
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
-    sessionStorage.setItem("payment" , element.price)
+    sessionStorage.setItem("payment", element.price);
   };
   const handleClose = () => {
     setOpen(false);
@@ -69,7 +69,7 @@ const Men = () => {
     token: null,
   };
 
-  let { isAuth, token } = JSON.parse( sessionStorage.getItem("user")) || a;
+  let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
 
   const handleAdd = (e) => {
     if (!isAuth) {
@@ -91,7 +91,6 @@ const Men = () => {
     }
   };
 
-
   const [page, setPage] = useState(1);
   const perPage = 10;
 
@@ -112,7 +111,6 @@ const Men = () => {
     setPage(value);
   };
 
-
   return (
     <Container>
       <Box color="#1976d2">{loading && "loading..."}</Box>
@@ -122,27 +120,34 @@ const Men = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} >
-          <Box display="flex" justifyContent="space-around" fontSize="12px" flexWrap="wrap">
+        <Box sx={style}>
+          <Box
+            display="flex"
+            justifyContent="space-around"
+            fontSize="12px"
+            flexWrap="wrap"
+          >
             <Box p="2rem">
               <img style={{ maxWidth: "10rem" }} src={data.image_url} alt="" />
             </Box>
             <Box>
-              <h1 style={{ color: "#a4a4a4", fontSize:"25px" }} >{data.name}</h1>
+              <h1 style={{ color: "#a4a4a4", fontSize: "25px" }}>
+                {data.name}
+              </h1>
               <Box display="flex" justifyContent="space-between" mt="3rem">
-              <Box>
-                    <h5
-                      style={{
-                        textDecoration: "line-through",
-                        color: "#a4a4a4",
-                      }}
-                    >
-                      {data.strikedoffprice}
-                    </h5>
-                  </Box>
-                  <Box>
-                    <h5>Rs.{data.price}</h5>
-                  </Box>
+                <Box>
+                  <h5
+                    style={{
+                      textDecoration: "line-through",
+                      color: "#a4a4a4",
+                    }}
+                  >
+                    {data.strikedoffprice}
+                  </h5>
+                </Box>
+                <Box>
+                  <h5>Rs.{data.price}</h5>
+                </Box>
               </Box>
             </Box>
           </Box>
