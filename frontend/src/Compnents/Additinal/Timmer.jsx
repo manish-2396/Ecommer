@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 const Timmer = () => {
-    const [mins, setMins] = useState(2);
+    const [mins, setMins] = useState(4);
     const [secs, setSecs] = useState(59);
     const min = useRef(null);
     const sec = useRef(null);

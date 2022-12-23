@@ -24,7 +24,7 @@ userRoutes.post("/newaccount", async (req, res) => {
     res.status(200).send({ isAuth: false, Massage: "User already registered" })
   } else {
     let otpcode = Math.floor(Math.random() * 1000 + 4500);
-    let expireIn = new Date().getTime() + 180 * 1000;
+    let expireIn = new Date().getTime() + 300 * 1000;
     let otpData = new otpModule({
       email: req.body.email,
       code: otpcode,
@@ -127,7 +127,7 @@ userRoutes.post("/passwordrest", async (req, res) => {
 
   if (user) {
     let otpcode = Math.floor(Math.random() * 1000 + 4500);
-    let expireIn = new Date().getTime() + 180 * 1000;
+    let expireIn = new Date().getTime() + 300 * 1000;
 
     const payload = {
       email: req.body.email,
