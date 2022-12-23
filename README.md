@@ -5,6 +5,7 @@
 ### Frontend
 - ReactJS
 - Redux
+- Redux-thunk
 - Material Ui
 
 ### Backend
