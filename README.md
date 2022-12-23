@@ -2,6 +2,18 @@
 
 ### Hell forks, this my Ecommerce website
 
+### Frontend
+- ReactJS
+- Redux
+- Material Ui
+
+### Backend
+- NodeJS
+- Express
+- MongoDB
+- Mongoose
+- Nodemailer
+
 #### Signup Page
 ![Signup](https://user-images.githubusercontent.com/100896129/206903869-70c8892b-8954-4ed5-84be-db66c19fb9bc.png)
 ![Signup](https://user-images.githubusercontent.com/100896129/206903880-d932f406-4601-4da3-96ca-ec571a3e6b88.png)
