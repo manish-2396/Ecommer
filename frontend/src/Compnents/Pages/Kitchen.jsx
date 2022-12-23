@@ -26,7 +26,7 @@ const Kitchen = () => {
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
-    sessionStorage.setItem("payment" , element.price)
+    sessionStorage.setItem("payment", element.price);
   };
   const handleClose = () => {
     setOpen(false);
@@ -68,7 +68,7 @@ const Kitchen = () => {
     token: null,
   };
 
-  let { isAuth, token } = JSON.parse( sessionStorage.getItem("user")) || a;
+  let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
 
   const handleAdd = (e) => {
     if (!isAuth) {
@@ -90,7 +90,6 @@ const Kitchen = () => {
     }
   };
 
-
   const [page, setPage] = useState(1);
   const perPage = 10;
 
@@ -107,11 +106,16 @@ const Kitchen = () => {
   let start = end - perPage;
   let paginatedProducts = kitchen.slice(start, end);
 
-
+  if (loading) {
+    return (
+      <Box color="#1976d2" textAlign="center">
+        Loading...
+      </Box>
+    );
+  }
 
   return (
     <Container>
-      <Box color="#1976d2">{loading && "loading..."}</Box>
       <Modal
         open={open}
         onClose={handleClose}
@@ -124,7 +128,9 @@ const Kitchen = () => {
               <img style={{ maxWidth: "8rem" }} src={data.image_url} alt="" />
             </Box>
             <Box>
-              <h1 style={{ color: "#a4a4a4", fontSize: "20px" }} >{data.name}</h1>
+              <h1 style={{ color: "#a4a4a4", fontSize: "20px" }}>
+                {data.name}
+              </h1>
               <Box display="flex" justifyContent="space-between" mt="3rem">
                 <Box>
                   <h5

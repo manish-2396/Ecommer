@@ -89,7 +89,6 @@ const Men = () => {
       dispatch(addCart(payload, token));
       swal("Add to the Cart");
     }
-    
   };
 
   const [page, setPage] = useState(1);
@@ -112,9 +111,16 @@ const Men = () => {
     setPage(value);
   };
 
+  if (loading) {
+    return (
+      <Box color="#1976d2" textAlign="center">
+        Loading...
+      </Box>
+    );
+  }
+
   return (
     <Container>
-      <Box color="#1976d2">{loading && "loading..."}</Box>
       <Modal
         open={open}
         onClose={handleClose}

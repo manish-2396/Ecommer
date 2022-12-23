@@ -106,9 +106,16 @@ const Women = () => {
   let start = end - perPage;
   let paginatedProducts = Women.slice(start, end);
 
+  if (loading) {
+    return (
+      <Box color="#1976d2" textAlign="center">
+        Loading...
+      </Box>
+    );
+  }
+
   return (
     <Container>
-      <Box color="#1976d2">{loading && "loading..."}</Box>
       <Modal
         open={open}
         onClose={handleClose}
