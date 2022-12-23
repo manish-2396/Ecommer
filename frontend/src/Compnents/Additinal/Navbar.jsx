@@ -50,7 +50,7 @@ const PrimarySearchAppBar = () => {
 
   if (gender === "Male") {
     logo = man;
-  } else {
+  } else if(gender === "Female"){
     logo = woman;
   }
 

@@ -151,6 +151,8 @@ const MailAuth = () => {
                         <Container maxWidth="sm">
                             <Box p="2px">
                                 <Timmer />
+                                <br/>
+                                <br/>
                                 <TextField id="otp" label="One Time Password" required autoFocus name="otp" onChange={(e) => setOTP(e.target.value)} />
                                 <Button variant="contained" onClick={handleOtp} sx={{ ml: 3, mt: 1 }} >
                                     Submit

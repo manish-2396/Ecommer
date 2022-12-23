@@ -190,7 +190,7 @@ const mailer = (email, otp) => {
     from: process.env.MAIL_I,
     to: email,
     subject: 'rest your password one time password',
-    text: `this a one time password is ${otp} and valid for only next 3 minutes `
+    text: `this a one time password is ${otp} and valid for only next 5 minutes.if not get check span folder onces `
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
