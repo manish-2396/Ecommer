@@ -86,7 +86,7 @@ const Kitchen = () => {
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
-      swal("Add to the Cart");
+      swal("Add to the Cart" , "" ,"success");
     }
   };
 

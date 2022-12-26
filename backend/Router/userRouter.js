@@ -163,6 +163,7 @@ userRoutes.post("/changePassword", async (req, res) => {
         await userData.save();
         res.status(200).send({isAuth:true ,  Massage: "Password updated sucessfully!" })
       });
+      mailerback(email)
       await otpModule.deleteOne({ email, code });
     } else {
       res.status(408).send({ isAuth: false , Massage: "OTP is Expired!" })
@@ -191,6 +192,37 @@ const mailer = (email, otp) => {
     to: email,
     subject: 'rest your password one time password',
     text: `this a one time password is ${otp} and valid for only next 5 minutes.if not get check span folder onces `
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
+}
+
+
+
+const mailerback =  (email) => {
+  var transporter =  nodemailer.createTransport({
+    service: 'gmail', 
+    host: 'smtp.gmail.com', 
+    secure: false, 
+    auth: {
+      user: process.env.MAIL_ID, 
+      pass: process.env.MAILER_POASSWORD
+    } 
+  });
+  
+
+  var mailOptions = {
+    from: process.env.MAIL_I,
+    to: email,
+    subject: 'confirmation email',
+    text: `password set successfully`
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
