@@ -87,7 +87,7 @@ const Kids = () => {
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
-      swal("Add to the Cart" , "" ,"success");
+      swal("Add to the Cart", "", "success");
     }
   };
 
@@ -111,14 +111,6 @@ const Kids = () => {
   const handleChange = (ChangeEvent, value) => {
     setPage(value);
   };
-
-  if (loading) {
-    return (
-      <Box color="#1976d2" textAlign="center">
-        Loading...
-      </Box>
-    );
-  }
 
   return (
     <Container>
@@ -169,84 +161,93 @@ const Kids = () => {
           </Box>
         </Box>
       </Modal>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 4 }}
-        columns={{ xs: 4, sm: 12, md: 20 }}
-      >
-        {paginatedProducts &&
-          paginatedProducts.map((element, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
-              <Box className="shadow" height="auto" p="1rem">
-                <Box
-                  fontSize="10px"
-                  position="absolute"
-                  borderRadius="50%"
-                  bgcolor="red"
-                  color="#fff"
-                  border="1px solid red"
-                  p="5px"
-                >
-                  {element.offer}
-                </Box>
-                <img
-                  style={{ maxWidth: "100%", height: "10rem" }}
-                  src={element.image_url}
-                  alt={element.name}
-                />
-                <Box height="3rem">
-                  <p style={{ color: "#a4a4a4", fontSize: "14px" }}>
-                    {element.name}
-                  </p>
-                </Box>
-                <Box display="flex" justifyContent="space-around">
-                  <Box>
-                    <h5
-                      style={{
-                        textDecoration: "line-through",
-                        color: "#a4a4a4",
-                      }}
-                    >
-                      {element.strikedprice}
-                    </h5>
-                  </Box>
-                  <Box>
-                    <h5>Rs.{element.price}</h5>
-                  </Box>
-                </Box>
 
-                <Box display="flex" justifyContent="space-around">
-                  <Box>
-                    <Button
-                      variant="contained"
-                      onClick={() => handleOpen(element)}
-                    >
-                      Buy
-                    </Button>
+      {loading && (
+        <Box color="#1976d2" textAlign="center">
+          Loading...
+        </Box>
+      )}
+      <Box>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 4 }}
+          columns={{ xs: 4, sm: 12, md: 20 }}
+        >
+          {paginatedProducts &&
+            paginatedProducts.map((element, index) => (
+              <Grid item xs={2} sm={4} md={4} key={index}>
+                <Box className="shadow" height="auto" p="1rem">
+                  <Box
+                    fontSize="10px"
+                    position="absolute"
+                    borderRadius="50%"
+                    bgcolor="red"
+                    color="#fff"
+                    border="1px solid red"
+                    p="5px"
+                  >
+                    {element.offer}
                   </Box>
-                  <Box>
-                    <Button
-                      onClick={() => handleAdd(element)}
-                      variant="contained"
-                    >
-                      Add
-                    </Button>
+                  <img
+                    style={{ maxWidth: "100%", height: "10rem" }}
+                    src={element.image_url}
+                    alt={element.name}
+                  />
+                  <Box height="3rem">
+                    <p style={{ color: "#a4a4a4", fontSize: "14px" }}>
+                      {element.name}
+                    </p>
+                  </Box>
+                  <Box display="flex" justifyContent="space-around">
+                    <Box>
+                      <h5
+                        style={{
+                          textDecoration: "line-through",
+                          color: "#a4a4a4",
+                        }}
+                      >
+                        {element.strikedprice}
+                      </h5>
+                    </Box>
+                    <Box>
+                      <h5>Rs.{element.price}</h5>
+                    </Box>
+                  </Box>
+
+                  <Box display="flex" justifyContent="space-around">
+                    <Box>
+                      <Button
+                        variant="contained"
+                        onClick={() => handleOpen(element)}
+                      >
+                        Buy
+                      </Button>
+                    </Box>
+                    <Box>
+                      <Button
+                        onClick={() => handleAdd(element)}
+                        variant="contained"
+                      >
+                        Add
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
-            </Grid>
-          ))}
-      </Grid>
-      <Box m="2rem" textAlign="center">
-        <Stack spacing={8}>
-          <Pagination
-            count={totalPages}
-            page={page}
-            defaultPage={6}
-            onChange={handleChange}
-            siblingCount={0}
-          />
-        </Stack>
+              </Grid>
+            ))}
+        </Grid>
+        
+        <Box m="2rem" textAlign="center">
+          <Stack spacing={8}>
+            <Pagination
+              count={totalPages}
+              page={page}
+              defaultPage={6}
+              onChange={handleChange}
+              siblingCount={0}
+            />
+          </Stack>
+        </Box>
       </Box>
     </Container>
   );

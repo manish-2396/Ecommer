@@ -87,7 +87,7 @@ const Men = () => {
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
-      swal("Add to the Cart" , "" ,"success");
+      swal("Add to the Cart", "", "success");
     }
   };
 
@@ -110,14 +110,6 @@ const Men = () => {
   const handleChange = (ChangeEvent, value) => {
     setPage(value);
   };
-
-  if (loading) {
-    return (
-      <Box color="#1976d2" textAlign="center">
-        Loading...
-      </Box>
-    );
-  }
 
   return (
     <Container>
@@ -172,6 +164,11 @@ const Men = () => {
           </Box>
         </Box>
       </Modal>
+      {loading && (
+        <Box color="#1976d2" textAlign="center">
+          Loading...
+        </Box>
+      )}
       <Grid
         container
         spacing={{ xs: 2, md: 4 }}

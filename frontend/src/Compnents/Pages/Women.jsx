@@ -86,7 +86,7 @@ const Women = () => {
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
-      swal("Add to the Cart" , "" ,"success");
+      swal("Add to the Cart", "", "success");
     }
   };
 
@@ -105,14 +105,6 @@ const Women = () => {
   let end = page * perPage;
   let start = end - perPage;
   let paginatedProducts = Women.slice(start, end);
-
-  if (loading) {
-    return (
-      <Box color="#1976d2" textAlign="center">
-        Loading...
-      </Box>
-    );
-  }
 
   return (
     <Container>
@@ -162,6 +154,11 @@ const Women = () => {
           </Box>
         </Box>
       </Modal>
+      {loading && (
+        <Box color="#1976d2" textAlign="center">
+          Loading...
+        </Box>
+      )}
       <Grid
         container
         spacing={{ xs: 2, md: 4 }}
