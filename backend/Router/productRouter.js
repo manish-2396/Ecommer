@@ -1,147 +1,136 @@
-const { Router } = require('express');
-const express = require('express')
+const { Router } = require("express");
+const express = require("express");
 
 const productRouter = Router();
 
 const app = express();
-const fs= require('fs')
+const fs = require("fs");
 app.use(express.json());
 
+productRouter.get("/man", (req, res) => {
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-productRouter.get('/man', (req, res) => {
+  const parseData = JSON.parse(data);
 
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  const Data = parseData.mens_data;
 
-    const parseData = JSON.parse(data);
+  res.status(200).send(Data);
+});
 
-    const Data = parseData.mens_data
+productRouter.get("/man/:id", (req, res) => {
+  let { id } = req.params;
+  // console.log(id)
 
-    res.status(200).send(Data)
-})
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
+  const parseData = JSON.parse(data);
 
-productRouter.get('/man/:id', (req, res) => {
+  const Data = parseData.mens_data;
 
-    let {id} = req.params
-    // console.log(id)
+  // console.log(Data);
 
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  const SigleData = Data.find((e) => Number(e.id) == id);
+  // console.log(SigleData)
 
-    const parseData = JSON.parse(data);
+  res.status(200).send(SigleData);
+});
 
-    const Data = parseData.mens_data
+productRouter.get("/woman", (req, res) => {
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-    // console.log(Data);
+  const parseData = JSON.parse(data);
 
-    const SigleData = Data.find((e) => Number(e.id) == id)
-    // console.log(SigleData)
+  const Data = parseData.womensData;
 
-    res.status(200).send(SigleData)
-})
+  res.status(200).send(Data);
+});
 
-productRouter.get('/woman', (req, res) => {
-    
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+productRouter.get("/woman/:id", (req, res) => {
+  let { id } = req.params;
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-    const parseData = JSON.parse(data);
+  const parseData = JSON.parse(data);
 
-    const Data = parseData.womensData
+  const Data = parseData.womensData;
 
-    res.status(200).send(Data)
-})
+  const SigleData = Data.find((e) => e.id == id);
 
-productRouter.get('/woman/:id', (req, res) => {
+  res.status(200).send(SigleData);
+});
 
-    let {id} = req.params
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+productRouter.get("/kids", (req, res) => {
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-    const parseData = JSON.parse(data);
+  const parseData = JSON.parse(data);
 
-    const Data = parseData.womensData
+  const Data = parseData.kids;
 
-    const SigleData = Data.find((e) => e.id == id)
+  res.status(200).send(Data);
+});
 
-    res.status(200).send(SigleData)
-})
+productRouter.get("/kids/:id", (req, res) => {
+  let { id } = req.params;
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-productRouter.get('/kids', (req, res) => {
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  const parseData = JSON.parse(data);
 
-    const parseData = JSON.parse(data);
+  const Data = parseData.kids;
 
-    const Data = parseData.kids
+  const SigleData = Data.find((e) => e.id == id);
+  // console.log(SigleData)
 
-    res.status(200).send(Data)
-   
-})
+  res.status(200).send(SigleData);
+});
 
-productRouter.get('/kids/:id', (req, res) => {
-    let {id} = req.params
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+productRouter.get("/kitchen", (req, res) => {
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-    const parseData = JSON.parse(data);
+  const parseData = JSON.parse(data);
 
-    const Data = parseData.kids
+  const Data = parseData.kitchenData;
+  res.status(200).send(Data);
+});
 
-    const SigleData = Data.find((e) => e.id == id)
-    // console.log(SigleData)
+productRouter.get("/kitchen/:id", (req, res) => {
+  let { id } = req.params;
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-    res.status(200).send(SigleData)
-   
-})
+  console.log(id);
 
+  const parseData = JSON.parse(data);
 
-productRouter.get('/kitchen', (req, res) => {
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  const Data = parseData.kitchenData;
+  // console.log(Data)
 
-    const parseData = JSON.parse(data);
+  const SigleData = Data.find((e) => e.id == id);
 
-    const Data = parseData.kitchenData
-    res.status(200).send(Data)
-})
+  console.log(SigleData);
 
-productRouter.get('/kitchen/:id', (req, res) => {
-    let {id} = req.params
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  res.status(200).send(SigleData);
+});
 
-    console.log(id)
-    
-    const parseData = JSON.parse(data);
+productRouter.get("/trendingData", (req, res) => {
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  const parseData = JSON.parse(data);
+  const Data = parseData.trendingData;
+  res.status(200).send(Data);
+});
 
-    const Data = parseData.kitchenData
-    // console.log(Data)
+productRouter.get("/trendingData/:id", (req, res) => {
+  let { id } = req.params;
+  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+  console.log(id);
+  const parseData = JSON.parse(data);
+  const Data = parseData.trendingData;
+  // console.log(Data)
 
-    const SigleData = Data.find((e) => e.id == id)
+  const SigleData = Data.find((e) => e.id == id);
 
-    console.log(SigleData)
+  // console.log(SigleData)
 
-    res.status(200).send(SigleData)
-})
-
-
-productRouter.get('/trendingData', (req, res) => {
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-    const parseData = JSON.parse(data);
-    const Data = parseData.trendingData
-    res.status(200).send(Data)
-})
-
-productRouter.get('/trendingData/:id', (req, res) => {
-    let {id} = req.params
-    let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-    console.log(id)
-    const parseData = JSON.parse(data);
-    const Data = parseData.trendingData
-    // console.log(Data)
-
-    const SigleData = Data.find((e) => e.id == id)
-
-    // console.log(SigleData)
-
-    res.status(200).send(SigleData)
-})
-
+  res.status(200).send(SigleData);
+});
 
 module.exports = {
-    productRouter
-}
+  productRouter,
+};

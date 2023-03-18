@@ -52,17 +52,18 @@ const Signin = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    // console.log(form)
 
     dispatch(signin(form))
      
 
-    if (user.isAuth) {
-      navigate("/")
-    } else {
-      swal("Something went wrong. Please try again later")
-      form.password = "";
+    // if (user.isAuth) {
+    //   navigate("/")
+    // } else {
+    //   swal("Something went wrong. Please try again later")
+    //   form.password = "";
      
-    }
+    // }
   }
 
 

@@ -1,7 +1,11 @@
 import * as types from "./actionType"
+import { Navigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 // https://ecommer-production.up.railway.app
 // const process.env.REACT_APP_URL = process.env.REACT_APP_process.env.REACT_APP_URL
+
+// const navigate = useNavigate()
 
 let baseURL = "https://eccommerceapi.onrender.com"
 
@@ -17,7 +21,8 @@ export const signup = (payload) => (dispatch) => {
     })
         .then((res) => res.json())
         .then((res) => {
-            dispatch({ type: types.LOGIN_SUCCESS , payload: res})
+            dispatch({ type: types.LOGIN_SUCCESS , payload: res});
+            
         })
         .catch((err) => {
             dispatch({ type: types.LOGIN_FAILED })
@@ -27,7 +32,7 @@ export const signup = (payload) => (dispatch) => {
 
 export const signin = (payload) => (dispatch) => {
     dispatch({ type: types.LOGIN_REQUEST })
-    // console.log("login",payload)
+    console.log("login",payload)
 
     fetch(`${baseURL}/login`, {
         method: "POST",
@@ -38,10 +43,13 @@ export const signin = (payload) => (dispatch) => {
     })
         .then((res) => res.json())
         .then((res) => {
-            dispatch({ type: types.LOGIN_SUCCESS , payload: res})
+            dispatch({ type: types.LOGIN_SUCCESS , payload: res});
+            console.log(res);
+            <Navigate to="/" replace={true} />
         })
         .catch((err) => {
             dispatch({ type: types.LOGIN_FAILED })
+            swal("Something went wrong. Please try again later")
         })
 
 }
