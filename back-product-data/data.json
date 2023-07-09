@@ -1,0 +1,2345 @@
+{
+  "kids": [
+    {
+      "id": 1,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/r/6/230X258_sharpened/Kids-Cave-Dress-for-girls-SDL433221746-1-2c766.webp",
+      "name": "Dress for girls Regular fit Cut Out Peplum Sleeves Knee Length Dress",
+      "strikedprice": "MRP  Rs. 1,699",
+      "price": 799,
+      "offer": "53% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(33)"
+    },
+    {
+      "id": 2,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/p/230X258_sharpened/combo-pack-of-2-SDL890657267-1-c7f21.jpeg",
+      "name": " Dhoti Kurta For Boys Combo pack of 2",
+      "strikedprice": "MRP  Rs. 1,399",
+      "price": 439,
+      "offer": "69% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(53)"
+    },
+    {
+      "id": 3,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/g/Montello-Cotton-Best-Friends-Dress-SDL050011730-1-13c04.jpg",
+      "name": "Montello Cotton Dress set for Baby Girl Frock Top Jhabla and Full Length Pyjamas",
+      "strikedprice": "MRP  Rs. 899 ",
+      "price": 299,
+      "offer": "67% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(67)"
+    },
+    {
+      "id": 4,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/6/Tales-Stories-Boys-Lycra-White-SDL183316223-1-62c4b.jpg",
+      "name": "Tales & Stories Boys Lycra White Solid Jeans",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 875,
+      "offer": "12% OFF\t",
+      "rating": "3halfstar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 5,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/x/j/SBN-GIRLS-YELLOW-BLACK-PARTY-SDL959930182-1-8f14e.jpeg",
+      "name": "SBN GIRLS YELLOW & BLACK PARTY FROCK",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 319,
+      "offer": "68% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(52)"
+    },
+    {
+      "id": 6,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/6/Tales-Stories-Boys-Lycra-Grey-SDL201308856-1-24043.jpg",
+      "name": "Tales & Stories Boys Lycra Grey Solid Jeans",
+      "strikedprice": "MRP  Rs. 999 ",
+      "price": 875,
+      "offer": "12% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 7,
+      "image_url": "https://n1.sdlcdn.com/imgs/b/5/4/large/Kaboos-Blue-Romper-SDL505765877-1-81724.JPG",
+      "name": "Kaboos Blue Romper",
+      "strikedprice": "MRP  Rs. 359",
+      "price": 179,
+      "offer": "50% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 8,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/v/s/Boys-Festive-Party-Kurta-and-SDL539267794-1-c91bc.jpg",
+      "name": "Boys Festive & Party Kurta and Churidar Set",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 359,
+      "offer": "64% OFF",
+      "rating": "fivestar.png",
+      "freq": "(155)"
+    },
+    {
+      "id": 9,
+      "image_url": "https://n1.sdlcdn.com/imgs/i/9/2/230X258_sharpened/Naughty-Ninos-Girls-Maroon-Ruffled-SDL986177888-1-bc807.jpeg",
+      "name": "Naughty Ninos Girls Maroon Ruffled Dress",
+      "strikedprice": "MRP  Rs. 1,499",
+      "price": 699,
+      "offer": "53% OFF",
+      "rating": "fivestar.png",
+      "freq": "(85)"
+    },
+    {
+      "id": 10,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/s/u/230X258_sharpened/Mirrow-Trade-Girl-s-Ethnic-SDL419494320-1-0818d.webp",
+      "name": "Mirrow Trade Girl's Ethnic Wear Western Style Lehenga Choli Set",
+      "strikedprice": "MRP  Rs. 1,999",
+      "price": 519,
+      "offer": "74% OFF",
+      "rating": "fivestar.png",
+      "freq": "(89)"
+    },
+    {
+      "id": 11,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/x/z/NARPAVI-TRENDS-COLOUR-BLOCKED-BOYS-SDL714875247-1-b3628.jpg",
+      "name": "NARPAVI TRENDS COLOUR BLOCKED BOYS CLOTHING SET 3/4th (PACK OF 5)",
+      "strikedprice": "MRP  Rs. 1,299",
+      "price": 725,
+      "offer": "44% OFF",
+      "rating": "fivestar.png",
+      "freq": "(325)"
+    },
+    {
+      "id": 12,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/g/k/The-Creators-Cotton-Baby-Girl-SDL340959731-1-f17cf.jpeg",
+      "name": "The Creators Red , Yellow , Blue , Green and Black Cotton Baby Girl Frocks",
+      "strikedprice": "MRP  Rs. 999 ",
+      "price": 549,
+      "offer": "45% OFF",
+      "rating": "fivestar.png",
+      "freq": "(135)"
+    },
+    {
+      "id": 13,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/7/u/The-Best-Son-Kids-T-SDL402853828-1-77a28.jpeg",
+      "name": "The Best Son Kids T-Shirt",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 309,
+      "offer": "38% OFF",
+      "rating": "fivestar.png",
+      "freq": "(05)"
+    },
+    {
+      "id": 14,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/q/1/MBLACK-SDL562246058-1-eb299.jpeg",
+      "name": "SBN Black Partywear Gown for Girls",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 319,
+      "offer": "68% OFF",
+      "rating": "fivestar.png",
+      "freq": "(534)"
+    },
+    {
+      "id": 15,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/u/230X258_sharpened/KV-Fashion-Baby-Girls-Girls-SDL127482054-1-997d1.webp",
+      "name": "KV Fashion Baby Girls & Girls Red Velvet Semi Stitched lehenga Choli",
+      "strikedprice": "MRP  Rs. 1,999",
+      "price": 775,
+      "offer": "61% OFF",
+      "rating": "threeStar.png",
+      "freq": "(64)"
+    },
+    {
+      "id": 16,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/r/2/T4YOU-GIRLS-FANCY-STRAIGHT-KURTI-SDL597550218-1-c3ee9.jpg",
+      "name": "T4YOU GIRLS FANCY STRAIGHT KURTI",
+      "strikedprice": "MRP  Rs. 2,396",
+      "price": 469,
+      "offer": "80% OFF",
+      "rating": "threeStar.png",
+      "freq": "(95)"
+    },
+    {
+      "id": 17,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/s/v/large/T4YOU-PRINTED-KURTI-SDL267613870-1-08d09.jpg",
+      "name": "Fashion Dream Girl's Peplum Style Brown Chudidhar",
+      "strikedprice": "MRP  Rs. 2,196",
+      "price": 439,
+      "offer": "80% OFF",
+      "rating": "threeStar.png",
+      "freq": "(15)"
+    },
+    {
+      "id": 18,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/7/q/Ahhaaaa-Cotton-Blend-Kids-Ethnic-SDL733347511-1-14f72.jpg",
+      "name": "Ahhaa Cotton Blend Ethnic Waistcoat Shirt and Pant with Tie Set",
+      "strikedprice": "MRP  Rs. 2,999",
+      "price": 539,
+      "offer": "82% OFF",
+      "rating": "threeStar.png",
+      "freq": "(18)"
+    },
+    {
+      "id": 19,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/t/j/Mojua-Girls-Midi-Knee-Length-SDL503643377-1-c2f06.jpeg",
+      "name": "Mojua Girls Midi/Knee Length Party Dress (Red, 3/4 Sleeve)",
+      "strikedprice": "MRP  Rs. 1,599",
+      "price": 249,
+      "offer": "84% OFF",
+      "rating": "threeStar.png",
+      "freq": "(110)"
+    },
+    {
+      "id": 20,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/o/k/Hunny-Bunny-Girls-Plain-Navy-SDL132494308-1-3c6d6.jpg",
+      "name": "Hunny Bunny Girls Plain Navy Blue Front Buttoned Shirt Dress",
+      "strikedprice": "MRP  Rs. 1,099",
+      "price": 375,
+      "offer": "60% OFF",
+      "rating": "threeStar.png",
+      "freq": "(575)"
+    },
+    {
+      "id": 21,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/l/k/Ahhaaaa-Kids-Ethnic-Wear-Cotton-SDL027783014-1-74cd7.jpg",
+      "name": "Kids Ethnic Wear Cotton Blend Waistcoat Shirt and Trouser Set",
+      "strikedprice": "MRP  Rs. 749",
+      "price": 439,
+      "offer": "85% OFF",
+      "rating": "threeStar.png",
+      "freq": "(45)"
+    },
+    {
+      "id": 22,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/b/2/SFC-Midi-Knee-Length-Festive-SDL493676394-1-e1e09.jpg",
+      "name": "SFC Midi/Knee Length Festive/Wedding Dress (Multicolor, Haf Sleeve)",
+      "strikedprice": "MRP  Rs. 1159 ",
+      "price": 439,
+      "offer": "69% OFF",
+      "rating": "threeStar.png",
+      "freq": "(45)"
+    },
+    {
+      "id": 23,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/d/v/Sathiyas-Baby-Girls-Dresses-Pack-SDL389700527-1-30907.jpeg",
+      "name": "Sathiyas Green, Purple, Red, Pink and Yellow Baby Girls Dresses 5",
+      "strikedprice": "MRP  Rs. 1,399",
+      "price": 599,
+      "offer": "57% OFF",
+      "rating": "threeStar.png",
+      "freq": "(98)"
+    },
+    {
+      "id": 24,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/v/s/Boys-Festive-Party-Wedding-Kurta-SDL845576284-1-d0d63.jpg",
+      "name": "Boys Festive & Party, Wedding Kurta and Pyjama Set",
+      "strikedprice": "MRP  Rs. 1,199",
+      "price": 299,
+      "offer": "75% OFF",
+      "rating": "threeStar.png",
+      "freq": "(08)"
+    },
+    {
+      "id": 25,
+      "image_url": "https://n1.sdlcdn.com/imgs/a/p/o/Dongli-Boys-Knitted-Fleece-Full-SDL376178506-1-684da.jpg",
+      "name": "Dongli Boys Knitted Fleece Full Sleeve 2pcs Combo",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 419,
+      "offer": "58% OFF",
+      "rating": "threeStar.png",
+      "freq": "(35)"
+    },
+    {
+      "id": 26,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/s/7/Fashion-Dream-Girl-s-Long-SDL533138887-2-f07a8.jpeg",
+      "name": "Fashion Dream Girl’s Long Tulle Bridesmaid Skirt/Lehenga Choli",
+      "strikedprice": "MRP  Rs. 2499",
+      "price": 479,
+      "offer": "82% OFF",
+      "rating": "threeStar.png",
+      "freq": "(70)"
+    },
+    {
+      "id": 27,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/r/c/Fashion-Dream-Girl-s-Patola-SDL158991205-1-47aea.jpg",
+      "name": "Fashion Dream Girl's Patola Printed Rajastani Lehenga Choli",
+      "strikedprice": "MRP  Rs. 2,499 ",
+      "price": 519,
+      "offer": "79% OFF",
+      "rating": "fivestar.png",
+      "freq": "(86)"
+    },
+    {
+      "id": 28,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/b/d/NEW-COLLECTIONS-Jeans-BabaSuit-SDL328722987-1-a92e4.jpeg",
+      "name": "NEW COLLECTIONS Jeans BabaSuit",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 349,
+      "offer": "65% OFF",
+      "rating": "fivestar.png",
+      "freq": "(34)"
+    },
+    {
+      "id": 29,
+      "image_url": "https://n4.sdlcdn.com/imgs/h/m/7/J-D-Creation-Kids-Party-SDL445728907-1-3408c.jpeg",
+      "name": "J D Creation Kids Party wear Maroon Plain Dhoti for Boys",
+      "strikedprice": "MRP  Rs. 599  ",
+      "price": 289,
+      "offer": "52% OFF",
+      "rating": "fivestar.png",
+      "freq": "(97)"
+    },
+    {
+      "id": 30,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/n/y/SINI-MINI-Printed-Hooded-Neck-SDL294292053-1-be43f.jpg",
+      "name": "SINI MINI Printed Hooded Neck Casual Boys & Girls Sweatshirt",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 359,
+      "offer": "64% OFF",
+      "rating": "fivestar.png",
+      "freq": "(796)"
+    },
+    {
+      "id": 31,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/r/c/Fashion-Dream-Girl-s-Designer-SDL606767542-1-a7432.jpg",
+      "name": "Fashion Dream Girl's Designer Top with Lehenga Skirt",
+      "strikedprice": "MRP  Rs. 1,999",
+      "price": 519,
+      "offer": "74% OFF",
+      "rating": "fivestar.png",
+      "freq": "(50)"
+    },
+    {
+      "id": 32,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/r/t/Hopscotch-Girls-Rayon-and-Polyester-SDL517613033-1-0c2f4.jpg",
+      "name": "Hopscotch Girls Rayon and Polyester 3/4Th Sleeves Gowns Green Color",
+      "strikedprice": "MRP  Rs. 3,689 ",
+      "price": 3599,
+      "offer": "2% OFF",
+      "rating": "fivestar.png",
+      "freq": "(25)"
+    },
+    {
+      "id": 33,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/j/Me-N-My-Latest-Fashion-SDL830343652-1-95603.jpg",
+      "name": "Me N My Latest Fashion Frock for Girls",
+      "strikedprice": "MRP  Rs. 699",
+      "price": 399,
+      "offer": "43% OFF",
+      "rating": "fivestar.png",
+      "freq": "(63)"
+    },
+    {
+      "id": 34,
+      "image_url": "https://n2.sdlcdn.com/imgs/g/3/w/Generation-Next-Maroon-Indo-Western-SDL086836999-1-caaa8.jpeg",
+      "name": "Generation Next Maroon Indo Western For Boy",
+      "strikedprice": "MRP  Rs. 1,299",
+      "price": 319,
+      "offer": "75% OFF",
+      "rating": "3star.png",
+      "freq": "(69)"
+    },
+    {
+      "id": 35,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/r/w/Hopscotch-Girls-Polyester-Cotton-Polka-SDL400392158-1-409cf.jpg",
+      "name": "Hopscotch Girls Polyester, Cotton Polka Dots Sleeveless Dress in Red Color",
+      "strikedprice": "MRP  Rs. 1,929",
+      "price": 1048,
+      "offer": "46% OFF",
+      "rating": "3star.png",
+      "freq": "(764)"
+    },
+    {
+      "id": 36,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/u/m/PARI-FASHIONS-Midi-Knee-Length-SDL665862412-1-b46a8.jpg",
+      "name": "PARI FASHIONS Midi/Knee Length Festive/Wedding dress",
+      "strikedprice": "MRP  Rs. 1,250",
+      "price": 309,
+      "offer": "75% OFF",
+      "rating": "3star.png",
+      "freq": "(63)"
+    },
+    {
+      "id": 37,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/j/Fashion-Dream-Girl-s-Indo-SDL249525810-1-468e2.jpeg",
+      "name": "Fashion Dream Girl’s Indo Western Style Lehenga Choli",
+      "strikedprice": "MRP  Rs. 2,999 ",
+      "price": 599,
+      "offer": "80% OFF",
+      "rating": "3star.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 38,
+      "image_url": "https://n3.sdlcdn.com/imgs/h/m/g/GENERATION-NEXT-MULTI-COLOR-MODI-SDL255481606-1-9de1c.jpeg",
+      "name": "GENERATION NEXT MULTI COLOR MODI SET FOR BOYS",
+      "strikedprice": "MRP  Rs. 1,299",
+      "price": 349,
+      "offer": "73% OFF",
+      "rating": "3star.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 39,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/x/r/BOYS-FESTIVE-WEAR-KURTA-AND-SDL570835545-1-24082.jpeg",
+      "name": "BOYS FESTIVE WEAR KURTA AND PAYJAMA SET",
+      "strikedprice": "MRP  Rs. 899",
+      "price": 239,
+      "offer": "73% OFF",
+      "rating": "3star.png",
+      "freq": "(553)"
+    },
+    {
+      "id": 40,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/s/u/Mirrow-Trade-Girl-s-Knee-SDL961182011-1-42b20.jpg",
+      "name": "Mirrow Trade Girl's Knee Length Dress",
+      "strikedprice": "MRP  Rs. 1,999",
+      "price": 319,
+      "offer": "84% OFF",
+      "rating": "3star.png",
+      "freq": "(85)"
+    },
+    {
+      "id": 41,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/g/Montello-Cotton-Cute-Dress-set-SDL034126764-1-c18f3.jpg",
+      "name": "Montello Cotton Cute Dress set for Baby Girl with Full sleeves2",
+      "strikedprice": "MRP  Rs. 899",
+      "price": 299,
+      "offer": "67% OFF",
+      "rating": "fivestar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 42,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/g/k/The-Creators-Cotton-Baby-Girl-SDL340959731-1-f17cf.jpeg",
+      "name": "The Creators Red , Yellow , Blue , Green and Black Cotton Baby Girl Frocks",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 549,
+      "offer": "45% OFF",
+      "rating": "fivestar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 43,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/x/h/Ahhaaaa-Cotton-Floral-Print-Sleeveless-SDL038664322-1-b4759.jpg",
+      "name": "Ahhaaaa Cotton Floral Print Sleeveless Kurti-Sharara Set for Girls",
+      "strikedprice": "MRP  Rs. 2499",
+      "price": 699,
+      "offer": "70% OFF",
+      "rating": "3star.png",
+      "freq": "(1)"
+    },
+    {
+      "id": 44,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/v/v/Boys-Casual-T-shirt-Track-SDL626420951-1-50d84.jpg",
+      "name": "Boys Casual T-shirt Track Pants",
+      "strikedprice": "MRP  Rs. 1,999 ",
+      "price": 519,
+      "offer": "74% OFF",
+      "rating": "fivestar.png",
+      "freq": "(585)"
+    },
+    {
+      "id": 45,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/s/n/230X258_sharpened/Fashion-Dream-Girl-s-Ethnic-SDL085583346-1-f8206.jpeg",
+      "name": "Fashion Dream Girl’s Ethnic Wear Lehenga Choli",
+      "strikedprice": "MRP  Rs. 2,499",
+      "price": 519,
+      "offer": "79% OFF",
+      "rating": "fivestar.png",
+      "freq": "(4)"
+    },
+    {
+      "id": 46,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/c/r/Sathiyas-Set-of-5-Printed-SDL045337200-1-5994f.jpeg",
+      "name": "Sathiyasf 5 Printed Cotton Shirts and Shorts For 0-6 months Babies",
+      "strikedprice": "MRP  Rs. 799",
+      "price": 379,
+      "offer": "53% OFF",
+      "rating": "fivestar.png",
+      "freq": "(8)"
+    },
+    {
+      "id": 47,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/u/230X258_sharpened/AGRAYYANA-Gulab-Tafetta-Sattin-Semi-SDL385538873-1-908d0.jpeg",
+      "name": "AGRAYYANA Gulab Tafetta Sattin Semi-Stitched girl's Lehenga Choli",
+      "strikedprice": "MRP  Rs. 1,899",
+      "price": 539,
+      "offer": "72% OFF",
+      "rating": "fivestar.png",
+      "freq": "(84)"
+    },
+    {
+      "id": 48,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/k/y/230X258_sharpened/KIDS-Full-Sleeves-OMBRE-DYEING-SDL066310212-1-2935b.webp",
+      "name": "KIDS Full Sleeves OMBRE DYEING HOODED T-Shirt",
+      "strikedprice": "MRP  Rs. 1,199 ",
+      "price": 289,
+      "offer": "76% OFF",
+      "rating": "3star.png",
+      "freq": "(78)"
+    },
+    {
+      "id": 49,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/y/o/Fourfolds-Three-piece-Indo-Western-SDL428343390-1-a5f3d.jpeg",
+      "name": "Fourfolds Three piece Indo Western Stylish dress set with Jacquard Blazer",
+      "strikedprice": "MRP  Rs. 3,099",
+      "price": 1399,
+      "offer": "54% OFF",
+      "rating": "fivestar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 50,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/g/Li-l-Cupid-Sweatshirt-Hoodie-SDL242406737-1-b7be2.jpg",
+      "name": "Li'l Cupid Sweatshirt Hoodie Jacket with Zip Open For KIDS BOYS AND GIRLS",
+      "strikedprice": "MRP  Rs. 1,279 ",
+      "price": 749,
+      "offer": "41% OFF\t",
+      "rating": "threeStar.png",
+      "freq": "(54)"
+    },
+    {
+      "id": 51,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/u/u/Arshia-Fashions-Girls-Kurti-and-SDL990332987-1-d3309.jpg",
+      "name": "Arshia Fashions Girls Kurti and Dhoti Set Girls Function Dress",
+      "strikedprice": "MRP  Rs. 2,799 ",
+      "price": 899,
+      "offer": "75% OFF",
+      "rating": "fivestar.png",
+      "freq": "(91)"
+    },
+    {
+      "id": 52,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/p/230X258_sharpened/combo-pack-of-2-SDL890657267-1-c7f21.jpeg",
+      "name": "Combo pack of 2",
+      "strikedprice": "MRP  Rs. 1,399",
+      "price": 439,
+      "offer": "69% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 53,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/u/230X258_sharpened/AGRAYYANA-Gulab-Tafetta-Sattin-Semi-SDL385538873-1-908d0.jpeg",
+      "name": "AGRAYYANA Gulab Tafetta Sattin Semi-Stitched girl's Lehenga Choli",
+      "strikedprice": "MRP  Rs. 1,899",
+      "price": 539,
+      "offer": "72% OFF",
+      "rating": "fivestar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 54,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/k/y/230X258_sharpened/KIDS-Full-Sleeves-OMBRE-DYEING-SDL066310212-1-2935b.webp",
+      "name": "KIDS Full Sleeves OMBRE DYEING HOODED T-Shirt",
+      "strikedprice": "MRP  Rs. 1,199 ",
+      "price": 289,
+      "offer": "76% OFF",
+      "rating": "3star.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 55,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/g/Montello-Cotton-Best-Friends-Dress-SDL050011730-1-13c04.jpg",
+      "name": "Montello Cotton Best Friends Dress set for Baby Girl with Full sleeves",
+      "strikedprice": "MRP  Rs. 899 ",
+      "price": 299,
+      "offer": "67% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(559)"
+    },
+    {
+      "id": 56,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/p/230X258_sharpened/combo-pack-of-2-SDL890657267-1-c7f21.jpeg",
+      "name": "Combo pack of 2 Kids Clothing",
+      "strikedprice": "MRP  Rs. 1,399",
+      "price": 439,
+      "offer": "69% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(35)"
+    },
+    {
+      "id": 57,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/u/n/Care-in-Printed-Round-Neck-SDL385294235-3-5d956.JPG",
+      "name": "Care in Printed Round Neck Cotton White Color Sando Vest and Short Set Kids",
+      "strikedprice": "MRP  Rs. 599",
+      "price": 329,
+      "offer": "45% OFF",
+      "rating": "fivestar.png",
+      "freq": "(33)"
+    },
+    {
+      "id": 58,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/n/u/MashUp-Classic-Red-Shirt-for-SDL647648268-1-51614.jpg",
+      "name": "MashUp Classic Red Shirt for Young boys",
+      "strikedprice": "MRP  Rs. 530",
+      "price": 419,
+      "offer": "21% OFF",
+      "rating": "3star.png",
+      "freq": "(26)"
+    },
+    {
+      "id": 59,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/d/7/Girls-Pyjama-Set-SDL615748359-1-f0fb3.JPG",
+      "name": "Girls Pyjama Set",
+      "strikedprice": "MRP  Rs. 1,299",
+      "price": 309,
+      "offer": "76% OFF",
+      "rating": "3star.png",
+      "freq": "(69)"
+    },
+    {
+      "id": 60,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/d/3/Kothari-100-cotton-Printed-Trackpant-SDL727245495-1-7ca63.jpeg",
+      "name": "Kothari 100% cotton Printed Trackpant for Boys",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 289,
+      "offer": "68% OFF",
+      "rating": "fivestar.png",
+      "freq": "(47)"
+    },
+    {
+      "id": 61,
+      "image_url": "https://n1.sdlcdn.com/imgs/h/6/9/Disha-Ethnic-Style-Rayon-Printed-SDL620791269-1-b81bc.jpeg",
+      "name": "Disha Ethnic Style Rayon Printed Girls Lehenga Choli",
+      "strikedprice": "MRP  Rs. 1,289  ",
+      "price": 625,
+      "offer": "52% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 62,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/q/1/Icable-Baby-Boys-and-Baby-SDL893177406-1-e879d.jpg",
+      "name": "Icable Baby Boys and Baby Girls Printed Rompers Organic Cotton",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 199,
+      "offer": "60% OFF",
+      "rating": "fivestar.png",
+      "freq": "(510)"
+    },
+    {
+      "id": 63,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/w/y/Mirrow-Trade-Baby-Girl-s-SDL879147658-1-c4a70.jpg",
+      "name": "Mirrow Trade Baby Girl’s Tutu Style Flared Party Midi Dress",
+      "strikedprice": "MRP  Rs. 849",
+      "price": 499,
+      "offer": "59% OFF",
+      "rating": "3star.png",
+      "freq": "(15)"
+    },
+    {
+      "id": 64,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/t/g/BLUE-STRIPES-EMBROIDERED-FROCK-SDL668354566-1-181c5.jpg",
+      "name": "BLUE STRIPES EMBROIDERED FROCK FOR SMALL GIRL CHILD 5YEARS",
+      "strikedprice": "MRP  Rs. 561  ",
+      "price": 299,
+      "offer": "65% OFF",
+      "rating": "fivestar.png",
+      "freq": "(51)"
+    },
+    {
+      "id": 65,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/d/3/Kothari-100-cotton-Printed-Trackpant-SDL727245495-1-7ca63.jpeg",
+      "name": "Kothari 100% cotton Printed Trackpant for Boys",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 289,
+      "offer": "68% OFF",
+      "rating": "fivestar.png",
+      "freq": "(47)"
+    },
+    {
+      "id": 66,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/p/230X258_sharpened/combo-pack-of-2-SDL890657267-1-c7f21.jpeg",
+      "name": "Combo pack of 2",
+      "strikedprice": "MRP  Rs. 1,399",
+      "price": 439,
+      "offer": "69% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(35)"
+    },
+    {
+      "id": 67,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/r/c/Fashion-Dream-Girl-s-Patola-SDL158991205-1-47aea.jpg",
+      "name": "Fashion Dream Girl's Patola Printed Rajastani Lehenga Choli",
+      "strikedprice": "MRP  Rs. 2,499 ",
+      "price": 519,
+      "offer": "79% OFF",
+      "rating": "fivestar.png",
+      "freq": "(86)"
+    },
+    {
+      "id": 68,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/b/d/NEW-COLLECTIONS-Jeans-BabaSuit-SDL328722987-1-a92e4.jpeg",
+      "name": "NEW COLLECTIONS Jeans BabaSuit",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 349,
+      "offer": "65% OFF",
+      "rating": "fivestar.png",
+      "freq": "(34)"
+    },
+    {
+      "id": 69,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/c/r/Sathiyas-Set-of-5-Printed-SDL045337200-1-5994f.jpeg",
+      "name": "Sathiyas 5Set Printed Cotton Shirts and Shorts- 0-6 months Babies",
+      "strikedprice": "MRP  Rs. 799",
+      "price": 279,
+      "offer": "53% OFF",
+      "rating": "fivestar.png",
+      "freq": "(46)"
+    },
+    {
+      "id": 70,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/u/230X258_sharpened/AGRAYYANA-Gulab-Tafetta-Sattin-Semi-SDL385538873-1-908d0.jpeg",
+      "name": "AGRAYYANA Gulab Tafetta Sattin Semi-Stitched girl's Lehenga Choli",
+      "strikedprice": "MRP  Rs. 1,899",
+      "price": 479,
+      "offer": "72% OFF",
+      "rating": "fivestar.png",
+      "freq": "(94)"
+    },
+    {
+      "id": 71,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/t/m/230X258_sharpened/Clothonics-kids-frock-SDL378386848-1-1d897.jpeg",
+      "name": "Little Kids - Cotton Blend Green Baby Girl Frock ( Pack of 1 )",
+      "strikedprice": "MRP  Rs. 599",
+      "price": 239,
+      "offer": "60% OFF",
+      "rating": "3star.png",
+      "freq": "(4)"
+    },
+    {
+      "id": 71,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/t/0/JGJ-Baby-Boy-s-Baby-SDL366352178-1-8ae96.jpg",
+      "name": "JGJ Baby Boy's & Girl's Jumbo The Elephant Dungaree(0-6months)",
+      "strikedprice": "MRP  Rs. 999 ",
+      "price": 279,
+      "offer": "72% OFF",
+      "rating": "fivestar.png",
+      "freq": "(52)"
+    }
+  ],
+  "sevenData": [
+    {
+      "id": 1,
+      "image_url": "https://i3.sdlcdn.com/img/web_csf_top_navigation09/WaterPurifiers_Widget.jpg",
+      "name": "water purifiers"
+    },
+    {
+      "id": 2,
+      "image_url": "https://i3.sdlcdn.com/img/web_csf_top_navigation09/GasStove_Widget.jpg",
+      "name": "gas stove"
+    },
+    {
+      "id": 3,
+      "image_url": "https://i2.sdlcdn.com/img/web_csf_top_navigation09/JuicerMixer_Widget.jpg",
+      "name": "Juicer Mixer Grinder"
+    },
+    {
+      "id": 4,
+      "image_url": "https://i1.sdlcdn.com/img/web_csf_top_navigation09/Chiminey_Widget.jpg",
+      "name": "Chimneys"
+    },
+    {
+      "id": 5,
+      "image_url": "https://n2.sdlcdn.com/imgs/d/0/0/kettle_CSF_topnavimg-fbb07.jpg",
+      "name": "Electric Kettles"
+    },
+    {
+      "id": 6,
+      "image_url": "https://i4.sdlcdn.com/img/web_csf_top_navigation09/InductionCooktops_Widget.jpg",
+      "name": "Introduction Cookups"
+    },
+    {
+      "id": 7,
+      "image_url": "https://i2.sdlcdn.com/img/web_csf_top_navigation09/ChoppersBlenders_Widget.jpg",
+      "name": "Choppers & Blender"
+    }
+  ],
+  "mens_data": [
+    {
+      "id": 1,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/b/d/large/Urbano-Fashion-Light-Blue-Slim-SDL217584315-1-cb45f.webp",
+      "name": "Tales & Stories Boys Lycra Grey Solid Jeans",
+      "strikedoffprice": "Rs. 999 ",
+      "price": 875,
+      "offer": "12% OFF",
+      "rating": "3halfstar.png",
+      "freq": "(55)"
+    },
+    {
+      "id": 2,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/u/a/large/David-Crew-100-Percent-Cotton-SDL279933668-1-f3c63.jpeg",
+      "name": "David Crew 100 Percent Cotton Maroon Printed ",
+      "strikedoffprice": "Rs. 1199",
+      "price": 299,
+      "offer": "76% off",
+      "rating": "3halfstar.png",
+      "freq": "(233)"
+    },
+    {
+      "id": 3,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/p/s/large/DevHim-Four-Way-lycra-Jogger-SDL842099384-1-5260d.webp",
+      "name": "DevHim Four Way lycra Jogger",
+      "strikedoffprice": "Rs. 1199",
+      "price": 289,
+      "offer": "79% off",
+      "rating": "3halfstar.png",
+      "freq": "(24)"
+    },
+    {
+      "id": 4,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/q/e/large/Forbro-Maroon-Polyester-Lycra-Trackpants-SDL651825720-1-3ef59.jpeg",
+      "name": "Forbro - Polyester Blend Purple Men's Trackpants",
+      "strikedoffprice": "Rs. 1345",
+      "price": 345,
+      "offer": "67% off",
+      "rating": "3halfstar.png",
+      "freq": "(367)"
+    },
+    {
+      "id": 5,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/d/9/large/David-Crew-100-Cotton-Multi-SDL407628231-1-28b3a.webp",
+      "name": "David Crew - 100% Cotton Regular Fit Multi Men's",
+      "strikedoffprice": "Rs.1199",
+      "price": "576",
+      "offer": "47% off",
+      "rating": "3halfstar.png",
+      "freq": "(23)"
+    },
+    {
+      "id": 6,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/b/9/large/Combo-Track-Pant-SDL241903648-1-3e816.webp",
+      "name": "Vitaan Color Block Grey & Blue Track Pant / Tra",
+      "strikedoffprice": "Rs.1598",
+      "price": 444,
+      "offer": "74% off",
+      "rating": "3halfstar.png",
+      "freq": "(222)"
+    },
+    {
+      "id": 7,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/e/v/large/Life-Roads-100-Cotton-Slim-SDL743173501-1-74893.webp",
+      "name": "Life Roads - 100% Cotton Slim Fit White Men's",
+      "strikedoffprice": "Rs.2499",
+      "price": "547",
+      "offer": "78% off",
+      "rating": "3halfstar.png",
+      "freq": "(456)"
+    },
+    {
+      "id": 8,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/v/large/VAPOUR-SPORTS-Black-Polyester-Lycra-SDL240910321-1-aecfe.webp",
+      "name": "VAPOUR SPORTS - Polyester Black Men's Trackpant",
+      "strikedoffprice": "Rs.3999",
+      "price": "589",
+      "offer": "89% off",
+      "rating": "3halfstar.png",
+      "freq": "(345)"
+    },
+    {
+      "id": 9,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/u/large/Veirdo-100-Cotton-Regular-Fit-SDL302182620-1-f0fac.webp",
+      "name": "Veirdo - 100% Cotton Regular Fit Green Men's",
+      "strikedoffprice": "Rs.1199",
+      "price": 297,
+      "offer": "67% off",
+      "rating": "3halfstar.png",
+      "freq": "(123)"
+    },
+    {
+      "id": 10,
+      "image_url": "https://n2.sdlcdn.com/imgs/f/8/p/large/Urbano-Fashion-Black-Slim-Jeans-SDL243120339-1-86604.jpeg",
+      "name": "Urbano Fashion Cotton Blend Slim Fit Black Men's",
+      "strikedoffprice": "Rs.1367",
+      "price": 657,
+      "offer": "55% off",
+      "rating": "3halfstar.png",
+      "freq": "(233)"
+    },
+    {
+      "id": 11,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/s/9/large/The-Million-Club-Polyester-Black-SDL428232722-1-f8472.jpeg",
+      "name": "The Million Club - Polyester Regular Fit Black Men ",
+      "strikedoffprice": "Rs.2345",
+      "price": 899,
+      "offer": "68% off",
+      "rating": "3halfstar.png",
+      "freq": "(234)"
+    },
+    {
+      "id": 12,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/t/s/large/Zeffit-Black-Cotton-Blend-Trackpants-SDL818033765-1-d0510.jpeg",
+      "name": "Zeffit - Cotton Blend Black Men's Trackpan",
+      "strikedoffprice": "Rs.999",
+      "price": 299,
+      "offer": "70% off",
+      "rating": "3halfstar.png",
+      "freq": "(123)"
+    },
+    {
+      "id": 13,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/9/large/Scrott-Fitness-100-Cotton-Regular-SDL533766053-1-46ed7.webp",
+      "name": "Scrott Fitness - 100% Cotton Regular Fit Black Men'",
+      "strikedoffprice": "Rs.1220",
+      "price": 467,
+      "offer": "72% off",
+      "rating": "3halfstar.png",
+      "freq": "(23)"
+    },
+    {
+      "id": 14,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/e/o/large/Maniac-100-Percent-Cotton-Slim-SDL416001461-1-f8db8.webp",
+      "name": "Maniac - 100% Cotton Slim Fit Navy Men's T-Shirt",
+      "strikedoffprice": "Rs.1249",
+      "price": 345,
+      "offer": "60% off",
+      "rating": "3halfstar.png",
+      "freq": "(67)"
+    },
+    {
+      "id": 15,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/b/5/large/The-Million-Club-Cotton-Blend-SDL746462088-1-34133.webp",
+      "name": "The Million Club - Cotton Blend Regular Fit Wh",
+      "strikedoffprice": "Rs.1544",
+      "price": 599,
+      "offer": "70% off",
+      "rating": "3halfstar.png",
+      "freq": "(234)"
+    },
+    {
+      "id": 16,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/t/b/large/UrbanMark-White-Daily-Slippers-SDL520498928-1-4e760.webp",
+      "name": "UrbanMark White Slippers",
+      "strikedoffprice": "Rs.999",
+      "price": 189,
+      "offer": "81% off",
+      "rating": "3halfstar.png",
+      "freq": "(123)"
+    },
+    {
+      "id": 17,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/w/c/large/UrbanMark-Red-Daily-Slippers-SDL454008603-1-4b108.jpeg",
+      "name": "UrbanMark Red Slippers",
+      "strikedoffprice": "Rs.455",
+      "price": 234,
+      "offer": "25% off",
+      "rating": "3halfstar.png",
+      "freq": "(23)"
+    },
+    {
+      "id": 18,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/a/o/large/Aadi-Outdoor-Black-Casual-Shoes-SDL716017712-1-5ca34.jpeg",
+      "name": "Aadi Outdoor Black Casual Shoes",
+      "strikedoffprice": "Rs.999",
+      "price": 449,
+      "offer": "56% off",
+      "rating": "3halfstar.png",
+      "freq": "(35)"
+    },
+    {
+      "id": 19,
+      "image_url": "https://n4.sdlcdn.com/imgs/i/e/q/large/ASIAN-Sneakers-Black-Casual-Shoes-SDL942280399-1-5574e.jpeg",
+      "name": "ASIAN Sneakers Black Casual Shoes",
+      "strikedoffprice": "Rs.699",
+      "price": 469,
+      "offer": "33% off",
+      "rating": "3halfstar.png",
+      "freq": "(56)"
+    },
+    {
+      "id": 20,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/d/y/large/Afashion-Tan-Loafers-SDL255870139-1-68b3d.jpeg",
+      "name": "ASIAN Sneakers Black Casual Shoes",
+      "strikedoffprice": "Rs.1234",
+      "price": 356,
+      "offer": "44% off",
+      "rating": "3halfstar.png",
+      "freq": "(45)"
+    },
+    {
+      "id": 21,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/s/v/large/Altek-Tan-Daily-Slippers-SDL529442762-1-b3064.webp",
+      "name": "Altek Tan Flip Flops",
+      "strikedoffprice": "Rs.499",
+      "price": 234,
+      "offer": "52% off",
+      "rating": "3halfstar.png",
+      "freq": "(234)"
+    },
+    {
+      "id": 22,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/v/s/large/viv-Blue-Casual-Shoes-SDL496749229-1-ad1c7.jpeg",
+      "name": "viv Blue Casual Shoes",
+      "strikedoffprice": "Rs.1999",
+      "price": 489,
+      "offer": "78% off",
+      "rating": "3halfstar.png",
+      "freq": "(1045)"
+    },
+    {
+      "id": 23,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/d/b/large/Aadi-Sneakers-Black-Casual-Shoes-SDL908198954-1-a423e.jpeg",
+      "name": "Aadi Sneakers Black Casual Shoes",
+      "strikedoffprice": "Rs.999",
+      "price": 799,
+      "offer": "20% off",
+      "rating": "3halfstar.png",
+      "freq": "(399)"
+    },
+    {
+      "id": 24,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/g/x/large/Kara-Black-Nylon-Office-Bag-SDL566255049-1-e3ed2.jpeg",
+      "name": "Kara Black Nylon Office Bag",
+      "strikedoffprice": "Rs.3999",
+      "price": 1199,
+      "offer": "80% off",
+      "rating": "3halfstar.png",
+      "freq": "(479)"
+    },
+    {
+      "id": 25,
+      "image_url": "https://n1.sdlcdn.com/imgs/i/6/3/large/Untitled_3-c6627.webp",
+      "name": "Abgrow Black PU Leather Office Laptop",
+      "strikedoffprice": "Rs.6777",
+      "price": 3555,
+      "offer": "30% off",
+      "rating": "3halfstar.png",
+      "freq": "(234)"
+    },
+    {
+      "id": 26,
+      "image_url": "https://n1.sdlcdn.com/imgs/i/0/i/large/Creator-shop-Black-Leather-Briefcase-SDL224287210-1-4b2bf.jpeg",
+      "name": "Creator Sleek PU Leather Office, College",
+      "strikedoffprice": "Rs.2,299",
+      "price": 456,
+      "offer": "81% off",
+      "rating": "3halfstar.png",
+      "freq": "(23)"
+    },
+    {
+      "id": 27,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/o/z/large/Leather-World-Laptop-office-bag-SDL432037858-2-574d5.jpeg",
+      "name": "Leather World Laptop office bag Brow",
+      "strikedoffprice": "Rs.3,999",
+      "price": 699,
+      "offer": "75% off",
+      "rating": "3halfstar.png",
+      "freq": "(46)"
+    },
+    {
+      "id": 28,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/o/7/large/Da-Tasche-Black-Laptop-Bags-SDL230185517-1-40ddf.webp",
+      "name": "Da Tasche Black 38 Ltrs Laptop Bags",
+      "strikedoffprice": "Rs.3,499",
+      "price": 749,
+      "offer": " 67% off",
+      "rating": "3halfstar.png",
+      "freq": "(89)"
+    },
+    {
+      "id": 29,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/n/q/large/Da-Tasche-Brown-P-U-SDL238500597-1-775b7.jpeg",
+      "name": "Fly Fashion Sky Blue 22 Ltrs Laptop Bags",
+      "strikedoffprice": "Rs.4667",
+      "price": 1999,
+      "offer": "56% off",
+      "rating": "3halfstar.png",
+      "freq": "(345)"
+    }
+  ],
+  "trendingData": [
+    {
+      "id": 1,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/u/large/Veirdo-100-Cotton-Regular-Fit-SDL302182620-1-f0fac.jpg",
+      "name": "100% Cotton Regular Fit Green Men's T-Shirt ( Pack of 1 )",
+      "strikedprice": "Rs 1,199",
+      "price": 309,
+      "offer": "74% OFF"
+    },
+    {
+      "id": 2,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/l/3/large/N95-White-Face-Mask-Reusable-SDL636079837-1-efb91.webp",
+      "name": "N95 White Face Mask, Reusable, Washable Pack Of 20",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 157,
+      "offer": "84% OFF"
+    },
+    {
+      "id": 3,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/m/l/large/Healthopedia-N95-Face-Masks-Pack-SDL860604353-1-74edb.webp",
+      "name": "Healthopedia N95 Face Masks Pack Of 8, Easy Breathable",
+      "strikedprice": "MRP  Rs. 1,199",
+      "price": 149,
+      "offer": "88% OFF"
+    },
+    {
+      "id": 4,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/b/d/Hritika-Black-Silk-Blend-Saree-SDL606871660-1-b545f.jpg",
+      "name": "Hritika-Black-Silk-Blend-Saree",
+      "strikedprice": "MRP Rs. 1,199",
+      "price": 419,
+      "offer": "65% OFF"
+    },
+    {
+      "id": 5,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/s/1/large/HOMETALES-Microfibre-Double-Bedsheet-with-SDL353410394-1-ddf2f.webp",
+      "name": "HOMETALES Double Bedsheet with 2 Pillow Covers ( 218 cm x 229 cm )",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 329,
+      "offer": "67% OFF"
+    },
+    {
+      "id": 6,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/a/8/large/Shiv-Shakti-Kavach-5-Mala-SDL443330653-1-a0955.webp",
+      "name": "Shiv Shakti Kavach 5 Mala With Shiv Trishul ",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 135,
+      "offer": "73% OFF"
+    },
+    {
+      "id": 7,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/i/0/large/Boat-boat-rockerz-235-V2-SDL552054716-1-2863f.webp",
+      "name": "boAt Rockerz 235 v2 Bluetooth Headset (Blue)",
+      "strikedprice": "MRP  Rs. 2990",
+      "price": 1199,
+      "offer": "60% OFF"
+    },
+    {
+      "id": 8,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/k/b/y/large/Adivasi-herbal-products-100-mL-SDL151263626-1-fcc31.webp",
+      "name": "Adivasi herbal products 100 mL",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 166,
+      "offer": "83% OFF"
+    },
+    {
+      "id": 9,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/k/b/b/large/GOD-BLESS-Cotton-Shirt-Style-SDL661431507-1-9e3dc.webp",
+      "name": "GOD BLESS Cotton Shirt Style - Yellow",
+      "strikedprice": "MRP  Rs. 1,199",
+      "price": 419,
+      "offer": "65% OFF"
+    },
+    {
+      "id": 10,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/b/6/large/AMAZE-SHOPPEE-7-Pcs-Wooden-SDL899574152-1-9d301.webp",
+      "name": "AMAZE SHOPPEE 7 Pcs Wooden Brown Serving Spoon",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 169,
+      "offer": "66% OFF"
+    },
+    {
+      "id": 11,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/r/t/large/Gold-Plated-Stylish-Bracelet-Adjustable-SDL902131379-1-d8bd9.webp",
+      "name": "Gold Plated Bracelet Adjustable OM Design Men",
+      "strikedprice": "MRP  Rs 249",
+      "price": 159,
+      "offer": "36% OFF"
+    },
+    {
+      "id": 12,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/k/e/9/large/Triraj-Polyester-Black-Women-s-SDL714569570-1-a3d25.webp",
+      "name": "Polyester Black Women's Tunic ( Pack of 1 )",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 169,
+      "offer": "79% OFF"
+    },
+    {
+      "id": 13,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/t/b/large/UrbanMark-White-Daily-Slippers-SDL520498928-1-4e760.webp",
+      "name": "UrbanMark White Slippers",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 249,
+      "offer": "75% OFF"
+    },
+    {
+      "id": 14,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/s/e/large/Ratan_s_Eco_friendly_1_SDL400446124_2_9a609_5c18c-525ca.webp",
+      "name": "SRR 1.8 Liter Stainless Steel Electric Kettle",
+      "strikedprice": "MRP  Rs. 2499",
+      "price": 649,
+      "offer": "74% OFF"
+    },
+    {
+      "id": 15,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/y/1/large/Shivom-24-Pcs-Stainless-Steel-SDL492277471-1-6ae51.webp",
+      "name": "Shivom 24 Pcs Stainless Steel Cutlery Set",
+      "strikedprice": "MRP  Rs. 1499",
+      "price": 575,
+      "offer": "62% OFF"
+    },
+    {
+      "id": 16,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/v/o/large/Imerbela-Organic-Combo-Tester-Kit-SDL518787831-1-db1df.webp",
+      "name": "Imerbela Organic Combo Tester Kit 90 mL Pack of 3",
+      "strikedprice": "MRP  Rs.180",
+      "price": 120,
+      "offer": "33% OFF"
+    },
+    {
+      "id": 17,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/b/6/large/AMAZE-SHOPPEE-7-Pcs-Wooden-SDL899574152-1-9d301.webp",
+      "name": "Life Roads - 100% Cotton Slim Fit Red Men's Casual Shirt ",
+      "strikedprice": "MRP  Rs.2499",
+      "price": 649,
+      "offer": "74% OFF"
+    },
+    {
+      "id": 18,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/b/2/o/large/Denver-Hamilton-Body-Spray-Pack-SDL455989391-1-1ab82.webp",
+      "name": "AMAZE SHOPPEE 7 Pcs Wooden Brown Serving Spoon",
+      "strikedprice": "MRP  Rs.440",
+      "price": 359,
+      "offer": "18% OFF"
+    },
+    {
+      "id": 19,
+      "image_url": "https://n1h2.sdlcdn.com/imgs/j/p/j/large/Arizona-Sunglasses-Black-Glass-lens-SDL836031916-1-d436d.webp",
+      "name": "AMAZE SHOPPEE 7 Pcs Wooden Brown Serving Spoon",
+      "strikedprice": "MRP  Rs.1099",
+      "price": 209,
+      "offer": "81% OFF"
+    },
+    {
+      "id": 20,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/r/6/230X258_sharpened/Kids-Cave-Dress-for-girls-SDL433221746-1-2c766.webp",
+      "name": "Kids Cave Dress for girls Regular fit Cut Out Dress",
+      "strikedprice": "MRP  Rs. 1,699",
+      "price": 799,
+      "offer": "53% OFF"
+    },
+    {
+      "id": 22,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/p/230X258_sharpened/combo-pack-of-2-SDL890657267-1-c7f21.jpeg",
+      "name": "Combo pack of 2",
+      "strikedprice": "MRP  Rs. 1,399",
+      "price": 439,
+      "offer": "69% OFF"
+    },
+    {
+      "id": 23,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/g/Montello-Cotton-Best-Friends-Dress-SDL050011730-1-13c04.jpg",
+      "name": "Montello Cotton Dress set for Baby Girl with Frock and Pyjamas",
+      "strikedprice": "MRP  Rs. 899 ",
+      "price": 299,
+      "offer": "67% OFF"
+    },
+    {
+      "id": 24,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/6/Tales-Stories-Boys-Lycra-White-SDL183316223-1-62c4b.jpg",
+      "name": "Tales & Stories Boys Lycra White Solid Jeans",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 875,
+      "offer": "12% OFF\t"
+    },
+    {
+      "id": 25,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/x/j/SBN-GIRLS-YELLOW-BLACK-PARTY-SDL959930182-1-8f14e.jpeg",
+      "name": "SBN GIRLS YELLOW & BLACK PARTY FROCK",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 319,
+      "offer": "68% OFF"
+    },
+    {
+      "id": 26,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/6/Tales-Stories-Boys-Lycra-Grey-SDL201308856-1-24043.jpg",
+      "name": "Tales & Stories Boys Lycra Grey Solid Jeans",
+      "strikedprice": "MRP  Rs. 999 ",
+      "price": 875,
+      "offer": "12% OFF"
+    },
+    {
+      "id": 27,
+      "image_url": "https://n1.sdlcdn.com/imgs/b/5/4/large/Kaboos-Blue-Romper-SDL505765877-1-81724.JPG",
+      "name": "Kaboos Blue Romper",
+      "strikedprice": "MRP  Rs. 359",
+      "price": 179,
+      "offer": "50% OFF"
+    },
+    {
+      "id": 28,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/v/s/Boys-Festive-Party-Kurta-and-SDL539267794-1-c91bc.jpg",
+      "name": "Boys Festive & Party Kurta and Churidar Set",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 359,
+      "offer": "64% OFF"
+    },
+    {
+      "id": 29,
+      "image_url": "https://n1.sdlcdn.com/imgs/i/9/2/230X258_sharpened/Naughty-Ninos-Girls-Maroon-Ruffled-SDL986177888-1-bc807.jpeg",
+      "name": "Naughty Ninos Girls Maroon Ruffled Dress",
+      "strikedprice": "MRP  Rs. 1,499",
+      "price": 699,
+      "offer": "53% OFF"
+    },
+    {
+      "id": 30,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/s/u/230X258_sharpened/Mirrow-Trade-Girl-s-Ethnic-SDL419494320-1-0818d.webp",
+      "name": "Mirrow Trade Girl's Ethnic Wear Western Style Lehenga Choli Set",
+      "strikedprice": "MRP  Rs. 1,999",
+      "price": 519,
+      "offer": "74% OFF"
+    },
+    {
+      "id": 31,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/x/z/NARPAVI-TRENDS-COLOUR-BLOCKED-BOYS-SDL714875247-1-b3628.jpg",
+      "name": "NARPAVI TRENDS BOYS CLOTHING SET 3/4th (PACK OF 5)",
+      "strikedprice": "MRP  Rs. 1,299",
+      "price": 725,
+      "offer": "44% OFF"
+    },
+    {
+      "id": 32,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/g/k/The-Creators-Cotton-Baby-Girl-SDL340959731-1-f17cf.jpeg",
+      "name": "The Creators Red , Blue and Black Baby Girl Frocks",
+      "strikedprice": "MRP  Rs. 999 ",
+      "price": 549,
+      "offer": "45% OFF"
+    },
+    {
+      "id": 33,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/7/u/The-Best-Son-Kids-T-SDL402853828-1-77a28.jpeg",
+      "name": "The Best Son Kids T-Shirt",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 309,
+      "offer": "38% OFF"
+    },
+    {
+      "id": 34,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/q/1/MBLACK-SDL562246058-1-eb299.jpeg",
+      "name": "SBN Black Partywear Gown for Girls",
+      "strikedprice": "MRP  Rs. 999",
+      "price": 319,
+      "offer": "68% OFF"
+    },
+    {
+      "id": 35,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/u/230X258_sharpened/KV-Fashion-Baby-Girls-Girls-SDL127482054-1-997d1.webp",
+      "name": "KV Fashion Baby Girls & Girls Red Velvet lehenga Choli",
+      "strikedprice": "MRP  Rs. 1,999",
+      "price": 775,
+      "offer": "61% OFF"
+    },
+    {
+      "id": 36,
+      "image_url": "https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg",
+      "name": "Bhawna Collection Loard Shiv Trishul Damru Locket ",
+      "strikedprice": "MRP  Rs. 499",
+      "price": 135,
+      "offer": "73% OFF"
+    }
+  ],
+  "womensData": [
+    {
+      "id": 1,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/b/m/230X258_sharpened/Bhakarwadi-Black-Art-Silk-Saree-SDL762653447-1-eb79c.webp",
+      "name": "Bhakarwadi - Silk Blend Black",
+      "price": "319",
+      "strikedoffprice": "1799",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 2,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/t/c/230X258_sharpened/Handloom-Red-Cotton-Silk-Saree-SDL863607435-1-4aafb.webp",
+      "name": "Handloom - Silk Blend Red ",
+      "price": " 539",
+      "strikedoffprice": " 1499",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 3,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/t/f/230X258_sharpened/Panihari-Creations-White-Cotton-Saree-SDL675200204-1-909b4.jpeg",
+      "name": "Panihari Creations - 100% Cotton White",
+      "price": " 699",
+      "strikedoffprice": " 1599",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 4,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/v/j/230X258_sharpened/Bhakarwadi-Blue-Georgette-Saree-Single-SDL094232966-1-9710f.webp",
+      "name": "Bhakarwadi - Georgette Multicolor ",
+      "price": " 433",
+      "strikedoffprice": " 1499",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 5,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/b/d/230X258_sharpened/Hritika-Brown-Georgette-Saree-Single-SDL639620046-1-f9a8b.webp",
+      "name": "Hritika - Georgette Brown",
+      "price": " 289",
+      "strikedoffprice": " 1399",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 6,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/t/b/230X258_sharpened/Bhakarwadi-Grey-Beige-Khadi-Saree-SDL474779609-1-bc712.jpeg",
+      "name": "Bhakarwadi - Cotton Blend Multicolor",
+      "price": " 649",
+      "strikedoffprice": " 2399",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 7,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/d/230X258_sharpened/Hritika-Black-Silk-Blend-Saree-SDL606871660-1-b545f.webp",
+      "name": "Bhakarwadi - Silk Blend Black With Blouse",
+      "price": " 319",
+      "strikedoffprice": " 1799",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 8,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/b/m/230X258_sharpened/Bhakarwadi-Black-Art-Silk-Saree-SDL762653447-1-eb79c.webp",
+      "name": "Hritika - Silk Blend Black",
+      "price": " 579",
+      "strikedoffprice": " 2999",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 9,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/j/230X258_sharpened/Alexplum-Red-Yellow-Bhagalpuri-Silk-SDL863522671-1-ed779.webp",
+      "name": "Alexplum - Silk Blend Multicolor",
+      "price": " 349",
+      "strikedoffprice": " 849",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 10,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/w/1/230X258_sharpened/Bhakarwadi-SkyBlue-Cotton-Silk-Saree-SDL289806692-1-0c666.webp",
+      "name": "Bhakarwadi - Silk Blend Blue",
+      "price": " 349",
+      "strikedoffprice": " 1549",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 11,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/o/8/230X258_sharpened/Sherine-Black-Pink-Printed-Saree-SDL062712840-1-ea3de.jpeg",
+      "name": "Sherine - Georgette Multicolor",
+      "price": " 299",
+      "strikedoffprice": " 1199",
+      "offprice": "48% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 12,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/9/230X258_sharpened/Sherine-Green-Cotton-A-line-SDL160449390-1-1110a.webp",
+      "name": "Sherine - A-line 100% Cotton Green Women's Kurti",
+      "price": " 699",
+      "strikedoffprice": " 3199",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 13,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/9/230X258_sharpened/CTMTEX-Straight-Rayon-Blue-Women-SDL357211660-1-d0eb6.webp",
+      "name": "CTMTEX - Straight Rayon Blue Women's Kurti ",
+      "price": " 499",
+      "strikedoffprice": " 1599",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 14,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/9/230X258_sharpened/Ethnic-Bay-Straight-100-Cotton-SDL343373051-1-35a25.webp",
+      "name": "Ethnic Bay - Straight 100% Cotton Multicolor Womens Kurti",
+      "price": " 499",
+      "strikedoffprice": " 1399",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 15,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/9/230X258_sharpened/KSHARAA-Straight-100-Cotton-Yellow-SDL518886093-1-f9b37.webp",
+      "name": "KSHARAA - Straight 100% Cotton Yellow Women's Kurti",
+      "price": " 599",
+      "strikedoffprice": " 1199",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 16,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/3/230X258_sharpened/Niyukti-Straight-Rayon-Green-Women-SDL986522025-1-4d006.webp",
+      "name": "Niyukti - Straight Rayon Green Women's Kurti ",
+      "price": " 399",
+      "strikedoffprice": " 2199",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 17,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/e/9/230X258_sharpened/CTMTEX-Anarkali-Rayon-Blue-Women-SDL732812176-1-79c3c.webp",
+      "name": "CTMTEX - Anarkali Rayon Blue Women's Kurti",
+      "price": " 519",
+      "strikedoffprice": " 1599",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 18,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/e/9/230X258_sharpened/Sherine-Straight-Cotton-Blend-Pink-SDL184099241-1-dd9b3.webp",
+      "name": "Sherine - Georgette Multicolor",
+      "price": " 599",
+      "strikedoffprice": " 1199",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 19,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/e/9/230X258_sharpened/Sherine-Front-Slit-100-Cotton-SDL058734686-1-75f5a.webp",
+      "name": " Front Slit Cotton Beige Women's Kurti",
+      "price": " 499",
+      "strikedoffprice": " 1199",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 20,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/s/4/230X258_sharpened/1-Stop-Fashion-Multicoloured-Crepe-SDL081544666-1-5d503.webp",
+      "name": "1 Stop Fashion Multicoloured Crepe Straight Kurti",
+      "price": " 499",
+      "strikedoffprice": " 999",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 21,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/e/9/230X258_sharpened/CTMTEX-High-Slit-Rayon-Multicolor-SDL731290853-1-c6286.webp",
+      "name": "CTMTEX - High Slit Rayon Multicolor Women's Kurti",
+      "price": " 499",
+      "strikedoffprice": " 1499",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 22,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/9/230X258_sharpened/GALWIZ-Multicoloured-Crepe-Straight-Kurti-SDL298029302-1-9c7ee.webp",
+      "name": "Sherine - Straight 100% Cotton Black Women's Kurti",
+      "price": " 699",
+      "strikedoffprice": " 2099",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 23,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/p/f/230X258_sharpened/Ethnic-Bay-Green-Polyester-Straight-SDL840930157-1-5a4bc.webp",
+      "name": "Ethnic Bay Green Polyester Straight Kurti",
+      "price": " 289",
+      "strikedoffprice": " 889",
+      "offprice": "28% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 24,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/d/i/230X258_sharpened/NOWT-Aliquid-Red-Crepe-Gown-SDL994700780-1-a4be2.webp",
+      "name": "NOWT-Aliquid Red Crepe Gown ",
+      "price": " 419",
+      "strikedoffprice": " 1499",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 25,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/x/0/230X258_sharpened/Raghumaya-Maroon-Crepe-Jumpsuit-Single-SDL938282413-1-22f38.webp",
+      "name": "RADHIKA AND ENTERPRISES Cotton Red A- line Dress",
+      "price": " 430",
+      "strikedoffprice": " 1499",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 26,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/6/230X258_sharpened/Zeelpin-Enterprise-Yellow-Rayon-Gown-SDL644179912-1-53986.jpeg",
+      "name": "Zeelpin Enterprise Yellow Rayon Gown - Single",
+      "price": " 389",
+      "strikedoffprice": " 1099",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 27,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/b/4/230X258_sharpened/HEENA-TEXTILES-Rayon-Beige-Kaftan-SDL060482635-1-0789d.webp",
+      "name": "HEENA TEXTILES Rayon Beige Kaftan - Single",
+      "price": " 539",
+      "strikedoffprice": " 1099",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 28,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/x/0/230X258_sharpened/Raghumaya-Orange-Georgette-Jumpsuit-Single-SDL638147379-1-5c7c3.webp",
+      "name": "Raghumaya Orange Georgette Jumpsuit ",
+      "price": " 599",
+      "strikedoffprice": " 1499",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 29,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/d/i/230X258_sharpened/NOWT-Aliquid-Black-Crepe-Gown-SDL354015859-1-175f9.webp",
+      "name": "NOWT-Aliquid Black Crepe Gown -",
+      "price": " 399",
+      "strikedoffprice": " 1499",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 30,
+      "image_url": "https://n4.sdlcdn.com/imgs/i/6/3/230X258_sharpened/Rangun-Cotton-Black-A-line-SDL315582979-1-65304.jpeg",
+      "name": "Rangun Cotton Black A- line Dress",
+      "price": " 289",
+      "strikedoffprice": " 999",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 31,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/b/2/230X258_sharpened/Sherine-Cotton-Navy-Shift-Dress-SDL254431224-1-8d890.webp",
+      "name": "Sherine Cotton Navy Shift Dress - Single",
+      "price": " 659",
+      "strikedoffprice": " 1099",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 32,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/c/z/230X258_sharpened/HivaTrendz-Crepe-Grey-Fit-And-SDL685008194-1-285e8.webp",
+      "name": "HivaTrendz Crepe Grey Fit And Flare Dress",
+      "price": " 289",
+      "strikedoffprice": " 1299",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 33,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/r/y/230X258_sharpened/GALWIZ-Blue-Crepe-Jumpsuit-SDL760232847-1-3717e.webp",
+      "name": "GALWIZ Blue Crepe Jumpsuit",
+      "price": " 599",
+      "strikedoffprice": " 1299",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 34,
+      "image_url": "https://n2.sdlcdn.com/imgs/d/c/f/230X258_sharpened/Triraj-Dresses-SDL274276566-1-be027.webp",
+      "name": "Triraj Dresses Straight ",
+      "price": " 309",
+      "strikedoffprice": " 999",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 35,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/a/2/230X258_sharpened/JOGITA-FASHION-Crepe-Blue-Fit-SDL678043764-1-5fa2b.webp",
+      "name": "JOGITA FASHION Crepe Blue Fit And Flare Dress ",
+      "price": " 288",
+      "strikedoffprice": " 999",
+      "offprice": "40% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 36,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/c/j/230X258_sharpened/PURVAJA-Blue-Jacquard-Chaniya-Choli-SDL330269181-1-d51ea.webp",
+      "name": "PURVAJA Green Jacquard Circular Semi Stitched Lehenga ",
+      "price": " 1899",
+      "strikedoffprice": " 6999",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 37,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/c/u/230X258_sharpened/Aika-Pink-Net-Chaniya-Choli-SDL197694205-1-58cdd.webp",
+      "name": "Aika Pink Net Chaniya Choli Semi Stitched Lehenga ",
+      "price": " 678",
+      "strikedoffprice": " 1199",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 38,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/c/u/230X258_sharpened/Aika-Blue-Net-Chaniya-Choli-SDL352510528-1-baf97.webp",
+      "name": "Aika Blue Net Chaniya Choli Semi Stitched Lehenga ",
+      "price": " 675",
+      "strikedoffprice": " 1999",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 39,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/v/h/230X258_sharpened/Juniper-Black-Georgette-Circular-Stitched-SDL804243688-1-58e78.webp",
+      "name": "Juniper Black Georgette Circular Stitched Lehenga",
+      "price": " 1399",
+      "strikedoffprice": " 3499",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 40,
+      "image_url": "https://n3.sdlcdn.com/imgs/g/6/0/230X258_sharpened/Aika-Yellow-Net-Semi-Stitched-SDL384281829-1-31b13.webp",
+      "name": "Aika Yellow and Blue Net Semi Stitched Lehenga",
+      "price": " 489",
+      "strikedoffprice": " 1499",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 41,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/t/3/230X258_sharpened/Estela-Black-Net-Circular-Semi-SDL421042754-1-b66f9.webp",
+      "name": "Estela Black Net Circular Semi Stitched Lehenga",
+      "price": " 799",
+      "strikedoffprice": " 2599",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 42,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/a/2/230X258_sharpened/JOGITA-FASHION-Crepe-Blue-Fit-SDL678043764-1-5fa2b.webp",
+      "name": "Lady Shopi Red Satin Chaniya Lehenga",
+      "price": " 1075",
+      "strikedoffprice": " 2999",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 43,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/r/y/230X258_sharpened/GALWIZ-Blue-Crepe-Jumpsuit-SDL760232847-1-3717e.webp",
+      "name": "PURVAJA Pink Jacquard Chaniya Choli Semi Stitched Lehenga ",
+      "price": " 1499",
+      "strikedoffprice": " 1999",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 44,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/t/v/230X258_sharpened/MecZZON-Maroon-Taffeta-Chaniya-Choli-SDL245195555-1-a0174.webp",
+      "name": "Lady Shopi Maroon Velvet Chaniya Choli",
+      "price": " 488",
+      "strikedoffprice": " 999",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 45,
+      "image_url": "https://n4.sdlcdn.com/imgs/k/b/m/230X258_sharpened/Lady-Shopi-Red-Velvet-Chaniya-SDL111187206-1-783a9.webp",
+      "name": "Lady Shopi Green Velvet Chaniya Choli Semi Stitched Lehenga ",
+      "price": " 999",
+      "strikedoffprice": " 1999",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 46,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/b/m/230X258_sharpened/Lady-Shopi-Green-Velvet-Chaniya-SDL070614798-1-32abf.webp",
+      "name": "Lady Shopi Purple Velvet Chaniya Choli Lehenga ",
+      "price": " 588",
+      "strikedoffprice": " 1599",
+      "offprice": "25% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 47,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/x/7/230X258_sharpened/GALWIZ-Grey-Georgette-Shirt-Single-SDL047853323-1-b2721.jpeg",
+      "name": "GALWIZ Grey Georgette Shirt ",
+      "price": " 309",
+      "strikedoffprice": " 1499",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 48,
+      "image_url": "https://n1.sdlcdn.com/imgs/i/5/j/230X258_sharpened/GALWIZ-Multi-Color-Polyester-Shirt-SDL114750225-1-ccfc4.webp",
+      "name": "GALWIZ Multi Color Polyester Shirt ",
+      "price": " 580",
+      "strikedoffprice": " 1099",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 49,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/0/f/230X258_sharpened/Thisbe-Maroon-Poly-Crepe-Shirt-SDL882507773-1-7b3c1.jpeg",
+      "name": "Thisbe Maroon Poly Crepe Shirt",
+      "price": " 599",
+      "strikedoffprice": " 999",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 50,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/y/m/230X258_sharpened/FABISHO-White-Rayon-Shirt-Single-SDL795214362-1-63d69.jpeg",
+      "name": "FABISHO White Rayon Shirt ",
+      "price": " 359",
+      "strikedoffprice": " 999",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 51,
+      "image_url": "https://n3.sdlcdn.com/imgs/h/i/d/230X258_sharpened/NEUVIN-Cotton-Shirt-SDL695387961-1-51d5e.webp",
+      "name": "NEUVIN Cotton Shirt",
+      "price": " 675",
+      "strikedoffprice": " 1300",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 52,
+      "image_url": "https://n4.sdlcdn.com/imgs/i/d/e/230X258_sharpened/Mayra-Rayon-Shirt-SDL825592630-1-51725.jpeg",
+      "name": "Mayra Rayon Shirt ",
+      "price": " 399",
+      "strikedoffprice": " 995",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 53,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/x/d/230X258_sharpened/FABISHO-Peach-Rayon-Shirt-Single-SDL191722408-1-fe00a.jpeg",
+      "name": "FABISHO Peach Rayon Shirt ",
+      "price": " 359",
+      "strikedoffprice": " 999",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 54,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/r/3/230X258_sharpened/JAPER-KURTI-Grey-Cotton-Shirt-SDL903404231-1-19a80.webp",
+      "name": "JAPER KURTI Grey Cotton Shirt",
+      "price": " 575",
+      "strikedoffprice": " 2199",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 55,
+      "image_url": "https://n4.sdlcdn.com/imgs/h/v/b/230X258_sharpened/HEATHER-HUES-Polyester-Shirt-SDL872099684-1-f006a.webp",
+      "name": "HEATHER HUES Polyester Shirt ",
+      "price": " 599",
+      "strikedoffprice": " 1490",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 56,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/x/3/230X258_sharpened/NUEVOSDAMAS-Black-Rayon-Shirt-Single-SDL620299086-1-4b742.webp",
+      "name": "NUEVOSDAMAS Black Rayon Shirt ",
+      "price": " 359",
+      "strikedoffprice": " 1999",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 57,
+      "image_url": "https://n2.sdlcdn.com/imgs/h/n/a/230X258_sharpened/Campus-Sutra-Cotton-Shirt-SDL617127153-1-e5d2c.jpeg",
+      "name": "Campus Sutra Cotton Shirt",
+      "price": " 699",
+      "strikedoffprice": " 1099",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 58,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/x/3/230X258_sharpened/Maya-Fashion-White-Poly-Crepe-SDL719407431-1-ecc1a.webp",
+      "name": "Maya Fashion White Poly Crepe Shirt ",
+      "price": " 309",
+      "strikedoffprice": " 1199",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 59,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/d/h/230X258_sharpened/Rare-Black-Polyester-Shirt-Single-SDL972144727-1-c6309.webp",
+      "name": "Rare Black Polyester Shirt",
+      "price": " 559",
+      "strikedoffprice": " 1299",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    },
+    {
+      "id": 60,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/l/q/230X258_sharpened/Triraj-Multi-Color-Rayon-Jumpsuit-SDL535255708-1-4ce67.webp",
+      "name": "Rare Black Polyester Shirt",
+      "price": " 600",
+      "strikedoffprice": " 1200",
+      "offprice": "23% Off",
+      "ratingimg": "https://media.istockphoto.com/vectors/five-stars-rating-vector-icon-vector-id1072182672?k=20&m=1072182672&s=612x612&w=0&h=tHn5kbSN_Rb-7rCNyVpY6p8q9x4qsxDBb2oSurtDTno="
+    }
+  ],
+  "kitchenData": [
+    {
+      "id": 8,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/p/7/230X258_sharpened/GRAND-PLUS-EPIC-17-Ltr-SDL027334234-1-50a2b.jpeg",
+      "name": "GRAND PLUS EPIC 17 Ltr RO + UV + UF + TDS Water Purifier",
+      "strikedOffPrice": "16500",
+      "price": "6114",
+      "discount": "76%OFF"
+    },
+    {
+      "id": 9,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/d/v/230X258_sharpened/Prestige-Flair-Spl-550-Watt-SDL488651589-1-c4fb7.webp",
+      "name": "ZunVolt ABS Plastic Body 500 Watt 3 Jar Mixer Grinder",
+      "strikedOffPrice": "3249",
+      "price": "1249",
+      "discount": "54%OFF"
+    },
+    {
+      "id": 10,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/e/l/230X258_sharpened/Khaitan-3-Burner-BP-JIO-SDL373176693-1-f7fcf.jpeg",
+      "name": "Goodflame 3 burner ms kwid plus digital gas stove with brass burner(design must be availabality)",
+      "strikedOffPrice": "6499",
+      "price": "2099",
+      "discount": "35%OFF"
+    },
+    {
+      "id": 11,
+      "image_url": "https://n3.sdlcdn.com/imgs/d/6/c/230X258_sharpened/Royal-Aquafresh-Aqua-Swift-ROUVUF-SDL342168927-1-09fdd.webp",
+      "name": "Aquagrand AQUA SWIFT RO+UF+UV+MINERAL+TDS CONTROLLER 10 Ltr ROUVUF Water Purifier",
+      "strikedOffPrice": "16500",
+      "price": "6246",
+      "discount": "67%OFF"
+    },
+    {
+      "id": 12,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/c/j/230X258_sharpened/MUSKPURE-Pro-Star-12-Ltr-SDL921757271-1-97039.webp",
+      "name": "MUSKPURE diamond Star 12 Ltr RO + UV + Copper + Alkaline + TDS Controller Water Purifier",
+      "strikedOffPrice": "15999",
+      "price": "5799",
+      "discount": "25%OFF"
+    },
+    {
+      "id": 13,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/c/h/230X258_sharpened/Maharaja-Whiteline-Stellar-Plus-500-SDL842179092-1-472ad.webp",
+      "name": "Eslite Chutney Jar 650 Watt 3 Jar Mixer Grinde",
+      "strikedOffPrice": "1699",
+      "price": "1099",
+      "discount": "23%OFF"
+    },
+    {
+      "id": 14,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/c/s/230X258_sharpened/Online-3burner-SDL404159912-1-f993e.png",
+      "name": "Blowhot Online 3 burner auto gas stove with top glass",
+      "strikedOffPrice": "5466",
+      "price": "2332",
+      "discount": "32%OFF"
+    },
+    {
+      "id": 15,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/g/230X258_sharpened/ZunVolt-ABS-Plastic-Body-500-SDL427712787-1-fd09e.webp",
+      "name": "ZunVolt ABS Plastic Body 750 Watt 3 Jar Mixer Grinder",
+      "strikedOffPrice": "4344",
+      "price": "1599",
+      "discount": "34%OFF"
+    },
+    {
+      "id": 16,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/d/w/230X258_sharpened/Evaahub-Electric-rechargable-LATEST-Automatic-SDL450280902-1-20b3c.webp",
+      "name": "Automatic Wireless Electric Rechargeable Drinking Water Dispenser Pump for 20 Liter Bottle Can with",
+      "strikedOffPrice": "544",
+      "price": "234",
+      "discount": "56%OFF"
+    },
+    {
+      "id": 17,
+      "image_url": "https://n3.sdlcdn.com/imgs/d/6/c/230X258_sharpened/Royal-Aquafresh-Aqua-Swift-ROUVUF-SDL342168927-1-09fdd.webp",
+      "name": "MUSKPURE Pride 10 Ltr RO + UF + UV + MAT Water Purifier",
+      "strikedOffPrice": "14999",
+      "price": "5655",
+      "discount": "76%OFF"
+    },
+    {
+      "id": 18,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/u/o/230X258_sharpened/GOODFLAME-4-BURNER-MS-RUNNER-SDL186150103-1-e77bb.webp",
+      "name": "Goodflame 4 Burner Kwid Gas Stove ISI Quality Mark With 1 Years Warranty",
+      "strikedOffPrice": "9890",
+      "price": "2455",
+      "discount": "70%OFF"
+    },
+    {
+      "id": 19,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/d/v/230X258_sharpened/Prestige-Flair-Spl-550-Watt-SDL488651589-1-c4fb7.webp",
+      "name": "Prestige Teon Watt 1 Jar Mixer Grinder",
+      "strikedOffPrice": "1245",
+      "price": "998",
+      "discount": "23%OFF"
+    },
+    {
+      "id": 20,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/e/l/230X258_sharpened/Khaitan-3-Burner-BP-JIO-SDL373176693-1-f7fcf.jpeg",
+      "name": "GOODFLAME 3BURNER BK PHOTON ISI QUALITY MARK 1 YEAR WARRANTY",
+      "strikedOffPrice": "5999",
+      "price": "2123",
+      "discount": "56%OFF"
+    },
+    {
+      "id": 21,
+      "image_url": "https://n2.sdlcdn.com/imgs/i/1/u/230X258_sharpened/MJ-FOREVER-LATEST-Automatic-water-SDL719529912-2-02fa8.jpeg",
+      "name": "Automatic Wireless Electric Rechargeable Drinking Water Dispenser Pump for 20 Liter Bottle Can",
+      "strikedOffPrice": "599",
+      "price": "259",
+      "discount": "66%OFF"
+    },
+    {
+      "id": 22,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/1/p/230X258_sharpened/ND-BROTHERS-Electric-Dispenser-20-SDL881235933-1-4b5dd.jpeg",
+      "name": "The Indus Valley Copper 8 liter Water Dispenser",
+      "strikedOffPrice": "4999",
+      "price": "2488",
+      "discount": "46%OFF"
+    },
+    {
+      "id": 23,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/e/q/230X258_sharpened/Prestige-Regal-750-Watt-4-SDL557794757-1-eaf11.jpeg",
+      "name": "Prestige Express PEX 3.0 350 Watt 2 Jar Mixer Grinder",
+      "strikedOffPrice": "3445",
+      "price": "2411",
+      "discount": "15%OFF"
+    },
+    {
+      "id": 24,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/n/5/230X258_sharpened/GE-Filtration-TDS-meter-for-SDL301364942-1-b17e1.jpeg",
+      "name": "Digital TDS Meter for Water Purity Test",
+      "strikedOffPrice": "699",
+      "price": "229",
+      "discount": "20%OFF"
+    },
+    {
+      "id": 25,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/l/t/230X258_sharpened/Plastic-Tap-Dispenser-Blue-colour-SDL882642595-1-3bb56.jpeg",
+      "name": "Kitchen tap extension (Pack of 1) with Tightening Clamp ,Assorted Colors",
+      "strikedOffPrice": "499",
+      "price": "179",
+      "discount": "27%OFF"
+    },
+    {
+      "id": 26,
+      "image_url": "https://n4.sdlcdn.com/imgs/d/8/y/230X258_sharpened/Concord-1-8-Litre-1-SDL002549899-1-9f01c.webp",
+      "name": "Concord TPSK 0818 1.8 Liter 1500 Watt Stainless Steel Electric Kettle",
+      "strikedOffPrice": "1199",
+      "price": "824",
+      "discount": "28%OFF"
+    },
+    {
+      "id": 27,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/e/z/230X258_sharpened/Havells-Aqua-Plus-Black-1-SDL006490749-1-66c7f.webp",
+      "name": "Havells Aqua Plus-Black 1.2 Liter 1500 Watt Stainless ,Steel Electric Kettle",
+      "strikedOffPrice": "2998",
+      "price": "1499",
+      "discount": "15%OFF"
+    },
+    {
+      "id": 28,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/v/x/230X258_sharpened/SDL150769155_imresizer-73bad.webp",
+      "name": "GOODFLAME 4 BURNER SS STAR (R) GAS STOVE WITH BRASS BURNER",
+      "strikedOffPrice": "8000",
+      "price": "6536",
+      "discount": "22%OFF"
+    },
+    {
+      "id": 29,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/q/x/230X258_sharpened/Aryanveda-Insta-Glow-Micellar-Water-SDL827025758-1-5a978.png",
+      "name": "GE Filtration 9 inches Candle filter suitable for all water purifier+Sediment Filter,RO filter candle-Pack of 4 pcs candle filter",
+      "strikedOffPrice": "799",
+      "price": "299",
+      "discount": "45%OFF"
+    },
+    {
+      "id": 30,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/d/v/230X258_sharpened/RO-Tap-Kent-Type-SDL606932130-1-380a2.jpeg",
+      "name": "RO Tap Kent Type",
+      "strikedOffPrice": "850",
+      "price": "299",
+      "discount": "35%OFF"
+    },
+    {
+      "id": 31,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/n/5/230X258_sharpened/GE-Filtration-TDS-meter-for-SDL301364942-1-b17e1.jpeg",
+      "name": "GE Filtration PH meter for testing the ph level/Digital LCD meter for measure accurate PH level/High Accuracy with 0.00-14.00ph-Pocket",
+      "strikedOffPrice": "1899",
+      "price": "519",
+      "discount": "30%OFF"
+    },
+    {
+      "id": 32,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/l/t/230X258_sharpened/Plastic-Tap-Dispenser-Blue-colour-SDL882642595-1-3bb56.jpeg",
+      "name": "Kitchen tap extension (Pack of 1) with Tightening Clamp Assorted Colors by Trending Tail",
+      "strikedOffPrice": "499",
+      "price": "179",
+      "discount": "25%OFF"
+    },
+    {
+      "id": 8,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/p/7/230X258_sharpened/GRAND-PLUS-EPIC-17-Ltr-SDL027334234-1-50a2b.jpeg",
+      "name": "GRAND PLUS EPIC 17 Ltr RO + UV + UF + TDS Water Purifier",
+      "strikedOffPrice": "Rs16500",
+      "price": "6114",
+      "discount": "76%OFF"
+    },
+    {
+      "id": 9,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/d/v/230X258_sharpened/Prestige-Flair-Spl-550-Watt-SDL488651589-1-c4fb7.webp",
+      "name": "ZunVolt ABS Plastic Body 500 Watt 3 Jar Mixer Grinder",
+      "strikedOffPrice": "Rs3249",
+      "price": "1249",
+      "discount": "54%OFF"
+    },
+    {
+      "id": 10,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/e/l/230X258_sharpened/Khaitan-3-Burner-BP-JIO-SDL373176693-1-f7fcf.jpeg",
+      "name": "Goodflame 3 burner ms kwid plus digital gas stove with brass burner(design must be availabality)",
+      "strikedOffPrice": "6499",
+      "price": "2099",
+      "discount": "35%OFF"
+    },
+    {
+      "id": 11,
+      "image_url": "https://n2.sdlcdn.com/imgs/h/a/6/230X258_sharpened/image1-b28be.JPG",
+      "name": "Aquagrand AQUA SWIFT RO+UF+UV+MINERAL+TDS CONTROLLER 10 Ltr ROUVUF Water Purifier",
+      "strikedOffPrice": "16500",
+      "price": "6246",
+      "discount": "67%OFF"
+    },
+    {
+      "id": 12,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/c/j/230X258_sharpened/MUSKPURE-Pro-Star-12-Ltr-SDL921757271-1-97039.webp",
+      "name": "MUSKPURE diamond Star 12 Ltr RO + UV + Copper + Alkaline + TDS Controller Water Purifier",
+      "strikedOffPrice": "15999",
+      "price": "5799",
+      "discount": "25%OFF"
+    },
+    {
+      "id": 13,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/c/h/230X258_sharpened/Maharaja-Whiteline-Stellar-Plus-500-SDL842179092-1-472ad.webp",
+      "name": "Eslite Chutney Jar 650 Watt 3 Jar Mixer Grinde",
+      "strikedOffPrice": "1699",
+      "price": "1099",
+      "discount": "23%OFF"
+    },
+    {
+      "id": 14,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/c/s/230X258_sharpened/Online-3burner-SDL404159912-1-f993e.png",
+      "name": "Blowhot Online 3 burner auto gas stove with top glass",
+      "strikedOffPrice": "5466",
+      "price": "2332",
+      "discount": "32%OFF"
+    },
+    {
+      "id": 15,
+      "image_url": "https://n3.sdlcdn.com/imgs/k/e/g/230X258_sharpened/ZunVolt-ABS-Plastic-Body-500-SDL427712787-1-fd09e.webp",
+      "name": "ZunVolt ABS Plastic Body 750 Watt 3 Jar Mixer Grinder",
+      "strikedOffPrice": "4344",
+      "price": "1599",
+      "discount": "34%OFF"
+    },
+    {
+      "id": 16,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/d/w/230X258_sharpened/Evaahub-Electric-rechargable-LATEST-Automatic-SDL450280902-1-20b3c.webp",
+      "name": "Automatic Wireless Electric Rechargeable Drinking Water Dispenser Pump for 20 Liter Bottle Can with",
+      "strikedOffPrice": "544",
+      "price": "234",
+      "discount": "56%OFF"
+    },
+    {
+      "id": 17,
+      "image_url": "https://n3.sdlcdn.com/imgs/d/6/c/230X258_sharpened/Royal-Aquafresh-Aqua-Swift-ROUVUF-SDL342168927-1-09fdd.webp",
+      "name": "MUSKPURE Pride 10 Ltr RO + UF + UV + MAT Water Purifier",
+      "strikedOffPrice": "14999",
+      "price": "5655",
+      "discount": "76%OFF"
+    },
+    {
+      "id": 18,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/u/o/230X258_sharpened/GOODFLAME-4-BURNER-MS-RUNNER-SDL186150103-1-e77bb.webp",
+      "name": "Goodflame 4 Burner Kwid Gas Stove ISI Quality Mark With 1 Years Warranty",
+      "strikedOffPrice": "9890",
+      "price": "2455",
+      "discount": "70%OFF"
+    },
+    {
+      "id": 19,
+      "image_url": "https://n1.sdlcdn.com/imgs/k/d/v/230X258_sharpened/Prestige-Flair-Spl-550-Watt-SDL488651589-1-c4fb7.webp",
+      "name": "Prestige Teon Watt 1 Jar Mixer Grinder",
+      "strikedOffPrice": "1245",
+      "price": "998",
+      "discount": "23%OFF"
+    },
+    {
+      "id": 20,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/e/l/230X258_sharpened/Khaitan-3-Burner-BP-JIO-SDL373176693-1-f7fcf.jpeg",
+      "name": "GOODFLAME 3BURNER BK PHOTON ISI QUALITY MARK 1 YEAR WARRANTY",
+      "strikedOffPrice": "5999",
+      "price": "2123",
+      "discount": "56%OFF"
+    },
+    {
+      "id": 21,
+      "image_url": "https://n2.sdlcdn.com/imgs/i/1/u/230X258_sharpened/MJ-FOREVER-LATEST-Automatic-water-SDL719529912-2-02fa8.jpeg",
+      "name": "Automatic Wireless Electric Rechargeable Drinking Water Dispenser Pump for 20 Liter Bottle Can",
+      "strikedOffPrice": "599",
+      "price": "259",
+      "discount": "66%OFF"
+    },
+    {
+      "id": 22,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/1/p/230X258_sharpened/ND-BROTHERS-Electric-Dispenser-20-SDL881235933-1-4b5dd.jpeg",
+      "name": "The Indus Valley Copper 8 liter Water Dispenser",
+      "strikedOffPrice": "4999",
+      "price": "2488",
+      "discount": "46%OFF"
+    },
+    {
+      "id": 23,
+      "image_url": "https://n2.sdlcdn.com/imgs/k/e/q/230X258_sharpened/Prestige-Regal-750-Watt-4-SDL557794757-1-eaf11.jpeg",
+      "name": "Prestige Express PEX 3.0 350 Watt 2 Jar Mixer Grinder",
+      "strikedOffPrice": "3445",
+      "price": "2411",
+      "discount": "15%OFF"
+    },
+    {
+      "id": 24,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/n/5/230X258_sharpened/GE-Filtration-TDS-meter-for-SDL301364942-1-b17e1.jpeg",
+      "name": "Digital TDS Meter for Water Purity Test",
+      "strikedOffPrice": "699",
+      "price": "229",
+      "discount": "20%OFF"
+    },
+    {
+      "id": 25,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/l/t/230X258_sharpened/Plastic-Tap-Dispenser-Blue-colour-SDL882642595-1-3bb56.jpeg",
+      "name": "Kitchen tap extension (Pack of 1) with Tightening Clamp ,Assorted Colors",
+      "strikedOffPrice": "499",
+      "price": "179",
+      "discount": "27%OFF"
+    },
+    {
+      "id": 26,
+      "image_url": "https://n4.sdlcdn.com/imgs/d/8/y/230X258_sharpened/Concord-1-8-Litre-1-SDL002549899-1-9f01c.webp",
+      "name": "Concord TPSK 0818 1.8 Liter 1500 Watt Stainless Steel Electric Kettle",
+      "strikedOffPrice": "1199",
+      "price": "824",
+      "discount": "28%OFF"
+    },
+    {
+      "id": 27,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/e/z/230X258_sharpened/Havells-Aqua-Plus-Black-1-SDL006490749-1-66c7f.webp",
+      "name": "Havells Aqua Plus-Black 1.2 Liter 1500 Watt Stainless ,Steel Electric Kettle",
+      "strikedOffPrice": "2998",
+      "price": "1499",
+      "discount": "15%OFF"
+    },
+    {
+      "id": 28,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/v/x/230X258_sharpened/SDL150769155_imresizer-73bad.webp",
+      "name": "GOODFLAME 4 BURNER SS STAR (R) GAS STOVE WITH BRASS BURNER",
+      "strikedOffPrice": "8000",
+      "price": "6536",
+      "discount": "22%OFF"
+    },
+    {
+      "id": 29,
+      "image_url": "https://n2.sdlcdn.com/imgs/j/q/x/230X258_sharpened/Aryanveda-Insta-Glow-Micellar-Water-SDL827025758-1-5a978.png",
+      "name": "GE Filtration 9 inches Candle filter suitable for all water purifier+Sediment Filter,RO filter candle-Pack of 4 pcs candle filter",
+      "strikedOffPrice": "799",
+      "price": "299",
+      "discount": "45%OFF"
+    },
+    {
+      "id": 30,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/d/v/230X258_sharpened/RO-Tap-Kent-Type-SDL606932130-1-380a2.jpeg",
+      "name": "RO Tap Kent Type",
+      "strikedOffPrice": "850",
+      "price": "299",
+      "discount": "35%OFF"
+    },
+    {
+      "id": 31,
+      "image_url": "https://n1.sdlcdn.com/imgs/j/n/5/230X258_sharpened/GE-Filtration-TDS-meter-for-SDL301364942-1-b17e1.jpeg",
+      "name": "GE Filtration PH meter for testing the ph level/Digital LCD meter for measure accurate PH level/High Accuracy with 0.00-14.00ph-Pocket",
+      "strikedOffPrice": "1899",
+      "price": "519",
+      "discount": "30%OFF"
+    },
+    {
+      "id": 32,
+      "image_url": "https://n4.sdlcdn.com/imgs/j/l/t/230X258_sharpened/Plastic-Tap-Dispenser-Blue-colour-SDL882642595-1-3bb56.jpeg",
+      "name": "Kitchen tap extension (Pack of 1) with Tightening Clamp Assorted Colors by Trending Tail",
+      "strikedOffPrice": "499",
+      "price": "179",
+      "discount": "25%Off"
+    }
+  ],
+  "newData": [
+    {
+      "id": 32,
+      "image_url": "https://n2.sdlcdn.com/imgs/g/3/1/large/Prestige-NA-18-Ltr-Gravity-SDL678101845-1-38c9f.jpg",
+      "name": "Prestige 18 Ltr Gravity Water Purifier",
+      "discount": "33%OFF",
+      "strikedOffPrice": "2965",
+      "Price": "2020"
+    },
+    {
+      "id": 33,
+      "image_url": "https://n3.sdlcdn.com/imgs/j/v/x/large/SDL167127229-a24d5.jpg",
+      "name": "Good Flame 2 burner ms nano gas stove with cast iron burner",
+      "discount": "63%OFF",
+      "strikedOffPrice": "4099",
+      "Price": "1699"
+    },
+    {
+      "id": 34,
+      "image_url": "https://n2.sdlcdn.com/imgs/a/h/q/Bajaj-FX-11-Food-Processor-1721454-1-61069.jpg",
+      "name": "Bajaj FX-11 Food Processor",
+      "discount": "33%OFF",
+      "strikedOffPrice": "8000",
+      "Price": "5698"
+    },
+    {
+      "id": 35,
+      "image_url": "https://n3.sdlcdn.com/imgs/i/q/1/large/cello1-ed569.jpg",
+      "name": "Cello Cook-N-Serve-600 0.5 Ltr Rice Cookers Rice Cooker",
+      "discount": "21%OFF",
+      "strikedOffPrice": "6000",
+      "Price": "4000"
+    },
+    {
+      "id": 36,
+      "image_url": "https://n3.sdlcdn.com/imgs/c/x/u/large/629823870949_2-513ba.jpg",
+      "name": "Pigeon Favorite Blackline Cook Top 2 Burner",
+      "discount": "54%OFF",
+      "strikedOffPrice": "5000",
+      "Price": "2484"
+    },
+    {
+      "id": 37,
+      "image_url": "https://n4.sdlcdn.com/imgs/b/u/v/large/Prestige-Ace-food-processor-01-SDL649988567-1-19b49.jpg",
+      "name": "Prestige Ace Food Processor Brown",
+      "discount": "23%OFF",
+      "strikedOffPrice": "6000",
+      "Price": "4900"
+    },
+    {
+      "id": 38,
+      "img": "https://n4.sdlcdn.com/imgs/h/1/0/large/Kingstar-electric-coconut-scraper-Chopper-SDL443202288-1-af922.jpeg",
+      "name": "Kingstar electric coconut scraper Chopper & Blender White",
+      "discount": "18%OFF",
+      "strikedOffPrice": "3000",
+      "Price": "2508"
+    },
+    {
+      "id": 39,
+      "img": "https://n3.sdlcdn.com/imgs/h/u/a/large/CXL-Titon-2-Ltr-Gravity-SDL317221601-1-71514.jpg",
+      "name": "CXL Titon 2 Ltr Gravity Water Purifier",
+      "discount": "44%OFF",
+      "strikedOffPrice": "3000",
+      "Price": "1890"
+    }
+  ]
+}

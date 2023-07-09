@@ -7,6 +7,7 @@ import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { Paginataion } from "../Additinal/Pagination";
+import { getCurrentTime } from "../Additinal/currentTime";
 
 const style = {
   position: "absolute",
@@ -39,25 +40,7 @@ const Kitchen = () => {
   const navigate = useNavigate();
   // console.log(kitchen , loading)
 
-  let time = new Date().toTimeString().split(" ")[0].split(":");
 
-  let Time = [];
-
-  if (time[0] > 12) {
-    let hr = time[0] - 12;
-    let min = time[1] + "PM";
-    Time.push(hr);
-    Time.push(min);
-  } else {
-    let hr = time[0];
-    let min = time[1] + "AM";
-    Time.push(hr);
-    Time.push(min);
-  }
-
-  let date = new Date().toDateString().split(" ");
-
-  let today = "" + date[2] + " " + date[1] + " " + date[3];
 
   useEffect(() => {
     dispatch(getkitchenData());
@@ -70,6 +53,8 @@ const Kitchen = () => {
 
   let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
 
+  const { current_date, current_time } = getCurrentTime();
+
   const handleAdd = (e) => {
     if (!isAuth) {
       navigate("/signin");
@@ -81,8 +66,8 @@ const Kitchen = () => {
         offer: e.discount,
         price: e.price,
         normalprice: e.strikedOffPrice,
-        orderdate: today,
-        ordertime: Time.join(":"),
+        orderdate: current_date,
+        ordertime: current_time,
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
@@ -164,8 +149,8 @@ const Kitchen = () => {
         spacing={{ xs: 2, md: 4 }}
         columns={{ xs: 4, sm: 12, md: 20 }}
       >
-        {paginatedProducts &&
-          paginatedProducts.map((element, index) => (
+        {kitchen &&
+          kitchen.map((element, index) => (
             <Grid item xs={2} sm={4} md={4} key={index}>
               <Box className="shadow" height="auto" p="1rem">
                 <Box

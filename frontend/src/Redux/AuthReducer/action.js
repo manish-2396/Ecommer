@@ -7,7 +7,7 @@ import swal from 'sweetalert';
 
 // const navigate = useNavigate()
 
-let baseURL = "https://eccommerceapi.onrender.com"
+let baseURL = "http://localhost:8080"
 
 export const signup = (payload) => (dispatch) => {
     // console.log("payload", payload)

@@ -7,6 +7,7 @@ import { addCart, getkidsData } from "../../Redux/AppReducer/action";
 import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { getCurrentTime } from "../Additinal/currentTime";
 
 const style = {
   position: "absolute",
@@ -23,54 +24,29 @@ const style = {
 const Kids = () => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({});
+  const dispatch = useDispatch();
+  const { kids, loading } = useSelector((state) => state.appreducer);
+  const navigate = useNavigate();
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
     sessionStorage.setItem("payment", element.price);
   };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
   const handlePayment = () => {
     return navigate("/payment");
   };
-  const dispatch = useDispatch();
-  const { kids, loading } = useSelector((state) => state.appreducer);
-  const navigate = useNavigate();
-
-  let time = new Date().toTimeString().split(" ")[0].split(":");
-
-  let Time = [];
-
-  if (time[0] > 12) {
-    let hr = time[0] - 12;
-    let min = time[1] + "PM";
-    Time.push(hr);
-    Time.push(min);
-  } else {
-    let hr = time[0];
-    let min = time[1] + "AM";
-    Time.push(hr);
-    Time.push(min);
-  }
-
-  let date = new Date().toDateString().split(" ");
-
-  let today = "" + date[2] + " " + date[1] + " " + date[3];
-
-  // console.log(Time.join(":"))
-  // console.log(today);
-
   useEffect(() => {
     dispatch(getkidsData());
   }, [dispatch]);
-
   let a = {
     isAuth: false,
     token: null,
   };
 
   let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
+  
+  const { current_date, current_time } = getCurrentTime();
 
   const handleAdd = (e) => {
     if (!isAuth) {
@@ -82,32 +58,16 @@ const Kids = () => {
         offer: e.offer,
         price: e.price,
         normalprice: e.strikedprice,
-        orderdate: today,
-        ordertime: Time.join(":"),
+        orderdate: current_date,
+        ordertime: current_time,
       };
-      // console.log("payload", payload)
       dispatch(addCart(payload, token));
       swal("Add to the Cart", "", "success");
     }
   };
 
   const [page, setPage] = useState(1);
-  const perPage = 10;
 
-  let totalPages;
-
-  if (kids) {
-    // totalPages = kids.length;
-    totalPages = Math.ceil(kids.length / perPage);
-  }
-
-  console.log(totalPages);
-
-  let end = page * perPage;
-  let start = end - perPage;
-  let paginatedProducts = kids.slice(start, end);
-
-  // const [newpage, setnewPage] = React.useState(1);
   const handleChange = (ChangeEvent, value) => {
     setPage(value);
   };
@@ -173,8 +133,8 @@ const Kids = () => {
           spacing={{ xs: 2, md: 4 }}
           columns={{ xs: 4, sm: 12, md: 20 }}
         >
-          {paginatedProducts &&
-            paginatedProducts.map((element, index) => (
+          {kids &&
+            kids.map((element, index) => (
               <Grid item xs={2} sm={4} md={4} key={index}>
                 <Box className="shadow" height="auto" p="1rem">
                   <Box
@@ -236,8 +196,8 @@ const Kids = () => {
               </Grid>
             ))}
         </Grid>
-        
-        <Box m="2rem" textAlign="center">
+
+        {/* <Box m="2rem" textAlign="center">
           <Stack spacing={8}>
             <Pagination
               count={totalPages}
@@ -247,7 +207,7 @@ const Kids = () => {
               siblingCount={0}
             />
           </Stack>
-        </Box>
+        </Box> */}
       </Box>
     </Container>
   );

@@ -1,135 +1,176 @@
 const { Router } = require("express");
-const express = require("express");
-
 const productRouter = Router();
-
-const app = express();
 const fs = require("fs");
-app.use(express.json());
+const { menModel } = require("../model/menModel");
+const { womenModel } = require("../model/womenModel");
+const { kidsModel } = require("../model/kidModel");
+const { kitchenModel } = require("../model/kitchenModel");
 
-productRouter.get("/man", (req, res) => {
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-
-  const parseData = JSON.parse(data);
-
-  const Data = parseData.mens_data;
-
-  res.status(200).send(Data);
+productRouter.get("/men", async (req, res) => {
+  let data,
+    pages = 1;
+  const { limit, skip } = req.query;
+  try {
+    let count = await menModel.count();
+    pages = Math.ceil(count / limit);
+    if (limit && skip) {
+      data = await menModel
+        .find()
+        .skip((skip - 1) * limit)
+        .limit(limit);
+    } else {
+      data = await menModel.find();
+    }
+    res.status(200).send({ data: data, pages });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
-productRouter.get("/man/:id", (req, res) => {
-  let { id } = req.params;
-  // console.log(id)
-
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-
-  const parseData = JSON.parse(data);
-
-  const Data = parseData.mens_data;
-
-  // console.log(Data);
-
-  const SigleData = Data.find((e) => Number(e.id) == id);
-  // console.log(SigleData)
-
-  res.status(200).send(SigleData);
+productRouter.get("/women", async (req, res) => {
+  let data,
+    pages = 1;
+  const { limit, skip } = req.query;
+  try {
+    if (limit && skip) {
+      let count = await menModel.count();
+      pages = Math.ceil(count / limit);
+      data = await womenModel
+        .find()
+        .skip((skip - 1) * limit)
+        .limit(limit);
+    } else {
+      data = await womenModel.find();
+    }
+    res.status(200).send({ data: data, pages });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
-productRouter.get("/woman", (req, res) => {
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-
-  const parseData = JSON.parse(data);
-
-  const Data = parseData.womensData;
-
-  res.status(200).send(Data);
+productRouter.get("/kids", async (req, res) => {
+  let data,
+    pages = 1;
+  const { limit, skip } = req.query;
+  try {
+    if (limit && skip) {
+      let count = await menModel.count();
+      pages = Math.ceil(count / limit);
+      data = await kidsModel
+        .find()
+        .skip((skip - 1) * limit)
+        .limit(limit);
+    } else {
+      data = await kidsModel.find();
+    }
+    res.status(200).send({ data: data, pages });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
-productRouter.get("/woman/:id", (req, res) => {
-  let { id } = req.params;
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-
-  const parseData = JSON.parse(data);
-
-  const Data = parseData.womensData;
-
-  const SigleData = Data.find((e) => e.id == id);
-
-  res.status(200).send(SigleData);
+productRouter.get("/kitchen", async (req, res) => {
+  let data,
+    pages = 1;
+  const { limit, skip } = req.query;
+  try {
+    if (limit && skip) {
+      let count = await menModel.count();
+      pages = Math.ceil(count / limit);
+      data = await kitchenModel
+        .find()
+        .skip((skip - 1) * limit)
+        .limit(limit);
+    } else {
+      data = await kitchenModel.find();
+    }
+    res.status(200).send({ data: data, pages });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
-productRouter.get("/kids", (req, res) => {
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+// productRouter.get("/man/:id", (req, res) => {
+//   let { id } = req.params;
+//   // console.log(id)
 
-  const parseData = JSON.parse(data);
+//   let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-  const Data = parseData.kids;
+//   const parseData = JSON.parse(data);
 
-  res.status(200).send(Data);
-});
+//   const Data = parseData.mens_data;
 
-productRouter.get("/kids/:id", (req, res) => {
-  let { id } = req.params;
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+//   // console.log(Data);
 
-  const parseData = JSON.parse(data);
+//   const SigleData = Data.find((e) => Number(e.id) == id);
+//   // console.log(SigleData)
 
-  const Data = parseData.kids;
+//   res.status(200).send(SigleData);
+// });
+// productRouter.get("/woman/:id", (req, res) => {
+//   let { id } = req.params;
+//   let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-  const SigleData = Data.find((e) => e.id == id);
-  // console.log(SigleData)
+//   const parseData = JSON.parse(data);
 
-  res.status(200).send(SigleData);
-});
+//   const Data = parseData.womensData;
 
-productRouter.get("/kitchen", (req, res) => {
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+//   const SigleData = Data.find((e) => e.id == id);
 
-  const parseData = JSON.parse(data);
+//   res.status(200).send(SigleData);
+// });
+// productRouter.get("/kids/:id", (req, res) => {
+//   let { id } = req.params;
+//   let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-  const Data = parseData.kitchenData;
-  res.status(200).send(Data);
-});
+//   const parseData = JSON.parse(data);
 
-productRouter.get("/kitchen/:id", (req, res) => {
-  let { id } = req.params;
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+//   const Data = parseData.kids;
 
-  console.log(id);
+//   const SigleData = Data.find((e) => e.id == id);
+//   // console.log(SigleData)
 
-  const parseData = JSON.parse(data);
+//   res.status(200).send(SigleData);
+// });
+// productRouter.get("/kitchen/:id", (req, res) => {
+//   let { id } = req.params;
+//   let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
 
-  const Data = parseData.kitchenData;
-  // console.log(Data)
+//   console.log(id);
 
-  const SigleData = Data.find((e) => e.id == id);
+//   const parseData = JSON.parse(data);
 
-  console.log(SigleData);
+//   const Data = parseData.kitchenData;
+//   // console.log(Data)
 
-  res.status(200).send(SigleData);
-});
+//   const SigleData = Data.find((e) => e.id == id);
 
-productRouter.get("/trendingData", (req, res) => {
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-  const parseData = JSON.parse(data);
-  const Data = parseData.trendingData;
-  res.status(200).send(Data);
-});
+//   console.log(SigleData);
 
-productRouter.get("/trendingData/:id", (req, res) => {
-  let { id } = req.params;
-  let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
-  console.log(id);
-  const parseData = JSON.parse(data);
-  const Data = parseData.trendingData;
-  // console.log(Data)
+//   res.status(200).send(SigleData);
+// });
 
-  const SigleData = Data.find((e) => e.id == id);
+// productRouter.get("/trendingData", (req, res) => {
+//   let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+//   const parseData = JSON.parse(data);
+//   const Data = parseData.trendingData;
+//   res.status(200).send(Data);
+// });
 
-  // console.log(SigleData)
+// productRouter.get("/trendingData/:id", (req, res) => {
+//   let { id } = req.params;
+//   let data = fs.readFileSync("./data.json", { encoding: "utf-8" });
+//   console.log(id);
+//   const parseData = JSON.parse(data);
+//   const Data = parseData.trendingData;
+//   // console.log(Data)
 
-  res.status(200).send(SigleData);
-});
+//   const SigleData = Data.find((e) => e.id == id);
+
+//   // console.log(SigleData)
+
+//   res.status(200).send(SigleData);
+// });
 
 module.exports = {
   productRouter,
