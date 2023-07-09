@@ -12,8 +12,8 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.appreducer.cart.data);
-  const { token } = JSON.parse( sessionStorage.getItem("user"));
-  const navigate = useNavigate()
+  const { token } = JSON.parse(sessionStorage.getItem("user"));
+  const navigate = useNavigate();
 
   let sum = 0;
 
@@ -50,16 +50,18 @@ const Cart = () => {
   };
 
   const handlePayment = () => {
-    console.log("payment")
-    sessionStorage.setItem("payment" , sum)
+    console.log("payment");
+    sessionStorage.setItem("payment", sum);
     return navigate("/payment");
   };
   return (
     <Container>
       <Box display={A}>
-        <Box display="flex" justifyContent="space-between" >
+        <Box display="flex" justifyContent="space-between">
           <Box>
-            <Button variant="outlined" onClick={handlePayment}>Checkout</Button>
+            <Button variant="outlined" onClick={handlePayment}>
+              Checkout
+            </Button>
           </Box>
           <Box display="flex" justifyContent="end" p="1rem">
             Total :-

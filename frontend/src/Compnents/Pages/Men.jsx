@@ -7,6 +7,7 @@ import { addCart, getManData } from "../../Redux/AppReducer/action";
 import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { getCurrentTime } from "../Additinal/currentTime";
 
 const style = {
   position: "absolute",
@@ -19,10 +20,19 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
+let a = {
+  isAuth: false,
+  token: null,
+};
+let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
 const Men = () => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({});
+  const [page, setPage] = useState(1);
+  const dispatch = useDispatch();
+  const { Men, loading, menpages } = useSelector((state) => state.appreducer);
+  console.log(menpages , page);
+  const navigate = useNavigate();
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
@@ -35,42 +45,12 @@ const Men = () => {
   const handlePayment = () => {
     return navigate("/payment");
   };
-
-  const dispatch = useDispatch();
-  const { Men, loading } = useSelector((state) => state.appreducer);
-  const navigate = useNavigate();
-
-  let time = new Date().toTimeString().split(" ")[0].split(":");
-
-  let Time = [];
-
-  if (time[0] > 12) {
-    let hr = time[0] - 12;
-    let min = time[1] + "PM";
-    Time.push(hr);
-    Time.push(min);
-  } else {
-    let hr = time[0];
-    let min = time[1] + "AM";
-    Time.push(hr);
-    Time.push(min);
-  }
-
-  let date = new Date().toDateString().split(" ");
-
-  let today = "" + date[2] + " " + date[1] + " " + date[3];
-
   useEffect(() => {
-    dispatch(getManData());
-  }, [dispatch]);
+    dispatch(getManData(10 , page));
+  }, [dispatch , page]);
 
-  let a = {
-    isAuth: false,
-    token: null,
-  };
-
-  let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
-
+  const { current_date, current_time } = getCurrentTime();
+  
   const handleAdd = (e) => {
     if (!isAuth) {
       navigate("/signin");
@@ -82,8 +62,8 @@ const Men = () => {
         offer: e.offer,
         price: e.price,
         normalprice: e.strikedoffprice,
-        orderdate: today,
-        ordertime: Time.join(":"),
+        orderdate: current_date,
+        ordertime: current_time,
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
@@ -91,21 +71,20 @@ const Men = () => {
     }
   };
 
-  const [page, setPage] = useState(1);
-  const perPage = 10;
+  // const perPage = 10;
 
-  let totalPages;
+  // let totalPages;
 
-  if (Men) {
-    // totalPages = Men.length;
-    totalPages = Math.ceil(Men.length / perPage);
-  }
+  // if (Men) {
+  //   // totalPages = Men.length;
+  //   totalPages = Math.ceil(Men.length / perPage);
+  // }
 
-  console.log(totalPages);
+  // console.log(totalPages);
 
-  let end = page * perPage;
-  let start = end - perPage;
-  let paginatedProducts = Men.slice(start, end);
+  // let end = page * perPage;
+  // let start = end - perPage;
+  // let paginatedProducts = Men.slice(start, end);
 
   const handleChange = (ChangeEvent, value) => {
     setPage(value);
@@ -174,8 +153,8 @@ const Men = () => {
         spacing={{ xs: 2, md: 4 }}
         columns={{ xs: 4, sm: 12, md: 20 }}
       >
-        {paginatedProducts &&
-          paginatedProducts.map((element, index) => (
+        {Men &&
+          Men.map((element, index) => (
             <Grid item xs={2} sm={4} md={4} key={index}>
               <Box className="shadow" height="auto" p="1rem">
                 <Box
@@ -240,7 +219,7 @@ const Men = () => {
       <Box m="2rem" textAlign="center">
         <Stack spacing={8}>
           <Pagination
-            count={totalPages}
+            count={menpages}
             page={page}
             defaultPage={6}
             onChange={handleChange}

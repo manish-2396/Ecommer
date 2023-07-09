@@ -7,6 +7,7 @@ import swal from "sweetalert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { Paginataion } from "../Additinal/Pagination";
+import { getCurrentTime } from "../Additinal/currentTime";
 
 const style = {
   position: "absolute",
@@ -23,6 +24,8 @@ const style = {
 const Women = () => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({});
+  const [page, setPage] = useState(1);
+  const perPage = 10;
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
@@ -36,28 +39,8 @@ const Women = () => {
   };
 
   const dispatch = useDispatch();
-  const { Women, loading } = useSelector((state) => state.appreducer);
+  const { Women, loading , womenpages } = useSelector((state) => state.appreducer);
   const navigate = useNavigate();
-
-  let time = new Date().toTimeString().split(" ")[0].split(":");
-
-  let Time = [];
-
-  if (time[0] > 12) {
-    let hr = time[0] - 12;
-    let min = time[1] + "PM";
-    Time.push(hr);
-    Time.push(min);
-  } else {
-    let hr = time[0];
-    let min = time[1] + "AM";
-    Time.push(hr);
-    Time.push(min);
-  }
-
-  let date = new Date().toDateString().split(" ");
-
-  let today = "" + date[2] + " " + date[1] + " " + date[3];
 
   useEffect(() => {
     dispatch(getWomanData());
@@ -69,7 +52,7 @@ const Women = () => {
   };
 
   let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
-
+  const { current_date, current_time } = getCurrentTime();
   const handleAdd = (e) => {
     if (!isAuth) {
       navigate("/signin");
@@ -81,17 +64,14 @@ const Women = () => {
         offer: e.offprice,
         price: e.price,
         normalprice: e.strikedoffprice,
-        orderdate: today,
-        ordertime: Time.join(":"),
+        orderdate: current_date,
+        ordertime: current_time,
       };
       // console.log("payload", payload)
       dispatch(addCart(payload, token));
       swal("Add to the Cart", "", "success");
     }
   };
-
-  const [page, setPage] = useState(1);
-  const perPage = 10;
 
   let totalPages;
 
@@ -164,8 +144,8 @@ const Women = () => {
         spacing={{ xs: 2, md: 4 }}
         columns={{ xs: 4, sm: 12, md: 20 }}
       >
-        {paginatedProducts &&
-          paginatedProducts.map((element, index) => (
+        {Women &&
+          Women.map((element, index) => (
             <Grid item xs={2} sm={4} md={4} key={index}>
               <Box className="shadow" height="auto" p="1rem">
                 <Box

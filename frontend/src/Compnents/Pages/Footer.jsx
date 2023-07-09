@@ -2,11 +2,19 @@ import { Box, Container } from "@mui/material";
 import React from "react";
 
 function Footer() {
-
   return (
-    <Container height="40px" bgcolor="#2c272e"  >
+    <Container height="40px" bgcolor="#2c272e">
       <hr />
-      <Box fontFamily="sans-serif"  display="flex" justifyContent="space-around" pt="3rem" bgcolor="#021236" color="#fff" flexWrap="wrap" alignItems="center" >
+      <Box
+        fontFamily="sans-serif"
+        display="flex"
+        justifyContent="space-around"
+        pt="3rem"
+        bgcolor="#021236"
+        color="#fff"
+        flexWrap="wrap"
+        alignItems="center"
+      >
         <Box>
           <h5>Featured Brands</h5>
           <h6>Heimat</h6>
