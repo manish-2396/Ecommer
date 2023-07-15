@@ -38,27 +38,27 @@
 }
 
 #NavLink :hover {
-  color:rgba(68, 0, 255, 0.884);
-  text-decoration:underline;
+  color: rgba(68, 0, 255, 0.884);
+  text-decoration: underline;
 }
 
-#NavLink{
+#NavLink {
   text-decoration: none;
-  color:antiquewhite;
-  font-family:'Times New Roman', Times, serif;
+  color: antiquewhite;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
 }
 
-#backgrond-img1{
+#backgrond-img1 {
   background-image: url(https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
 }
 
-#backgrond-img2{
-  background-image: url(https://images.meesho.com/images/marketing/1664343269674.jpg );
+#backgrond-img2 {
+  background-image: url(https://images.meesho.com/images/marketing/1664343269674.jpg);
 }
 
-.shadow{
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+.shadow {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-
-

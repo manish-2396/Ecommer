@@ -48,7 +48,7 @@ const AllRounts = () => {
           path="/payment"
           element={
             <PrivateRoute>
-              <Payment/>
+              <Payment />
             </PrivateRoute>
           }
         />

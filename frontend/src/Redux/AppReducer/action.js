@@ -24,7 +24,7 @@ export const getManData = (limit, skip) => async (dispatch) => {
 export const getWomanData = (limit, skip) => async (dispatch) => {
   dispatch({ type: types.get_women_Data_Request });
   try {
-    let res = await fetch(`${baseURL}/women?limit=10&skip=5`);
+    let res = await fetch(`${baseURL}/women?limit=${limit}&skip=${skip}`);
     res = await res.json();
     // console.log(res)
     dispatch({
@@ -40,7 +40,7 @@ export const getWomanData = (limit, skip) => async (dispatch) => {
 export const getkidsData = (limit, skip) => async (dispatch) => {
   dispatch({ type: types.get_kids_Data_Request });
   try {
-    let res = await fetch(`${baseURL}/kids?limit=10&skip=5`);
+    let res = await fetch(`${baseURL}/kids?limit=${limit}&skip=${skip}`);
     res = await res.json();
     // console.log(res)
     dispatch({
@@ -56,7 +56,7 @@ export const getkidsData = (limit, skip) => async (dispatch) => {
 export const getkitchenData = (limit, skip) => async (dispatch) => {
   dispatch({ type: types.get_kitchen_Data_Request });
   try {
-    let res = await fetch(`${baseURL}/kitchen?limit=10&skip=5`);
+    let res = await fetch(`${baseURL}/kitchen?limit=${limit}&skip=${skip}`);
     res = await res.json();
     // console.log(res)
     dispatch({

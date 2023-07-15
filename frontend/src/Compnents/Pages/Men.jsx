@@ -31,7 +31,7 @@ const Men = () => {
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
   const { Men, loading, menpages } = useSelector((state) => state.appreducer);
-  console.log(menpages , page);
+  console.log(menpages, page);
   const navigate = useNavigate();
   const handleOpen = (element) => {
     setData(element);
@@ -46,16 +46,16 @@ const Men = () => {
     return navigate("/payment");
   };
   useEffect(() => {
-    dispatch(getManData(10 , page));
-  }, [dispatch , page]);
+    dispatch(getManData(10, page));
+  }, [dispatch, page]);
 
   const { current_date, current_time } = getCurrentTime();
-  
+console.log(isAuth)
   const handleAdd = (e) => {
     if (!isAuth) {
       navigate("/signin");
     } else {
-      // console.log(e)
+      console.log(e)
       const payload = {
         img: e.image_url,
         name: e.name,
@@ -70,21 +70,6 @@ const Men = () => {
       swal("Add to the Cart", "", "success");
     }
   };
-
-  // const perPage = 10;
-
-  // let totalPages;
-
-  // if (Men) {
-  //   // totalPages = Men.length;
-  //   totalPages = Math.ceil(Men.length / perPage);
-  // }
-
-  // console.log(totalPages);
-
-  // let end = page * perPage;
-  // let start = end - perPage;
-  // let paginatedProducts = Men.slice(start, end);
 
   const handleChange = (ChangeEvent, value) => {
     setPage(value);

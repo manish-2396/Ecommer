@@ -1,175 +1,191 @@
-import { Avatar, Container, Grid, TextField, Typography, } from '@mui/material'
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
-import React, { useCallback, useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { mailcheck, otpcheck } from '../../Redux/AuthReducer/action';
-import Timmer from '../Additinal/Timmer';
-import ExitToAppSharpIcon from '@mui/icons-material/ExitToAppSharp';
-import swal from 'sweetalert';  
-
+import { Avatar, Container, Grid, TextField, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import React, { useCallback, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
+import { mailcheck, otpcheck } from "../../Redux/AuthReducer/action";
+import Timmer from "../Additinal/Timmer";
+import ExitToAppSharpIcon from "@mui/icons-material/ExitToAppSharp";
+import swal from "sweetalert";
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
 };
 
 const MailAuth = () => {
+  const [open, setOpen] = useState(false);
+  const [isShow, setIsShow] = useState(false);
+  const [email, setEmail] = useState("");
+  const [OTP, setOTP] = useState("");
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  // const data = useSelector((state) => state);
 
-    const [open, setOpen] = useState(false)
-    const [isShow, setIsShow] = useState(false)
-    const [email, setEmail] = useState("");
-    const [OTP, setOTP] = useState("")
+  // console.log(data);
 
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    // const data = useSelector((state) => state);
+  sessionStorage.setItem("email", email);
 
-    // console.log(data);
+  const handleOpen = useCallback(() => {
+    setOpen(true);
+    setIsShow(true);
 
+    return;
+  }, []);
 
-    sessionStorage.setItem("email", email);
+  const handleClose = useCallback(() => {
+    setOpen(false);
+    setIsShow(false);
+  }, []);
 
+  const data = useSelector((state) => state.authreducer);
 
+  const handleMail = () => {
+    dispatch(mailcheck({ email: email }));
+  };
 
-    const handleOpen = useCallback(() => {
-        setOpen(true);
-        setIsShow(true);
+  const handleOtp = () => {
+    const payload = {
+      email: email,
+      code: OTP,
+    };
 
-        return
-    }, [])
+    dispatch(otpcheck(payload));
+    // console.log("payload",payload)
+  };
 
-    const handleClose = useCallback(() => {
-        setOpen(false);
-        setIsShow(false);
-    }, [])
+  // console.log("data" ,data.ResponseOtp.Massage)
 
-    const data = useSelector((state) => state.authreducer);
-
-
-
-    const handleMail = () => {
-        dispatch(mailcheck({ email: email }))
+  useEffect(() => {
+    if (
+      data.ResponseOtp.Massage &&
+      data.ResponseOtp.Massage === "move to signup"
+    ) {
+      navigate("/signup");
+    } else if (
+      data.ResponseOtp.Massage &&
+      data.ResponseOtp.Massage === "OTP is Expired!"
+    ) {
+      swal("Please Enter Correct OTP!");
+      handleClose();
     }
+  }, [data.ResponseOtp.Massage, handleClose, navigate]);
 
-    const handleOtp = () => {
-        const payload = {
-            email: email,
-            code: OTP
-        }
-
-        dispatch(otpcheck(payload))
-        // console.log("payload",payload)
+  useEffect(() => {
+    if (
+      data.ResponseMail.Massage &&
+      data.ResponseMail.Massage === "User already registered"
+    ) {
+      swal("User already registered");
+    } else if (
+      data.ResponseMail.Massage &&
+      data.ResponseMail.Massage === "checkotp"
+    ) {
+      handleOpen();
     }
+  }, [data.ResponseMail.Massage, handleOpen]);
 
-    
-    // console.log("data" ,data.ResponseOtp.Massage)
+  let show = isShow ? "none" : "";
 
-    useEffect(() => {
-        if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "move to signup") {
-            navigate("/signup")
-        } else if (data.ResponseOtp.Massage && data.ResponseOtp.Massage === "OTP is Expired!") {
-            swal("Please Enter Correct OTP!")
-            handleClose()
-        }
-
-    }, [data.ResponseOtp.Massage, handleClose, navigate])
-
-
-
-
-    useEffect(() => {
-        if (data.ResponseMail.Massage && data.ResponseMail.Massage === "User already registered") {
-            swal("User already registered")
-        } else if (data.ResponseMail.Massage && data.ResponseMail.Massage === "checkotp") {
-            handleOpen();
-        }
-    }, [data.ResponseMail.Massage, handleOpen])
-
-
-
-
-
-
-
-
-
-    let show = isShow ? "none" : ""
-
-    return (
-        <Container maxWidth="xs">
-            <Box
-                sx={{
-                    marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                    <ExitToAppSharpIcon />
-                </Avatar>
-                <Typography component="h1" variant="h5">
-                    Sign up
-                </Typography>
-
-            </Box>
-            <Box display={show} >
-                <Box m={1.5}>
-                    <TextField fullWidth id="email" label="Email Address" required autoFocus name="email" onChange={(e) => setEmail(e.target.value)} />
-                </Box>
-                <Box>
-                    <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} onClick={handleMail}>Submit</Button>
-                    <Grid container justifyContent="flex-end">
-                        <Grid item>
-                            <NavLink to="/signin" style={{ textDecoration: "none", fontSize: "15px" }} >
-                                Already have an account? Sign in
-                            </NavLink>
-                        </Grid>
-                    </Grid>
-                </Box>
-
-            </Box>
-            <Box>
-                <Modal
-                    open={open}
-                    onClose={handleClose}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
+  return (
+    <Container maxWidth="xs">
+      <Box
+        sx={{
+          marginTop: 8,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          <ExitToAppSharpIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign up
+        </Typography>
+      </Box>
+      <Box display={show}>
+        <Box m={1.5}>
+          <TextField
+            fullWidth
+            id="email"
+            label="Email Address"
+            required
+            autoFocus
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </Box>
+        <Box>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+            onClick={handleMail}
+          >
+            Submit
+          </Button>
+          <Grid container justifyContent="flex-end">
+            <Grid item>
+              <NavLink
+                to="/signin"
+                style={{ textDecoration: "none", fontSize: "15px" }}
+              >
+                Already have an account? Sign in
+              </NavLink>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+      <Box>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Container maxWidth="sm">
+              <Box p="2px">
+                <Timmer />
+                <br />
+                <br />
+                <TextField
+                  id="otp"
+                  label="One Time Password"
+                  required
+                  autoFocus
+                  name="otp"
+                  onChange={(e) => setOTP(e.target.value)}
+                />
+                <Button
+                  variant="contained"
+                  onClick={handleOtp}
+                  sx={{ ml: 3, mt: 1 }}
                 >
-                    <Box sx={style}>
-                        <Container maxWidth="sm">
-                            <Box p="2px">
-                                <Timmer />
-                                <br/>
-                                <br/>
-                                <TextField id="otp" label="One Time Password" required autoFocus name="otp" onChange={(e) => setOTP(e.target.value)} />
-                                <Button variant="contained" onClick={handleOtp} sx={{ ml: 3, mt: 1 }} >
-                                    Submit
-                                </Button>
-                            </Box>
-                        </Container>
-                    </Box>
-                </Modal>
-            </Box>
+                  Submit
+                </Button>
+              </Box>
+            </Container>
+          </Box>
+        </Modal>
+      </Box>
+    </Container>
+  );
+};
 
-
-        </Container>
-    )
-}
-
-export default MailAuth
-
+export default MailAuth;
 
 /*
 import * as React from 'react';
