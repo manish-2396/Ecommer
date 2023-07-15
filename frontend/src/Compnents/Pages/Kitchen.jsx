@@ -23,6 +23,7 @@ const style = {
 
 const Kitchen = () => {
   const [open, setOpen] = useState(false);
+  const [page, setPage] = useState(1);
   const [data, setData] = useState({});
   const handleOpen = (element) => {
     setData(element);
@@ -36,15 +37,15 @@ const Kitchen = () => {
     return navigate("/payment");
   };
   const dispatch = useDispatch();
-  const { kitchen, loading } = useSelector((state) => state.appreducer);
+  const { kitchen, loading, kitchenpages } = useSelector(
+    (state) => state.appreducer
+  );
   const navigate = useNavigate();
   // console.log(kitchen , loading)
 
-
-
   useEffect(() => {
-    dispatch(getkitchenData());
-  }, [dispatch]);
+    dispatch(getkitchenData(10, page));
+  }, [dispatch , page]);
 
   let a = {
     isAuth: false,
@@ -74,22 +75,6 @@ const Kitchen = () => {
       swal("Add to the Cart", "", "success");
     }
   };
-
-  const [page, setPage] = useState(1);
-  const perPage = 10;
-
-  let totalPages;
-
-  if (kitchen) {
-    // totalPages = kitchen.length;
-    totalPages = Math.ceil(kitchen.length / perPage);
-  }
-
-  console.log(totalPages);
-
-  let end = page * perPage;
-  let start = end - perPage;
-  let paginatedProducts = kitchen.slice(start, end);
 
   return (
     <Container>
@@ -213,7 +198,7 @@ const Kitchen = () => {
           ))}
       </Grid>
       <Box mt="2rem">
-        <Paginataion page={page} setPage={setPage} totalPages={totalPages} />
+        <Paginataion page={page} setPage={setPage} totalPages={kitchenpages} />
       </Box>
     </Container>
   );

@@ -25,7 +25,6 @@ const Women = () => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({});
   const [page, setPage] = useState(1);
-  const perPage = 10;
   const handleOpen = (element) => {
     setData(element);
     setOpen(true);
@@ -39,12 +38,14 @@ const Women = () => {
   };
 
   const dispatch = useDispatch();
-  const { Women, loading , womenpages } = useSelector((state) => state.appreducer);
+  const { Women, loading, womenpages } = useSelector(
+    (state) => state.appreducer
+  );
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getWomanData());
-  }, [dispatch]);
+    dispatch(getWomanData(10, page));
+  }, [dispatch , page]);
 
   let a = {
     isAuth: false,
@@ -53,6 +54,7 @@ const Women = () => {
 
   let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
   const { current_date, current_time } = getCurrentTime();
+  
   const handleAdd = (e) => {
     if (!isAuth) {
       navigate("/signin");
@@ -72,19 +74,6 @@ const Women = () => {
       swal("Add to the Cart", "", "success");
     }
   };
-
-  let totalPages;
-
-  if (Women) {
-    // totalPages = Women.length;
-    totalPages = Math.ceil(Women.length / perPage);
-  }
-
-  console.log(totalPages);
-
-  let end = page * perPage;
-  let start = end - perPage;
-  let paginatedProducts = Women.slice(start, end);
 
   return (
     <Container>
@@ -207,7 +196,7 @@ const Women = () => {
           ))}
       </Grid>
       <Box mt="2rem">
-        <Paginataion page={page} setPage={setPage} totalPages={totalPages} />
+        <Paginataion page={page} setPage={setPage} totalPages={womenpages} />
       </Box>
     </Container>
   );

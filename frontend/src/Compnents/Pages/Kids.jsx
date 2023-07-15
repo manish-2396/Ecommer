@@ -23,9 +23,10 @@ const style = {
 
 const Kids = () => {
   const [open, setOpen] = useState(false);
+  const [page, setPage] = useState(1);
   const [data, setData] = useState({});
   const dispatch = useDispatch();
-  const { kids, loading } = useSelector((state) => state.appreducer);
+  const { kids, loading, kidspages } = useSelector((state) => state.appreducer);
   const navigate = useNavigate();
   const handleOpen = (element) => {
     setData(element);
@@ -37,15 +38,15 @@ const Kids = () => {
     return navigate("/payment");
   };
   useEffect(() => {
-    dispatch(getkidsData());
-  }, [dispatch]);
+    dispatch(getkidsData(10, page));
+  }, [dispatch , page]);
   let a = {
     isAuth: false,
     token: null,
   };
 
   let { isAuth, token } = JSON.parse(sessionStorage.getItem("user")) || a;
-  
+
   const { current_date, current_time } = getCurrentTime();
 
   const handleAdd = (e) => {
@@ -65,8 +66,6 @@ const Kids = () => {
       swal("Add to the Cart", "", "success");
     }
   };
-
-  const [page, setPage] = useState(1);
 
   const handleChange = (ChangeEvent, value) => {
     setPage(value);
@@ -197,17 +196,17 @@ const Kids = () => {
             ))}
         </Grid>
 
-        {/* <Box m="2rem" textAlign="center">
+        <Box m="2rem" textAlign="center">
           <Stack spacing={8}>
             <Pagination
-              count={totalPages}
+              count={kidspages}
               page={page}
               defaultPage={6}
               onChange={handleChange}
               siblingCount={0}
             />
           </Stack>
-        </Box> */}
+        </Box>
       </Box>
     </Container>
   );
